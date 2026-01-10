@@ -1,0 +1,302 @@
+JavaScript :
+
+>Everything in js is inside the execution context 
+has two component :-
+1. memory component - here it stores everything inside like key value of variables or function. it is also called variable environment..
+2. code component - here it stores the lines of code that needed to be executed and then executes these line by line and hence it thread of execution..
+
+> js is synchronous single threaded language because it can execute only one line at a time and in specific order
+> the execution context is created in two phases :-
+1. memory creation phase
+2. code creation phase
+
+
+during memory component all the variables and function assigned like every variable assign with the undefined value and then the function gets replaced by the whole code and after one iteration when the control goes to the code component then it goes line by line assign value to variable and then when function comes then new execution concept created inside the code component and then all the same process for that code execution concept and after the return the control goes to the earlier code concept and then the same process when whole end then global execution concept ends.
+
+>> in js all these things creation deletion and control flow managed by js -engine using the call stack and here at bottom global execution context there and then other execution context and then pops out and it goes on and comes on at top and then pop all these things happen
+
+>> Hoisting :- it is something to access the variables and function even before we have initialised it but the variable value would be undefined here and it will normally call that but in other programming languages it gonna give you a error. Access it anywhere in the program.
+
+>> Windows and this :-
+
+whenever js program runs then js-engine creates a window object and it has several methods and also creates this object and here this points to the window object. window is a global object which is created along with global execution context.
+
+
+JS running on different things like browser, server, such as browser of chrome has v8 engine,mozilla(SpiderMonkey) has different and safari has different..
+
+whenever js runs then this is the responsibility of the js-engine to create the above two things. for every execution context this is created at global level this == window in case of browser..
+
+> js is loosely typed language we can put different data types in it either string or number to the same variable unlike java or c++
+
+
+>> Scope in js :- 
+scope in js is directly proportional to the lexical environment.lexical environment means hierarchy in which execution context created . so here lexical environment of parent is created so it has access to all the parent thing. 
+
+memory space  = local space + lexical environment of parent
+
+scope chain means going from inside to outside with go to scope of parent and then parent and then like and so on.
+
+>> let and const declaration :-
+
+> let and const are also hoisted they are given a value undefined even when the single line of code executed but they cant be accessed with before initialisation as they are not present in a global they are in a temporal dead zone we cannot access those before initialisation.
+
+the time between the let variable is hoisted and the variable is initialised is called the temporal dead zone.
+let is more strict as compare to the var as if i again redefine the same let x = 10 let x = 100 then it gonna give syntax error.
+
+> const is even more restricted than let as it needs to be even initialised at that point and then same as let in hoisting all that.
+
+>> block and block scoped :
+
+block is simply a grouping of multiple statement where js needs to make it as a single statement. block scope means what all are the function and variables that we can access inside a block.
+
+we can access var outside the  block but cannot access let and const outside the block hence they are block scope. Here during hoisting the memory reference is assigned at the block not at global hence we cannot access.
+
+>> Shadowing in js :- shadowing means it shadows the value of one variable means different values shadowed to one variable.
+
+>> closure :- it is simply a function bundled all together inside the lexical environment. means parent ke environment (the function have been bundled).
+so the current function holds the variable of the parent lexical environment.
+In js we can directly pass the function inside the other function means we can write the entire function inside x(here we can write the function)
+
+> we can return the function in js with return values so return y which is another function now if we var z = x() in x i return another function y definition then we can directly use z() to call the function y outside the z but it will remember the scope.
+
+>> setTimeOut :-
+
+this is all about understanding closure as whenever setTimeOut(function(){console.log(i)}, 3000)  console.log("hii").. It does not gonna wait for the 3 sec here it gonna print hii first and then gonna wait for 3 sec and then print i but here what happens this callback function holds the closure for the lexical environment for the parent so it gonna hold all the references of the parent variables not actual so every time if we gonna loop run over here but since it is holding to the same reference then its value is gonna 6 not 1 to 3 so we can use let instead of var since let has a block level scope not global level so it will be al together a complete new variable here.
+
+So in js it does not wait for the anyone it just hold the definition of the function forms the closure and does all the thing and it refer to the reference of each variable and then does all the work when time finishes then it took out the value from the references and then print it.
+
+so either we can go for the let or we can do like use the function   function close(x){
+    setTimeout(function(){
+    console.log(x)
+  },i*1000);
+  }
+  close(i); and here every time close() is there which is a function scope so it gonna work with let also.
+
+>> Functions in js :-
+ 
+Main difference between the function statement and function expression is the hoisting as when in a function statement memory assigns then it assigns the whole function but during expression then the variable assigned with the value undefined but when does so it gives a typeerror as the var cannot be converted to the function but if baad me call then it gonna work since it assigs the function only then call
+
+// function statement : this is the normal function  (function declaration)
+
+// Main difference between the function statement and function expression is the hoisting as when in a function statement memory assigns then it assigns the whole function but during expression then the variable assigned with the value undefined but when does so it gives a typeerror as the var cannot be converted to the function but if baad me call then it gonna work since it assigs the function only then call
+// a();
+// b();
+function a(){
+    console.log("a called")
+}
+
+// function expression : here we are assigning to some particular variable
+var b = function(){
+    console.log("b called")
+}
+
+// here it gonna work ok 
+ a();
+ b();
+
+// Anonymous function :- the function without a name is the anonymous function. They are used generally whenever we need direct values.
+// function (){
+
+// }
+
+
+// named function expression :- function expression with the name 
+// here if we gonna call b() then will not give error but when xyz() then it gives reference error since it in a local scope only not in a global scope so we can access inside the b not inside the 
+var d = function xyz(){
+    // we can call here function xyz since it is in this scope not in a global scope
+    console.log("d called")
+}
+// Parameters and Arguments : so the params are that we define in a func declaration and then arguments are thoose that we pass during the function call
+
+// First class function : the ability to use the function as the values means we can pass the function inside the function means we can pass anonymous function like everything means we can pass function inside function
+// we can pass named function anonymous function and then return a anonymous function and and also the named function i can do all these 
+// so the ability to all these is called a first class function it is same as first class citizen
+
+function c(param1){
+    console.log(param1);
+    // return function(){
+
+    // }
+    return function d(){
+
+    }
+}
+c(function(){
+})
+
+
+// arrow function :- it is termed as the es6 comes here in 2025
+
+>> callback functions :-
+// the function that we pass into a another function is called a callback function.due to the callback we can do the async
+// thing inside the js. Theya are called as callback function because they can be called later sometimes in a code we are giving another function 
+// a responsibility to call a function.
+// means the callback function does not wait for the anyoone they gives the ability to run a program in asyn way for example in a setTimeout it does not gonna wait for the long it just executes the another one so it gives ability
+
+//using these webapi and settimeout we can achieve the asynchrounous operation means we can do all these means using those asynchrous possible
+// this is a callback function and using that we are achieving asyn things settimeout is webapi
+setTimeout(function(){
+    console.log("timer");
+}, 5000);
+
+function a(){
+    console.log("a");
+}
+
+function b(){
+    console.log("b");
+}
+a();
+b();
+
+// this is a callback that are stores somewhere and then they automatically gives the ability get called when the button is clicked
+// it will automatically comes inside the call stack and then does the work required.
+// document.getElementById("btn").addEventListener("click",function xyz(){
+//     console.log("button clicked")
+// });
+
+
+// here this is the eventlistener we can form the closure around these clicklistener and call the method so it will closure around the parent scope
+// when we form closure then it gonna wrap that listener to the function so we can do that
+
+//evenlistener is a heavy since it forms a closure around that and also since nothing is present in a call stack but we dont know it can be used where and when so we canot do that
+// hence they are heavy so remove when we are not using them
+function attachClosureToEventListener() {
+    let a =0;
+    document.getElementById("btn").addEventListener("click",function xyz(){
+    console.log("button clicked", ++a)
+});
+}
+
+attachClosureToEventListener();
+
+
+>> Event Loop :-
+in a callstack gce is present and then whenever function happens then its execution context created and then atlast mainly the role of callstack is to just execute everything which is present in a callstack immediately. callstack does not have a timer so whatever there in callstack it automatically gets executed without wait.
+
+so as suggested callstack reside inside the js-engine and js0-engine inside the browser . Browser has so many things like timer,bluetooth,storage,url, making request to the server and more thing .so we need something so that js-engine can communicate with the browser so that we can access to this whole these things.
+
+// to access all the superpowers of the browser we need webapi like timer,storage,everything whatever written using webapi js-engine access all these things.
+
+setTimeOut,localstorage,fetch,dom apis, document, console,location :- this is not a js. these are the webapis that are given by the browser in order to communicate with the js engine or js callstack.
+
+so mainly browser gives the ability to use these superpowers with the keyword called as window using these we can access those things and it is all there in a global thing.
+
+so basically browser maintains the storage where it stores all those things like callback and using that we can call these later and comes in a callstack.
+
+so whatever required must comes in a callstack to get executed from the browser and using the eventloop and callback queue all these things happens
+
+ok so what happens the whenever callback function present in a browser then using that required so it goes to the callback queue and then atlast this using eventloop it checks wheather something is there in a callbackqueue so it pushes the that callback again to the callstack and then it gets executed. eventloop is like gate keeper.
+
+// so same things happen for the eventlistener and all these eventloop and same callback queue all these
+
+> here fetch works in a different way :-
+so apart from the callback queue we have something called as microtask queue it is something similar to the callback queue but it has the higher priority so whatever callbacks needed to be executed firtst needs to go there in microstask queue so whay happens if millions of lines of code . so whenever the call stack is empty then only event loop gives the chance that it should push the callback of microtask queue and whenever that is empty then gives the chance of
+ callback queue and so on.
+
+all the callbacks that comes from the promises goes into the microtask queue so these should come here and mutation observer means that changes the dom object then it goes into the microtask queue except all these goes into the callback queue (dom api(eventlistener),setTimeout)
+.. to run a js code when we need a js runtime environment . why browser runs js because it has js runtime environment.
+
+>> js engine :-
+
+js uses the mark and sweep alogorithm to clean the memory by the garbage collector ... here in js engine we have parser that forms sytax tree using the parsing and created a abstract syntax tree and then compilation using interpreter and jit compiler and then goes into a execution phase . means does all thse it has memory heap and call stack . so to free up memory we use garbase collector and that gc uses the mark and sweep algorithm to clean the memory whenever possible.
+
+ignition interpreter name of interprter and turbofan compiler name of compiler in v8 and it is the fastest among all the js engine.
+
+>> settimeout issues :-
+
+means for example if js has millions of lines of code or something that is waiting for more than required time and it does not finish executuion the code and callstack is not empty so it might wait for the long time as callstack is not free and hence that callback will not go in callstack by event loop.
+
+
+>> Higher order function (functional programming) :-
+
+higher order function are those function in which the other function are passed and returned .
+
+>> map filter and reduce :- these map filter and reduce are the higher order function.
+.. map filter is mainly used to transform the array entirely means what we want to do the entire array pass the function it will does all the work.
+ filter function is used to filter out the value
+reduce function should be where it takes all the values of the array and comes up with the single value so it reduces the array to single value not arr size
+
+
+>> Callback hell :- it is the problem where multiple function are calling function when they have dependency so it is called the callback hell and structure is called the pyramid of doom. that calling inside calling and then inside calling that structure is pyramid of doom.
+
+inversion of control is another problem that we studied in callbacks : it means that you loose the control in a code when you are doing callback.means we give the control to the other function and that have the abilty to call that . this is a very important we need to care of 
+async programming exist in js because of callbacks.
+
+>> Promises :- They are used to handle the async operation in js.they are basically a empty object whose value gets filled after when the async operation happens. so after whatever time required then gives the result. after receiving the object filled then we gonna attach the callback function using .then so it gonna attach the callbacks so we maintain the callback that attac callback to the object of the previous function return means whatever object.
+
+So main difference between the callback function and promises is that in callback we pass the callbackfunction to another function and gives it control to call it anywhere and incase of promises we attach the callback function to the these so whenever data is filled as soon as we get the data then call the function so it is a main difference. So it might possible that these createorder api may call it twice thrice and may not call there are so many possibilities all these are handled by the promises that when to call the function all these 
+
+. fetch api mainly gives the promises so promises have two things state and result. result is the data that we get promise state are the state of promise.
+promises object can be resolved only once either success or failure  and then upon that we call the callback.
+promises objects are immutable as we cannot mutate those we cannot change the promises data object if that is filled with some data.
+promises are also the container that filled with some values at later time.it also said that it is a object that represent the eventual completion or failure of async operation.
+
+// so as you know about the pyramid of doom which is the structure of the callback hell and then to handle those promised uses the promise chaining inorder to handle that..
+
+so when we are doing promise chaining then we should return the data so that it goes to the next callback and then goes on and goes so it is mandatory to return in single promises its ok but in multiple we should return it;
+
+promise.then(function (orderId){
+     return proceedToPayment(orderId)
+}).then(function(paymentInfo){
+    return showOrderSummary(paymentInfo)
+}).then(function (paymentInfo){
+    return updateWalletBalance(paymentInfo)
+})
+
+createOrder(cart).then((orderId) => proceedToPayment(orderId))
+.then((paymentInfo) => showOrderSummary(paymentInfo))
+.then((paymentInfo) => updateWalletBalance(paymentInfo)) // this is the another way of writing the promises.
+
+
+>> Creating a promises and then sending it :-
+
+so basically to create a promise we need to use Promise constructor and pass the function in it with the resolve and reject as a parameter these two are those things which are given by js inorder to create a promise
+using these resolve and reject we gonna send error or if completed then we gonna send data.
+
+Once the promises gets rejected so its the responsibility of our to handle those rejection properly means those error should be properly handled otherwise code fails and everything stops.
+
+// to handle the error we properly means if rejected then we need to handle those we need to use catch also so does good 
+
+cart = ['1','2','3'];
+function validateCard() {return false}
+const promise = createOrder(cart);
+
+promise.then(function(orderId){
+    console.log(orderId)
+}).catch(function(err){
+    console.log(err)
+})
+
+function createOrder(cart){
+    const pr = new Promise(function(resolve,reject){
+        if(!validateCard(cart)){
+            // here we are rejecting the promises with the error 
+            const err = new Error("Cart is not valid")
+            reject(err)
+        }
+        else {
+            // here we are resolving and sending the data in resolve which is dat ahere is resolve 
+            const orderId = "12345"
+            resolve(orderId)
+        }
+    })
+    return  pr
+}
+
+
+so all we need to handle the promise object means in a promise then we either return the promise object or the data and then handle
+
+so all we need to handle the promise object means in a promise then we either return the promise object or the data and then handle that ..
+whenever we write the catch down then whenever code fails and then goes to the last step means it has the responsibility of al the above of it so we can apply catch in between anywhere we can apply that.
+
+// whatever then method is there after the catch that gonna definitely called either resolve or reject after catch it gonna called if after the catch
+
+
+
+
+
+
+
+
+

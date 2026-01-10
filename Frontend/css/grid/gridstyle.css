@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.gridcontainer{
+    background-color: red;
+    /* width: 750px; */
+    height: 750px;
+    display: grid;
+    /* grid-template-columns: 133px 133px 133px; */
+    /* grid-template-rows: 133px 133px 133px;
+    grid-template-columns: repeat(3,1fr); */
+    /* grid-template-rows: repeat(3,1fr); */
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 43px 1fr 43px;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    /* justify-items: center; */
+}
+
+.griditem{
+    background-color: aqua;
+    border: solid black;
+    /* height: 122px;
+    width: 122px; */
+}
+
+
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: black;
+    color: white;
+}
+
+
+.item1{
+    justify-self: end;
+}
+
+.item2{
+    place-self: center;
+}
+.footer{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* This is the same as above for column spanning or we can also do for the row spanning */
+    grid-column: 1 / span 3;
+    background-color: black;
+    color: white;
+}   

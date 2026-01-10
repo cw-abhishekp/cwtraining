@@ -1,0 +1,15 @@
+// mixin : this is used to reduce the boiler plate code if properties coming again and again then we gonna use mixin
+
+@mixin flexprop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// here we can pass parameters so that we can adjust as per need
+@mixin commoncode($para1){
+    font-size: 2rem + 3rem;
+    letter-spacing: $para1;
+}
+

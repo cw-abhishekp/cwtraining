@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main_header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: aqua;
+}
+.main_header h1 {
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+  color: red;
+}
+.main_header h1:hover {
+  color: green;
+}
+.main_header p {
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  color: red;
+}
+.main_header p:hover {
+  color: pink;
+}
+
+button {
+  background: white;
+  color: black;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*sass is important beacuse of : 
+1. Operators
+2. Variables
+3. Nesting  
+4. Mixin
+5. Parameter
+6. Partials : so that we can separate the code of scss as per needed then we can import that scss and then we can use that later
+Always use _before the files for the partial file so that it does not get compiled and only the main file gets created
+*//*# sourceMappingURL=scssstyle.css.map */

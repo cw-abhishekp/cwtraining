@@ -1,0 +1,75 @@
+// here we have separated the entire scss with the mixin and then imported that
+@import "_mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main_header {
+    width: 100vw;
+    height: 100vh;
+    @include flexprop;
+    box-sizing: border-box;
+    background: aqua;
+
+
+    // here we have done nesting in a scss
+    $nested_red_color: red;
+    h1 {
+        @include commoncode(0.5rem);
+        color: $nested_red_color;
+        &:hover{
+            color: green;
+        }
+    }
+
+    p {
+        @include commoncode(1rem);
+        color: $nested_red_color;
+        &:hover{
+            color: pink;
+        }
+    }
+}
+
+
+// this is use of the if else in a scss or sass
+$theme: white;
+button {
+  @if $theme == dark {
+    background: black;
+    color: white;
+  } @else {
+    background: white;
+    color: black;
+  }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/*sass is important beacuse of : 
+1. Operators
+2. Variables
+3. Nesting  
+4. Mixin
+5. Parameter
+6. Partials : so that we can separate the code of scss as per needed then we can import that scss and then we can use that later
+Always use _before the files for the partial file so that it does not get compiled and only the main file gets created
+*/
+
+// // Variables
+// $red_color: red;
+
+// h1{
+//     color: $red_color;
+//     font-size: 2rem + 3rem;
+// }
+
+// p{
+//     color: $red_color;
+//     font-size: 2rem + 3rem;
+// }
