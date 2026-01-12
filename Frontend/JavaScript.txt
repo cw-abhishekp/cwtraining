@@ -292,6 +292,171 @@ whenever we write the catch down then whenever code fails and then goes to the l
 
 // whatever then method is there after the catch that gonna definitely called either resolve or reject after catch it gonna called if after the catch
 
+>> async /await :- the async function always return the promise either we can directly gets the promise or even if we send the data then it will automatically wrap that data around a promise and return me a promise but it is for sure it gonna return promise.
+
+async and await combination are used to handle the promises. so basically when we write the await infront of promises then it automatically gets handled and then using that we get the data. await can only be used inside your async function  
+
+.. handling the promise using the normal way and promises way await :-
+
+so when we normally handles the promises then it does not wait for the execution of the promises to be resolved it goes to the nextline and then after that promises get resolved but in case of await it will wait that promises get resolved then only the control goes to the next line.
+
+so basically when we does this so actually js-engine is not waiting for the promises to resolved in a callstack when that function is there so it gonna come out of callstack and then goes into the callstack so js-engine does not wait for anyone here when await resolve happens then execution context of that comes out of call stack and then the again goes 
+
+// // this await function will return the promise always if direct then wrap around data otherwise created promise
+// async function getData(){
+//     // return "Hi";
+//     return new Promise(function(resolve,reject){
+//         resolve("Resolved promise.")
+//     })
+// }
+// const dataPromise = getData()
+// dataPromise.then((data) => console.log(data))
+
+
+// // you always write await infront of promise and then that will be resolved
+// const p = new Promise(function(resolve,reject){
+//         resolve("Using the await to handle the promise.")
+// })
+
+// async function handleAwaitPromise(){
+//         const val = await p;
+//         console.log(val);}
+
+// handleAwaitPromise()
+
+
+const p1 = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        resolve("Difference between await promises and await handling.")
+    },10000)
+})
+
+// here it goes to the next line and after 10 sec it goes to the promise
+function p1Resolve(){
+    p1.then((res) => console.log(res))
+    console.log("Lines get executed")
+}
+
+p1Resolve();
+
+
+// here it will wait until the promise does not get resolved and when resolve it goes to the next line
+async function p1ResolveUsingAwait() {
+    const val = await p1;
+    console.log(val)
+    console.log("Lines not get executed and wait for the promised to be resolved")
+}
+
+// so here you understand here for that particular function the stack will comes and out and then again goes when promises resolved
+console.log("hii final stack")
+p1ResolveUsingAwait()
+
+
+// here everything gonna work means everything call stack would be removed and then does all the operation required js engine does not wait for anyone and it never gets blocked by anyone.
+
+>> Real world handling of fetch and use of await :-
+here fetch gives the promises and and it has the response object which has the body and it has the readable stream that is has this data so Response object we get as data and Response.json() is promise so again we need to handle that promise in whatever way required and we get json value. 
+
+Earlier in a normal handling of promise we have someting called as .catch to handle the error but in case of await method to handle the promise we will use normal try and catch to handle the error if it comes
+
+>> Promises Api :-
+1. all : so it is basically about handling the multiple promises together if you have so many promises then you can handle all those promises all together suppose you are doing multiple api calls then promises all could be used. it takes the array of promises. In promises all it will take the arrays and then atlast it will wait for the all to finish and then gives the arrays of result with data if all the promises have success and if failure comes in any of the promises then immediately it will thow an error it will not wait for the other promises to get completed but actually these promises execution happen but here as soon as error comes it will thrown an error.
+
+2. allSettled : if we want only successful promises then this is good we get only those promises who gets completed and will return an array of error and successful data.
+
+3. race : it is an api that will give a result either failure or success and it would be a value. so basically it will wait execute the first promise and then whatever the result (fail or success) it will give me that not wait for other.
+
+4. any : so in case of any it is same as race whoever first goes but if one fails then will wait for the another api until gets success otherwise it will return an array of error of all the promises.
+
+>> Prototype : prototype is basically  associated prototype object to the normal object function or other things. since everything in js is a object so it has own object which has protype and then prototype has it own object prototype and then object proto is null so basically it is called protype chaining . 
+using prrototype it gets the aceess to the other promises like this property has acess to other fnction and properties.
+
+using the protype chaining one properties hold the properties of another object using that we can get one to another. 
+arr = ['hii']
+
+let object1 = {
+  name: "Abhishek",
+  city: "Bengaluru",
+  getIntro: function() {
+    console.log(this.name+ " from " + this.city);
+  }
+};
+
+
+let object2 = {
+    name: "Harsh"
+}
+
+
+// here if we do like this means we are attaching the function to the object class and since every below has access to above so all the below object will have access to function 
+Object.prototype.func1 = function(){
+    console.log("this is protoype function")
+}
+
+
+Function.prototype.func2 = function(){
+    console.log("this is protoype functfuncion for only function")
+}
+
+// so here we are doing protype since here we are assigning properties of one to the another object means here  it is inherting one protype then to another prototype then to another 
+object2.__proto__ = object1
+
+
+>> Currying : it is a method to define function using some predefined function so that we can get all those means it is a currying to make a copy of a function and then predefining some values .
+// it is all about the predefined function and making the copy and then done that
+
+>> DOM :- dom stands for document object model and here in dom it has a tag and element and all those element tag will be accessed by js and automatically that html is to dom and it creates a document object means h1 tag then it will create that object and then so on. so and that document object will be part of window object. in dom we have a object that are node .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -76,3 +76,5 @@ function proceedToPayment(orderId){
         return resolve("Payment was successful")
     })
     }
+
+
