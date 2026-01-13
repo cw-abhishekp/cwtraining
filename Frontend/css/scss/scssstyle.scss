@@ -19,7 +19,7 @@
     h1 {
         @include commoncode(0.5rem);
         color: $nested_red_color;
-        &:hover{
+        &:hover{ 
             color: green;
         }
     }
