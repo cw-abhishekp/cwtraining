@@ -4,6 +4,7 @@ const toast = document.getElementById("toast");
 const fieldError = "This field is required";
 const emailError = "Please enter a valid email address";
 const consentError = "To submit this form, please consent to being contacted";
+const inputNameError = "Please enter a valid value";
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -27,12 +28,23 @@ form.addEventListener("submit", (e) => {
         valid = false;
       }
     }
-
     else if (input.type !== "radio" && input.type !== "checkbox") {
-      if (!input.value.trim()) {
+      const value = input.value.trim();
+
+      if (!value) {
         error.textContent = fieldError;
         input.classList.add("invalid");
         valid = false;
+      }
+
+      else if (input.id === "firstName" || input.id === "lastName") {
+        const nameRegex = /^[A-Za-z]+(?:\s+[A-Za-z]+)*$/;
+        
+        if (!nameRegex.test(value)) {
+          error.textContent = inputNameError;
+          input.classList.add("invalid");
+          valid = false;
+        }
       }
     }
   });

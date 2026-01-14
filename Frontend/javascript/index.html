@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <title>JS Setup</title>
+
+
+  <style>
+  div{
+    min-width: 100px;
+    min-height: 100px;
+    padding: 10px;
+    border: solid black 2px;
+  }
+
+  </style>
 </head>
 <body>
   <h1>Hello JS</h1>
   <input type="text" onkeyup="functionDebounce()">
   <button id="btn">Click</button>
-  <script src="debounce.js"></script>
+
+<hr>
+  
+  <div id="grandparent">
+    <div id="parent">
+      <div id="child"></div>
+    </div>
+  </div>
+
+  <script src="propagation.js"></script>
 </body>
 </html>
