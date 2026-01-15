@@ -39,7 +39,7 @@ form.addEventListener("submit", (e) => {
 
       else if (input.id === "firstName" || input.id === "lastName") {
         const nameRegex = /^[A-Za-z]+(?:\s+[A-Za-z]+)*$/;
-        
+
         if (!nameRegex.test(value)) {
           error.textContent = inputNameError;
           input.classList.add("invalid");
@@ -74,3 +74,32 @@ form.addEventListener("submit", (e) => {
 
   form.reset();
 });
+
+
+// function toastMessage(time){
+//     toast.classList.add("show");
+//     setTimeout(() => {
+//         toast.classList.remove("show");
+//     }, time);
+// }
+
+// function setError(input, errorEl, message) {
+//     errorEl.textContent = message;
+//     input.classList.add("invalid");
+// }
+
+// function clearError(input, errorEl) {
+//     errorEl.textContent = "";
+//     input.classList.remove("invalid");
+// }
+
+// function isValidName(value) {
+//     const nameRegex = /^[A-Za-z]+(?:\s+[A-Za-z]+)*$/;
+//     return nameRegex.test(value);
+// }
+
+// toast.classList.add("show");
+
+// setTimeout(() => {
+//     toast.classList.remove("show");
+// }, 3000);

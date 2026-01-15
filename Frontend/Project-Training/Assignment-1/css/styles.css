@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Karla";
-  src: url("../Project-Training/font/Karla-Italic-VariableFont_wght.ttf");
+  src: url("../font/Karla-Italic-VariableFont_wght.ttf");
 }
 
 * {
@@ -94,6 +94,7 @@ textarea {
   border-radius: 8px;
   border: 1px solid var(--border);
   outline: none;
+  resize: none;
 }
 
 input:hover,
@@ -240,8 +241,3 @@ button {
     font-size: 0.6rem;
   }
 }
-
-
-
-
-
