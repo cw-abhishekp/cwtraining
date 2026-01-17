@@ -1,0 +1,200 @@
+React : it is a open source library for building user interfaces. It focuses on only thing like building user interfaces does not focus on the http request or network serving and routing. React has a rich ecosystem that make its capable of making a rich ecosystem. React follows a component where different component are encapsulated to make a official website.
+
+So in a normal page we have 4 section :- header,sidenav,footer,main content. React code should be reusable and then that component can be directly used in other things by passing right data like in vue, angular ,etc.
+
+React has a declarative way means you just need to tell what makes and then it will automatically creates a ui like if you give painter give me a painting of good view then it will automatically create a new ui and other one is imperative way where we need to tell at each step. for example make mountain then river like means we have to tell at each step and in imperative way you control the flow of landscape but in react you give control to other then its there responsibility what to draw what but just completes.
+
+React will handle efficiently updating and rendering of the components when the data changes and it also makes a very good dom update.
+
+Since the react is based on the component either we can integrate one component or other or an entire application to the other applications if we want.
+
+// So what happens in normal js state - js and ui-dom has not any synchronisation so everything proper does not get updated and react solve this problem.
+In react the problems are the code that it gives is not a good html css means and so have the problem of seo as it does not generate proper good html css js.
+Browser needs to render js so it becomes slow and it has router problem as it makes a single page application. So these are the problems of seo.React does not have state management.
+
+>> Vite or Parcel : They are the bundler we write the js in so many file so it bundles everything and put everything in just one file.
+
+React npx : it is a npm package runner which is installed during node and using that we are able to create react. create-react-app is a utility which is used to create a react app but it has so many things that not need to create hence takes a lot of time.
+
+>> package json : first go to package.json and then it will give you a library for that. it has scripts, react-dom,react,web-vitals(they are used to measure the performance of application)
+
+scripts are basically used to run the react means how it gonna run in a local and how it gonna run in a production and how it gonna run in a test .since the requirement needed to run is different from local
+
+npx create-react-app react-project-name // this will be so heavy and will take a huge amount of time but creating a react project using vite that is a library that helps to create react project with necessary dependencies only.
+
+npm create vite@latest // then project ka name
+
+npm install are used to install dependencies to run project that are present in package.json
+
+>> Project Structure : Main entry point of the react is index.js file so basically react also creates its dom and that is called the virtual dom and that dom has been compared against the main dom that what is the difference and then at that point only it repaints the pixel.
+
+So basically what react gave it gave took a function having html tags and using that html tags will be rendered using the react and it can be passed also. Using js we are writing html that is the power of react.
+
+>> In react basically react-scripts in package.json is responsible to put js in file and loading all the scripts. So in basically all those react-scripts are not there . here it directly put the needed jsx or js file in the index.html directly and not needed to load.
+
+In react when we are rendering element then we should return only one element more than one not allowed so to configure that we can put all in a div or any common thing so to solve this problem <></> we can use these tags where we will enclose all the things together in a tag and this tag is called fragment.
+
+>> In react function name should be capital and also it is best practices otherwise tag will not come while exporting and it is good to create name with capital letter even js or jsx file.
+
+Actually the transpiler like bable or vitr all these convert thse react code into a these structure of properties of any division like means it split the tag into these and this gives the normal like component.
+
+
+function renderElement(reactElement,container){
+    const domElement = document.createElement(reactElement.type);
+    domElement.innerHTML = reactElement.children;
+    domElement.setAttribute('href',reactElement.props.href)
+    domElement.setAttribute('target',reactElement.props.href)
+    container.appendChild(domElement)
+}
+
+// it breaks the tag into like these element and then data gets filled over there.
+const reactElement = {
+    type : 'a',
+    props : {
+        href : "https://google.com",
+        target : "_blank"
+    },
+    children : "Click here to visit google.com"
+}
+const mainContainer = document.querySelector("#root")
+
+renderElement(reactElement,mainContainer)
+
+
+>> So basically in a react we follow a component based architecture where each component together form to make a entire UI application and here each component can be reused and these component can be nested component or the parent component. These component are placed inside the js file or jsx file.
+
+
+>> Why do you nee hooks and all these :-
+
+// so basically for the UI updation we need the hooks in general what happen if we want to update the value then in normal js here we will get the element by id and then change the innerText and all these. So basically all these things will happen so control this properly we mainly use the react hooks proper ui updation.So basically to control the ui updation react hooks are used.
+
+.. usestate Hook : so basically this hook is to change the state it does not mean changing the variable or other thing the change to the dom or you can say UI.
+
+const [counter,setCounter] = useState(//here we can pass any default value integer string any data type object means everything evrn function we can give)
+// so this method will give first the variable and second the method to change that variable or other thing we cam give anyname to the variable or function but it is good to have convenient name. IN SETSTATE BROWSER RE-RENDER EVERYTHING.
+
+>> Fibre,Reconciliation : so basically what happens if there are multiple request means counter variable updating again and again means here it is in that like it is in network and then new request comes so new new like goes on so to avoid this what we can do wait for few and then we can update it all together so not to paint again and again so overall performance high means update if again and again request and using this we can choose and set the priotrty to the reuest and all those things and reuse it later and then again play when needed all those things we can do.
+
+Reconciliation is an algorithm that is used to differ between the browser dom and virtual dom so that they can update that particular root point.
+
+So it is mainly used for the efficient transiting the state from one to another.In tree some component there are some thing that it is not necessary to compare those component it is good to directly change that component even without comparing so it is well managed by fibre.
+
+Diffing of list is done using keys by stable,predictable and unique. to basically improve the performance using the keys.
+
+>> props : props makes the component reusable.like we made a card then we make it again. so in a normal workflow if we want that we can pass multiple arugments or values and each values takes up differently so that is called the props
+
+function Card(props){
+  return (
+    <>
+    <h1>My name is : {props.username}</h1>
+    </>
+  )
+}
+
+
+<Card username = "Abhishek"/> // so here we are defining component card and making it reusable and we can pass any properties in a card.
+<Card username = "AP"/>
+
+// so here we passed an  props which is already defined by the react means if we want that component reusable then we can do that and now for example 
+
+In a component passing we can pass the myobject = {//here object or array} and then we can access those object and array using the props.and then goes on.
+
+function Card({username = "AA"}){ // here we are directly taking the username and then putting in it and removed the props again and again with curly braces. here we are predifing values also - aa if not any value passed then take AA
+  return (
+    <>
+    <h1>My name is : {username || "AA"}</h1>//here also we are doing the same thin`g either take user value or take "AA"
+    </>
+  )
+} 
+
+// onclick is a method that expect a function not a reference hence setColor // we can pass but we cannot pass ()=>setColor() // this we have to use hence it is important.
+
+>>Hooks : (useRef,useEffect,useCallBack)
+
+useCallBack helps basically to memoise the function so that we can call it for the multiple request for example if we have multiple callback then we can call those function again and again then we get the result.In a usecallback we have two things measns two things one is function that we need to implement and second one is the dependencies means that we need to rerender all those dependies all those changes.
+
+
+
+
+
+import { useState, useCallback } from "react";
+
+// here we are calling passwordgenerator() but we cannot call that since we cannot do it manually react will automatically does so that effective management we can do
+function App() {
+
+const [length,setLength] = useState(8);
+const [numberAllowed,setNumberAllowed] = useState(false);
+const [charAllowed,setCharAllowed] = useState(false);
+const  [password,setPassword] = useState("");
+
+
+const passwordGenerator = useCallback(()=>{
+  let pass = ""
+  let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  if(numberAllowed) str+="0123456789"
+  if(charAllowed) str+="!@#$%^&*()_+?><:"
+
+  for(let i =1;i<=length;i++){
+  const index = Math.floor(Math.random() * str.length +1);
+  pass+=str.charAt(index);
+  }
+
+  setPassword(pass)
+},[length,numberAllowed,charAllowed,setPassword])
+
+// passwordGenerator()
+
+  return (
+    <div className="App">
+      <h1>Password Generator</h1>
+      <hr></hr>
+      <input type = "text" value={password} placeholder="Enter the passwod" readOnly/>
+      <hr></hr>
+      <button>Copy</button>
+      <hr></hr>
+      <div>
+        <input type ="range" value={length} min={6} max={100} onChange={(e)=>setLength(e.target.value)}/>
+        <label>Length : {length}</label>
+        </div>
+
+        <hr></hr>
+        <div>
+      <input type ="checkbox" defaultChecked={numberAllowed} onChange={()=>setNumberAllowed((prev) => !prev)}/>
+      <label>Number</label>
+      </div>
+      <div>
+      <input type ="checkbox" defaultChecked={charAllowed} onChange={()=>setCharAllowed((prev) => !prev)}/>
+      <label>Character</label>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+>> since in react we cannot call whenever we need to tell react that this function needs to be called and then depending upon best requirement it can be called .
+// usecallback me aisa karna hai jo jo dependencies hai us method ko optimise karke kahi cache karlo jisse easy hoga aur useEffect matlab dubra se run kardo agar inme kisi me change ho raha hai to (memorise the function jitna ho sake)
+
+
+>> useRef : when we need to take the reference of anything then useRef is used means if we want reference then we should use that.
+
+const passRef = useRef(null) // this is the reference we are creating but here in reference we are passing null value we can pass any it is possible like useState
+
+
+>> Custom hooks : So basically hooks are nothing they are just function who are returning array of constant value and the callback function using that we can effectively manipulate the UI. so it means we can also create some custom hooks using function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
