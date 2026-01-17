@@ -184,10 +184,207 @@ const passRef = useRef(null) // this is the reference we are creating but here i
 
 >> Custom hooks : So basically hooks are nothing they are just function who are returning array of constant value and the callback function using that we can effectively manipulate the UI. so it means we can also create some custom hooks using function.
 
+>> Component : So basically component are part of the entire user interfaces and then that can be reusable also. 
+Two types of Component :-
+1. Functional Component : It is basically a function that is returning some html content and that can be render.(Stateless)
+2. Class Component : It is another component that is a class component which extends React.Component and this class must render() html code like (Stateful)
+
+class Component extends React.Component{
+render(){
+return (
+<h1>Hello</h1>); // So here we are extending and rendering the component.
+}}
+
+>> Class Component : They are basically a es6 classes they can receive input(props optionally) and then can give output html. It can maintain a private internal state and use that private internal state information there only to do something.They are called as stateful because they can maintain their own data or we can say state hence they are called as functional component but now hooks can be used so the functional component are now also stateful.
+
+JSX Stands for the javascript xml it is used to write xml inside the js code it is very much useful to write a good code means without it we can do.
+props.children are used to have the children component. mean if we write the inbetween the component and then we can use props.children then we can do that.
+
+
+>> Props in class component : Here props are used to have and it is same as the jsx code but instead of passing props to function we can access the properties using the this.props.and then whatever name we are specifying or we can say that this.props // which is reserved and then we can this.props.children whatever we want.
+
+we cannot assign props properties explicity means like props.name = "something" // we cannot do that it is not possible
+
+>> State : It is possible to control what is render on the screen either through props or state. One more thing props are passed within a function parameter and hence they have not control outside but state component entirely belong to the class and hence have the full control everywhere hence it is easy means props are not reassigned but props can be reassigned as they entirely belong to props . We can manage the state in class component by this.state and in functional component using useState.
+
+Inside class component : We need to create a state object and then intialise that state object inside constructor. Whenever we have something that needs to executed after the state has been change then do not write it outside instead of that write inside a callback function which is the next parameter for a setState when we are setting a value. when we have somethin like calling again and again same thing so react gives all the thing together means it does not give all the 5 times for example incrementing 5 times a same counter so react send in a batches . In those condition always utilise a pevious state means never directly update the function pass the function in a setState or useState and then using prev value does the thing 
+
+import { Component } from "react";
+
+class Counter extends Component{
+    constructor(){
+        super()
+        this.state ={
+            count : 0
+        }
+    }
+
+    incrementCounter(){
+        // here another paramter is callback value that anything after function call then we do all these
+        this.setState(
+            {
+            count : this.state.count+1
+        },
+        ()=>{
+            console.log(this.state.count, " This is after the callback")
+        })
+
+        // here what happens function get called and it happens in a synchrounous way hence gettting value =0 because setState is a asyn operation
+        console.log(this.state.count)
+    }
+    // second object is props object here if props object dependency
+    incrementFiveTimesCounter(){
+         // here another paramter is callback value that anything after function call then we do all these
+        this.setState((prevState,props)=> ({
+            count : prevState.count +1
+        }))
+
+        // here what happens function get called and it happens in a synchrounous way hence gettting value =0 because setState is a asyn operation
+        console.log(this.state.count)
+    }
+
+    incrementFive(){
+        this.incrementFiveTimesCounter()
+        this.incrementFiveTimesCounter()
+        this.incrementFiveTimesCounter()
+        this.incrementFiveTimesCounter()
+        this.incrementFiveTimesCounter()
+    }
+
+    render(){
+        return (
+            <>
+            <h1>Counter - {this.state.count}</h1>
+            <hr></hr>
+            <button onClick={()=>this.incrementFive()}>Update the counter</button>
+            </>
+        );
+    }
+}
+
+export default Counter
+
+
+>> Event Handling : (Binding event handler in this function) so it can understand and does the work...
+
+  <button onClick={()=>this.changeState()}>Click here State Class Component</button> // it has some performance implicatipn
+  <button onClick={this.changeState.bind(this)}>Click here State Class Component</button> // it has some issue as if large event mean big application then issue
+ another way inside 
+
+constructor(){
+this.changeState = this.changeState.bind(this)
+}
+
+// now normal call   <button onClick={()=>this.changeState}>Click here State Class Component</button> // this gonna work perfectly
+... Now if we do not write this or do not bind the object then that this would be undefined when we update the setstATE hence we need to bind it 
+we can pass method in props means anything inside the props means props or we can say function we can pass if any using props 
+
+
+>> Conditional Rendering : When you want to render HTML on the basis of certain condition then we use this it is same as the condition works in js.
+1. if/else
+2. element variables
+3. ternary condition operator
+4. short circuit operator
+
+.. using if/else we have to write inside the render() method it is not allowed to write anything inside jsx
+
+>> List Rendering: Common thing to list the list of items means array of items
+
+const ls = [1,2,3]
+const newls = ls.map((x) => <h1>x<h1/>)// this is the way to iterate and then does the rendering means it is normal we are returning normal jsx and then placing inside jsx
+
+>> List and Keys :
+so what happens to match the keys since think if we have list of children and if order same then react will add only but if not order same then react will not render whole hence key attribute passed as props but we cannot access the key as properties as this is fixed and we cannot change that hence to avoid rerendering react matches the keys if it matches then not rerender again and again only necessary item delete add or update like this
+
+Using the index as a key what happens when we create a list and have a index as a key then in normal it works it is good but when we want to change the order or sort it then it maintains an index so it fills out those points so what happens values stayed there yes index everything work fine but not values since it stores the value at first index and then at second and then goes on.
+
+So we should not use index as a key until we have :
+1. unique id 2.static list and will not change 3. list will not be reorder or filtered
+
+>> Styling of css can be done either by styling inline by styling = whtever classname or we can do using className attribute
+
+>> Lifecycle Method : When we create a component then it goes to several stages means react provide a method at different stages and using that we can edit at different stages.These lifecycle methods are available for the class component not for the functional component.
+
+We can classify the methods into 4 phases :
+1.Mounting : when instance of an component has been created and inserted into the DOM.
+2. Updating : when component being re rendered either to the change of the state or props.
+3. Unmounting : when component is being removed from the dom.
+4. Error Handling : when there is an error in rendering or in any constructor in a children component.
+
+
+>> Mounting Lifecycle Method :
+1. Constructor(props) // so basically it is a function that will get called whenever new component is being created. It is used for intialising the state or binding the eventHandler(). if we are not calling super() inside this then we have to use this. otherwise we cannot do that and constructor is only place where we have access to the this.state otherwise apart from this we always have to use this.setState
+
+2. static getDerivedStateFromProps(props,state) : This method is rarely used lifecycle method as said by react documentation.This method called when the state of the component depend on changes in props. set the state here do not have access to this keyword we need to return object here directly 
+
+3. render() : only required method . here we should not not change state inside render also interact with dom.
+
+4.componentDidMount() : this method called only once in a  whole lifecycle method and invoke immediately after the component and have children component has been rendered to the DOM. This method is perfect to load data and does all the things when interacting with the nodes. when component did mount called so it happens in a reverse order means internal that is child execution first and then parent and then so on goes
+
+>> Updating LifeCycle Method : It appears in a order in which they appear. It gets called when the component is being re rendered on the basis of the properties or state change. It has 5 methods in which 3 are rarely used.
+
+1. static getDerivedStateFromProps(props,state) // this method gets called whenever the component being updated or rerendered it has to return the null object or return the new object of component representing the current state.
+
+2.shouldComponentUpdate(nextProps,nextState) // this method called to decide whenever there is update or should i change the component or not by default if any of the state or props changes then this method gets called. it return false or return true should upate or not by comparing prev props and state with cu
+
+3. render() : same as change to update
+
+4. getSnapshotBeforeUpdate(prevprops,prevstate) // this method called  right before the changes have been reflected in a dom before the virtual dom. it will ereturn the null or the value
+
+5. componentDidUpdate(prevprops,prevstate,(value from the above getsnapshtbeforeuodate)) // this method called when the render happens in a rerender cycle properly .. here this is 100 percent sure that this method called only once
+
+
+
+>> Unmounting phase method : componentwillunmount() this method invoke immediately before the component is bein destroyed and removed from the dom.Here we can do cleanup work like closing network and all those.
+
+>> errorHandlingPhase : these method called when there is any error in component and or in an constructor of parent.
+1. static getDerivedStateFromError(error) 
+2. componentDidCatch(error,info)
+
+>> Fragments : fragment basically helps let you group children element with being created extra node in a dom. 
+ // so basically here fragment means without creating entry to the dom and grouping children . Here one thing is sure that <React.fragment> or <> normal this we have to use in order to do fragmentation and only paramtere that is allowed inside React.fragment is a key = {} // any key that can be used for grouping the table content.
+
+import React, { Component} from "react";
+import { Fragment } from "react";
+class Fragments extends Component{
+    render(){
+        return(
+            // so basically here fragment means without creating entry to the dom and grouping children
+            <React.Fragment key = id> // here id is allowed not anything more than that then we can do whateve we wamt//
+            <h1> What is your name ? </h1>
+            </React.Fragment>
+        )
+    }
+}
+
+export default Fragments
+
+>> Pure Component in react :
+
+One way is a class based component is to extend from the component another way is to extend from the pure component class. Regular Component does not implement shouldComponentUpdate() method by default it always return true where as in case of Pure Component does the immediate shallow props and state comparison. 
+
+In regular always calls as it always return true while in case of purecomponent comparison if the state and props have sma value then does not return true hance called only once. shallow comparison means for the primitives a and b has the same data type and the value and same type like string while in complex data type it has the same reference 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
