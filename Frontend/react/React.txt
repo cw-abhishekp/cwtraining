@@ -363,7 +363,363 @@ export default Fragments
 
 One way is a class based component is to extend from the component another way is to extend from the pure component class. Regular Component does not implement shouldComponentUpdate() method by default it always return true where as in case of Pure Component does the immediate shallow props and state comparison. 
 
-In regular always calls as it always return true while in case of purecomponent comparison if the state and props have sma value then does not return true hance called only once. shallow comparison means for the primitives a and b has the same data type and the value and same type like string while in complex data type it has the same reference 
+In regular always calls as it always return true while in case of purecomponent comparison if the state and props have sma value then does not return true hance called only once. shallow comparison means for the primitives a and b has the same data type and the value and same type like string while in complex data type it has the same reference.
+
+>> Memo : PureComponent only re renders something when there is a difference in a shallow comparison between the props and state for the performance optimisation and here it only works for the class based component . So to achieve this functionality in a functional based component we have something called as memo
+
+import React from "react"
+function MemoComponent({name}){
+    console.log("Memo Component Render")
+    return(
+        <>
+        <h1>My name is : {name}</h1>
+        </>
+    )
+}
+
+export default React.memo(MemoComponent)
+
+.// so here we are using React.memo(inside component name) so this will basically give me a higher order component that will only re render only if there is change in a props and state. so basically it is introduced and worked after react 16 so use that so basically for the performance improvement we do this.
+
+>> refs in a react : refs make it possible to access dom node directly within react.(like focusing a text input) when page loads then input name should be focused. So it is basically used to access a dom node . it is basically an object in which it holds the current dom node object.
+
+So we have three steps to do :
+1. create ref in constructor so that it is accessible to entire component using React.createRef() method 
+2. assign ref to whatever html tag or node we want reference by passing attribute ref = {this.ref_nmae}
+3. call the method using current this.inputref.current.method_name // whatever we want to do
+
+Right now we are adding reference to the html element means a normal html element or tag but is possible to add reference to the class element. so basically we are passing input to the parent component to child means from one by one that is attaching references to the ref
+
+
+>> Forward Ref : Ref forwarding is a technique of automatically forwarding the ref from a component to a one of its children. so basically we can achieve this using React.forwardRef() method that takes paramters as a component that is going to receive a refernce from the component.
+
+
+>> React Portal : React Portal are used to render the children into a dom nodes that exists outside the component hierarchy of the parent component. So basically in a react everything is inside the root component and app is inside that and everything inside that so basically means if we want to render some nodes without in the dom hierarchy then we can use the portal. So basically we can do this using ReactDom.createPortal() // it takes two parameters first one can be anything number,string ,jsx ,component that you want to render where as second parameter is the target means document.getElementbyId("portal-root") where you want to render.
+
+So basically in a react portal also event bubbling happens when an node is fired from the dom tree then event bubbling happens and pass it to the parent like these
+
+
+>> Error Boundary : So basically what happens when we do a normal and if any error then it can unmount the entire dom tree and breaks the code entirely so to handle those thing we do a error catch and then show afallback UI.
+a class component that either implements one or both of the error lifecycle method that is called the error boundary. getDerivedstatefromerror method is used to render a fallback ui after an error is thrown and componentdicatch is basically used to log the information.
+
+
+// this error boundary catches the error in rendering, lifecyle method , constructor of the whole tree but does not catch at a event handler for that you need to use normal if else statement.
+
+>> Higher Order Component :
+So basically what happens in when we are writing the same functionality for so many times then we are not reusing the same code we are simply duplicating the code what we want that we should reuse it again so what we can do if both are present in same parent state then it will work but if both are not in same parent then that becomes problem so to avoid this we have to use higher order component. So immediate thought is to lift this to parent component and then reuse by passing props but it is not always possible if they are so much far apart and higher in number hence we have to use something called as higher order component.
+
+To share common functionality between component we use the higher order component.
+
+So basically higher order component are the enhanced component or advance component that we receive from the passing original component in some function and getting a more advance component.
+
+import { Component } from "react";
+
+const UpdatedComponent = (OriginalComponent) =>{
+    class NewComponent extends Component{
+         constructor(props){
+        super(props)
+        this.state = {
+            count : 0
+        }
+
+        this.incrementCounter = this.incrementCounter.bind(this)
+    }
+
+
+    incrementCounter() {
+        this.setState((prevstate)=>{
+            return {count : prevstate.count + 1}
+        })
+    }
+
+
+        render(){
+            return(
+                <>
+                <OriginalComponent incrementCounter = {this.incrementCounter} count = {this.state.count}/>
+                </>
+            )
+        }
+    }
+     return NewComponent
+}
+
+export default UpdatedComponent
+
+
+>> when we are passing props in a hoc function so it gets wrapped to the higher order component means if we do this.props some other component then that is not accessible so we have to use {... this.props} inside a higher order component at a bottom line so that it can be passed to a other original component . in a hoc we can pass multiple parameters also so that we can do whatever we want to do.
+
+
+>> Render Props : This is the another pattern inorder to use the common functionality as we do in a higher order component. In react it is possible to use prop whose value is a function to control what is actually rendered by the component. Render props are technique to share the code between two component using a prop whose value is a function.
+
+
+>> Context Api :
+Consider the react application has so many component nested at several level if we want to provide a certain props then we need to pass at each level then it goes to that level so to avoid this we use the context api which is a way to pass the data through the component tree without having pass down props manually at each level.
+
+so basically it has the three steps to do this :
+1. create a context 2. provide a context value 3. consume a context value by the necessary component . we can set thedefault value to a context
+
+import React from "react";
+
+const UserContext = React.createContext("Abhishek") // now if we will not use userprovider so while consuming it will use the byfedaultt value = "Abhishek"
+
+
+// so basically we are creating provider and consumer so that we can consume and provide value
+// we need to do do userprovider to whome so that value available to all children otherwise not
+const UserProvider = UserContext.Provider
+const UserConsumer = UserContext.Consumer
+
+
+
+export {UserProvider, UserConsumer}
+
+
+
+import { Component } from "react"
+import ComponentF from "./ComponentF"
+import UserContext from "./UserContext"
+class ComponentE extends Component{
+    static contextType = UserContext
+    render(){
+        return(
+            <>
+            <h1>
+            value using context-type : {this.context}
+            <ComponentF/>
+            </h1>
+            </>
+        )
+    }
+}
+// we are using context class in order to access the value directly using contexttype and then access using this.context
+// ComponentE.contextType = UserContext
+export default ComponentE // ......>>>
+
+>>>>.... this is the simplest way using context but we cannot do in real as we might have so many context in which consumercomponent is good
+
+>> HTTP AND REACT :
+So basically react is a library it does not need to worry anything about the http request .It even does not know about the sever it only knows about the state and props and depending upon state and props it renders the data it just need a data in props and state. Now react is not going to handle http request. So here you have to make use of http library which  will handle the request. (axios and fetch) are those with whome we are going to fetch a data.we will get and add the axios package to the application and then does the use of axios library in order to handle http request and fetch the data or send the data.
+
+To install axios run the command npm install axios 
+
+
+// Get Request using axios and render the fetch data :
+
+   componentDidMount(){
+        axios.get('https://jsonplaceholder.typicode.com/posts')
+        .then((res)=>{
+            console.log(res)
+            this.setState({
+                posts : res.data
+            })
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
+
+
+>> Posting a data from react to somewhere :
+ axios.post('https://jsonplaceholder.typicode.com/posts',this.state) // here the second param is whatever the data we are going to send as a paylod then we are going to get response or catch the error means same as above
+
+
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+>> Hooks : Hooks are used to use advance features of react without the classes. hooks does not work inside the class they work outside the classes.
+Use of this keyword, and also binding eventhandler is problem.Hooks are used to basically make our work easy as simple as that.
+
+.. useState() hook : chai aur code is same as this
+// rules of hooks is that : write hooks at very top level and never call hooks inside the loops,condition or nested function, only call hooks from react function
+
+
+const[name,setName] = useState({firstname : "",lastname :""})
+// so what happens when we implement this so by default usestate does not split the firstname and lastname we have to do it manually otherwise if i write one then it will take that only will not take other hence to avoid this we have to use spread operator that copy the entire object and change the particular value
+
+setName(...name, firstname : Harsh) // so this is copying the entire name and then only changing the firstname so this will work otherwise objedct are themselves not distributable.
+
+
+>> useEffect Hooks ::::
+So basically what happens when we want to do like when button value gets updated then show that update thing in a document title if we want then we have to use componentdidupdate and does all the things and while wrting in a componentdidmount so basically we are writing the same code again and again to avoid these and put together all the necessary things together we use the useffect hook. it is close replacement of componentdidupdate,mount,unmount so for performing side effects in functional component we need the useEffect hook.
+
+So what happens useeffect renders every time a component render. after every render useeffect runs . It is placed inside the function. After every render runs so it might give a problem of performance so we need to set a condition in which this useeffect is going to run.
+
+so basically we can add dependencies [count] as a second parameter that when these values changes then run the useEffect.so basically for calling once the useffect initial only use an [] empty array as a second parameter so that will work passing it will only call once. we are mimickin the componentdidmount() here since it is calling only once.
+
+
+// now doing componentwillunmount() idea means for the cleanup purpose :
+when you want to do cleanup code in useffect then 
+
+inside useEffect(()=>{
+// write the code
+
+return ()=>{
+console.log("Unmounting code");
+// write the removable code it will automatically removed after calling once and remove whatever thing necessary
+}
+},[])
+
+
+>> useEffect With incorrect dependency : means always pass dependency on whome the useEffect is depending 
+
+>> Fetching the data with useEffect :write inside the fetching logic and pass [] otherwise it will fetch for the infinite time or any dependency if dependent on dependency.
+
+....>>> useContext Hook 
+
+So basically in a context api when we have so many nesting like context then we have lots of value then that becomes a problem so to avoid that useContext is uses
+
+<UserConsumer>
+                {
+                    user =>{
+                        return(
+                            <ChannelContext.Consumer>
+                                {
+                                    channel =>{
+                                        return <div>Hello {user} from {channel}</div>
+                                    }
+                                }
+                            </ChannelContext.Consumer>
+                        )
+                    }
+                }
+            </UserConsumer> 
+
+// so here lots of nesting is there so basically avoid this we use the useContext hook.
+
+so basically in normal context api we create,produce and then consume the context all the process of creation and production is same the only difference here in case of consumption we have to use useContext means here we need to do importusecontext and then import all the context we have created and then pass the context created to usecontext hook and use it simply
+
+import { useContext } from "react";
+import UserContext from "./UserContext";
+import { ChannelContext } from "../App";
+
+// this we are doing and using the useContext inorder to consume the values
+function FunctionalComponentContext(){
+    const user = useContext(UserContext)
+    const channel = useContext(ChannelContext)
+
+
+    return(
+        <div>
+            {user} by functional context :::: {channel}
+        </div>
+    )
+}
+
+export default FunctionalComponentContext
+
+
+>> useReducer hook : it is a hook that is used for the state management. it is an alternative to usestate. usestate is build using the usereducer.
+so basically this hook is somewhat related to the reduce method in a array.reduce(reducer,5) // so here reducer is the function wirhparamrer acc and current value similarly in case of useReducer(reducer,initialstate) in reducer we give (currentstate,action) and we get the new state and that state has been passed into useReducer that gives the newstate and dispatch method to specify the action.
+
+
+Actions are basically the instruction to the reducer based on those action reducer function goes and does the transition from one state to another.
+we can use multiple reducer to do as per needed and we can reuse the same piece of reducer and initial state both will be independent of each other means everything different state and reducer will be actually different.
+
+
+>> Currently we have used useReducer with the local sate component means within the component now we want to use useReducer with the global state means outside the component with the help of useReducer and useContext.
+
+We need to implement one counter and want that every component maintain the same counter value to do that we use the useredcuer + usecontext method
+import logo from './logo.svg';
+import './App.css';
+import CounterUseReducer from './Components/CounterUseReducer';
+import CounterObject from './Components/CounterObject';
+import React, { useReducer } from 'react';
+import ComponentD from './Components/ComponentD';
+import ComponentE from './Components/ComponentE';
+import ComponentF from './Components/ComponentF';
+
+
+const initialState = 0;
+
+const reducer = (state,action) =>{
+    switch(action){
+        case 'increment':
+            return state+1
+        case 'decrement':
+            return state-1
+        case 'reset':
+            return 0
+        default:
+            return state
+    }
+}
+
+const Appcontext = React.createContext()
+
+function App() {
+  const [count,dispatch] = useReducer(reducer,initialState);
+  return (
+    <div className="App">
+      {/* <CounterUseReducer/> */}
+      {/* <CounterObject/> */}
+
+      Count - {count}
+      <Appcontext.Provider value = {{countC :count, countDispatch : dispatch}}>
+      <ComponentD/>
+      <ComponentE/>
+      <ComponentF/>
+      </Appcontext.Provider>
+
+    </div>
+  );
+}
+
+export default App;
+export {Appcontext}
+
+
+
+
+>> Fetching the data with useReducer () :-
+
+import { useEffect, useReducer } from "react"
+import axios from 'axios'
+
+const initialState = {
+    loading : true,
+    error : '',
+    posts : {}
+}
+
+const reducer = (state,action) =>{
+    switch(action.type){
+        case 'FETCH-SUCCESS':
+            return {
+                loading : false,
+                error : '',
+                posts : action.payload
+            }
+        case 'FETCH-ERROR':
+            return {
+                loading : false,
+                error : 'Something went wrong!',
+                posts : {}
+            }
+        default:
+            return state
+    }
+}
+function FetchUseReducer(){
+    // dispatch is used to call the function reducer or specify the action like here increment decrement or somehthing like this
+    const [state,dispatch] = useReducer(reducer,initialState);
+
+    useEffect(()=>{
+    axios.get("https://jsonplaceholder.typicode.com/posts/1")
+    .then((res)=>{
+        dispatch({type: 'FETCH-SUCCESS', payload:res.data})
+    })
+    .catch((err)=>{
+        dispatch({type: 'FETCH-ERROR'})
+    })
+    },[])
+    return (
+        <>
+        {state.loading ? 'Loading' : state.posts.title}
+        {state.error ? state.error : null}
+        </>
+    )
+}
+
+export default  FetchUseReducer
+
+>> usereducer vs useEffect :::---- usestate - primitive data type, one or two transition, not related transition ,less complex logic,local state vice versa for usereducer.
 
 
 
@@ -384,7 +740,14 @@ In regular always calls as it always return true while in case of purecomponent 
 
 
 
- 
+
+
+
+
+
+
+
+
 
 
 
