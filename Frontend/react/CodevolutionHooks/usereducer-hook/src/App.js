@@ -7,6 +7,7 @@ import ComponentD from './Components/ComponentD';
 import ComponentE from './Components/ComponentE';
 import ComponentF from './Components/ComponentF';
 import FetchUseReducer from './Components/FetchUseReducer';
+import ParentComponent from './Components/usecallback-hook/ParentComponent';
 
 
 const initialState = 0;
@@ -41,8 +42,9 @@ function App() {
       </Appcontext.Provider> */}
 
 
-      <FetchUseReducer/>
+      {/* <FetchUseReducer/> */}
 
+      <ParentComponent/>
     </div>
   );
 }

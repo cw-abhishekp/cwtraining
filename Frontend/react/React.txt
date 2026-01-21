@@ -719,14 +719,523 @@ function FetchUseReducer(){
 
 export default  FetchUseReducer
 
->> usereducer vs useEffect :::---- usestate - primitive data type, one or two transition, not related transition ,less complex logic,local state vice versa for usereducer.
+>> usereducer vs useEffect :::---- usestate - primitive data type, one or two transition, not related transition ,less complex logic and have no business logic ,local state vice versa for usereducer.
+
+>>usecallback : callback hook is used for the performance optimisation. So basically what happen when we create a normal code and its state and props changes then rendering happen so everytime even if state or props changes always rerendering happens so to avoid this we use something called as React.memo(component) // but here everything fine but if function are passeds as props then everytime something changes then it will  create a new render funtion even if function not changing still it will create a new function hence always re rendering happens here in case of function props to avoid this we have to use usecallback hook.
+
+usecallback is a memoisation function that will store the callback funtion and will cache it and it will return the same function until the dependencies have not been changed/
+
+
+import React from "react"
+
+function Count({text,count}) {
+    console.log(`Rendering ${text}`)
+    return (
+       <div>{text} - {count}</div>
+    )
+}
+
+// this will pretent that only if the props and state changes then the method should call but here in case of
+// the function it would not be able to do as always function gets newer hence callback hook is used if any of the dependencies changes then it will create a new function otherwise will memoise the same function
+export default React.memo(Count)
+
+   // here we are using usecallback so that if dependencies changes then only do the function change otherwise give same
+    const incrementAge  = useCallback(()=>{
+        setAge(age+1);
+    },[age])
+
+    const incrementSalary = useCallback(()=>{
+        setSalary(age+1);
+    },[salary])
+
+>> useMemo hook : it is also concerned with performance optmisation. It is a hook that get recalculated when one of the dependencies get changed to avoid expensive calculation to every render. When we want to cache a function itself then we can use usecallback and when we want to cache the function value then we have to use useMemo hook. 
+cont val = useMemo(()=>{},[age]) // dependency of age so it will cache the value of function val and then recalculate if dependency changes
+
+
+>> useRef : it is simply same as above inorder to have the same reference everywhere and then inputref = useRef(value) >>>. inputref.current // to get current and does whatever you want to do
+
+>>  Custom Hooks : Custom hooks are basically used to share the functionality in order that they can be reusable and become the as non repeatable as possible.They are generally component where we write our logic and then get the required function by calling it and then use that.
+
+
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+
+>> React Redux :- Redux is a predictable state container so basically it manages the state in a very effective. It is for the entire js application not only for the react. So basically when one want to share something then it has to lift it up and then pass it as a props to children. So basically if lot of distribution then state management. So basically to avoid this we use a react container that will hold the state and then does the necessary operation and then atlast return awhatever necessary things. 
+
+Redux is a state management library that we have to use that maintains and manages the state.To directly use redux it is tough to implement.So to avoid this we use React-redux ui binding library for react. For sharing of a state we the redux. (npm install redux is a code to install redux )
+
+
+>> Three Core Concepts :
+1. Store : that holds the state of your application just like a shop holds a cake.
+2. Action : describes what needs to be performed like reduce cake by 1	.
+3. Reducer : that actually carries out the state transition depending on action and current state of application like shopkeeper who does the all the things
+
+>> Three Principal :
+1. the state of your application is stored in an object in a single tree .Maintain our application state in a single object would be managed by redux store.
+
+2. The only way to tell redux what to do is with the help of actions.
+
+3. we need to write reducer inorder to do the state transition and pass a current state and action together inorder to get a new state.
+
+You can directly update the state via js applications or there you need to dispatch actions and then reducer update and then does the state and then goes to apps.
+
+
+>> Actions : they are basically js object and must have type properties and also they are only way to connect to js store.so we need to create a Actioncreator they are basically a function that will create an action means function that will return an action  object
+
+>> Reducer : are basically a function that will take actions and state as an argument and return a new state 
+ 
+
+>> Redux Store  : it is something that brings the action and reducer together. for an entire application we have only redux store.
+..1. holds the application state
+..2. allow access to state via getState()
+..3. allow state to be update via dispatch(action)
+..4. register listener via subscribe(listener)
+..5. unregistering of listener via the function return by the subscribe.
+
+// so here we are doing redux thing in order to mange the application
+/// HERE WE ARE DOING WITH THE ONE REDUCER
+console.log("Redux demo")
+
+// so basically to combine the reducer we have something called as combine reducer provided by redux
+const redux = require('redux')
+const createStore = redux.createStore
+// here we are combining the reducer and then passing the both the reducer as key value 
+const combineReducer = redux.combineReducers
+
+const BUY_CAKE ="BUY_CAKE"
+function buyCake(){
+    return{
+        type : BUY_CAKE,
+        infor : "First redux function"
+    }
+}
+
+const BUY_ICECREAM ="BUY_ICECREAM"
+function buyIcecream(){
+    return{
+        type : BUY_ICECREAM,
+    }
+}
+
+const initialstatecake = {
+    cakes : 10,
+}
+
+
+const initialstateicecream = {
+    icecream : 20
+}
+
+const reducercake = (state = initialstatecake,action)=>{
+
+    switch(action.type){
+        case BUY_CAKE:
+            return{
+                ...state,
+                cakes : state.cakes-1
+            }
+        default: return state
+    }
+}
+
+
+const reducericecream = (state = initialstateicecream,action)=>{
+
+    switch(action.type){
+        case BUY_ICECREAM:
+            return{
+                ...state,
+                icecream : state.icecream-1
+            }
+        default: return state
+    }
+}
+
+// passing both the reducer as a key value pair in a combine reducer so that both works fine
+// here both the reducer recieves tha action where as one acts on action whereas other one ignores that action
+const reducer = combineReducer({
+    cake : reducercake,
+    icecream : reducericecream
+})
+
+ // holding the application state  
+const store = createStore(reducer)
+
+// getState method
+console.log('Intial state',store.getState())
+
+// we are getting the value unsubsribe and then doing all the function
+const unsubscribe = store.subscribe(()=>{console.log('Updated state', store.getState())})
+store.dispatch(buyCake())
+store.dispatch(buyCake())
+store.dispatch(buyIcecream())
+store.dispatch(buyIcecream())
+store.dispatch(buyIcecream())
+store.dispatch(buyCake())
+
+unsubscribe()
+
+
+>> Middleware : it is a way to extend redux with custom functionality. it provides third party action between dispatching an action and reaching it to reducer. use middleware for logging,crash report, perform asynchronous task .. so right now we are using and incorporating something called as redux-logger 
+
+// logger for an application
+const reduxlogger = require('redux-logger')
+const logger = reduxlogger.createLogger()
+
+// to apply middle ware redux library have an method called as applymiddleware
+// so here we are doing redux thing in order to mange the application
+/// HERE WE ARE DOING WITH THE ONE REDUCER
+console.log("Redux demo")
+
+// so basically to combine the reducer we have something called as combine reducer provided by redux
+const redux = require('redux')
+const createStore = redux.createStore
+// here we are combining the reducer and then passing the both the reducer as key value 
+const combineReducer = redux.combineReducers
+
+
+// logger for an application
+const reduxlogger = require('redux-logger')
+const logger = reduxlogger.createLogger()
+
+
+const applymiddleware = redux.applyMiddleware
+
+const BUY_CAKE ="BUY_CAKE"
+function buyCake(){
+    return{
+        type : BUY_CAKE,
+        infor : "First redux function"
+    }
+}
+
+const BUY_ICECREAM ="BUY_ICECREAM"
+function buyIcecream(){
+    return{
+        type : BUY_ICECREAM,
+    }
+}
+
+const initialstatecake = {
+    cakes : 10,
+}
+
+
+const initialstateicecream = {
+    icecream : 20
+}
+
+const reducercake = (state = initialstatecake,action)=>{
+
+    switch(action.type){
+        case BUY_CAKE:
+            return{
+                ...state,
+                cakes : state.cakes-1
+            }
+        default: return state
+    }
+}
+
+
+const reducericecream = (state = initialstateicecream,action)=>{
+
+    switch(action.type){
+        case BUY_ICECREAM:
+            return{
+                ...state,
+                icecream : state.icecream-1
+            }
+        default: return state
+    }
+}
+
+// passing both the reducer as a key value pair in a combine reducer so that both works fine
+// here both the reducer recieves tha action where as one acts on action whereas other one ignores that action
+const reducer = combineReducer({
+    cake : reducercake,
+    icecream : reducericecream
+})
+
+ // holding the application state  and we are here passing the logger in a applymiddleware
+const store = createStore(reducer,applymiddleware(logger))
+
+// getState method
+console.log('Intial state',store.getState())
+
+// we are getting the value unsubsribe and then doing all the function
+const unsubscribe = store.subscribe(()=>{})
+store.dispatch(buyCake())
+store.dispatch(buyCake())
+store.dispatch(buyIcecream())
+store.dispatch(buyIcecream())
+store.dispatch(buyIcecream())
+store.dispatch(buyCake())
+
+unsubscribe()
+
+
+>> Async Actions : Synchronous actions are one with that are as soon as dispatched then it will update the state.so basically we will use the redux thunk and also the axios inorder to correctly fetch the data.
+
+thunk middle allows you to create a action as a function instead of an action object.it does not need to be pure it means it can do async operation and all other things this can do.
+const redux = require('redux')
+const { createStore, applyMiddleware } = redux
+const thunkMiddleware = require('redux-thunk').thunk
+const axios = require('axios')
+
+
+const initialState = {
+    loading : false,
+    users : [],
+    error : ''
+}
+
+const FETCH_USERS_REQUEST = "FETCH_USERS_REQUEST"
+const FETCH_USERS_SUCCESS = "FETCH_USERS_SUCCESS"
+const FETCH_USERS_FAILURE = "FETCH_USERS_FAILURE"
+
+function fetchUsersRequest(){
+    return{
+        type : FETCH_USERS_REQUEST
+    }
+}
+
+function fetchUsersSuccess(users){
+    return{
+        type : FETCH_USERS_SUCCESS,
+        payload : users
+    }
+}
+
+function fetchUsersFailure(error){
+    return{
+        type : FETCH_USERS_FAILURE,
+        payload : error
+    }
+}
+
+
+const reducer = (state = initialState,action) =>{
+    switch(action.type){
+        case FETCH_USERS_REQUEST: return{
+            ...state,
+            loading :true
+        }
+
+        case FETCH_USERS_SUCCESS: return{
+            ...state,
+            loading :false,
+            error : '',
+            users : action.payload
+        }
+
+        case FETCH_USERS_FAILURE: return{
+            ...state,
+            loading :false,
+            error : action.payload,
+            users : []
+        }
+        default: return state
+    }
+}
 
 
 
+const fetchUsers = ()=>{
+    return function(dispatch){
+        dispatch(fetchUsersRequest())
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then((response)=>{
+            const users = response.data.map(user =>user.id)
+            dispatch(fetchUsersSuccess(users))
+        })
+        .catch((error)=>{
+            dispatch(fetchUsersFailure(error.message))
+        })
+    }
+}
+const store = createStore(reducer, applyMiddleware(thunkMiddleware))
+
+const unsubscribe = store.subscribe(()=>{console.log(store.getState())})
+store.dispatch(fetchUsers())
+
+>> React Redux :
+now till the same as we have created a redux store now we have to provide this store to a react application via provider (react-redux) . Provider is a component that has been provided by react-redux in order to get redux store to react application. typically wherever we provide the store it wpuld be available tp avery component. Now we have provided a store to the react application now we want to connect and then does the work.
+
+
+.... mapStateToProps(state) as an parameter and return an object and selector are used to so that we can have something to select and we can use selector file if we have large number of data and we want selective things make selectior.js and then does the calculation atlast take whatever necessary
+
+... mapDispatchToProps(dispatch) and returnd an object 
+
+so basically it will get more props from the component apart from it is getting and dispatch method also it is getting the another props that we have declared actions and state and reducer also using 
+ 
+import BuyCake from "../redux/cakes/CakeActions";
+import {connect} from  'react-redux'
+
+function CakeContainer(props){
+    return(
+        <>
+        <h1> Number of Cakes - {props.numOfCakes}</h1>
+        <button onClick={props.buycake}>Button</button>
+        </>
+    )
+}
+
+const mapStateToProps = state =>({
+    numOfCakes : state.numOfCakes
+})
+
+const mapDispatchToProps = dispatch =>({
+    buycake : () => dispatch(BuyCake())
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(CakeContainer)
+Using connect we are connecting the react-redux and everything
+
+>> Redux with hooks : So basically redux with hooks allows you to do send get and dispatch without using the connect and subscribing to store and dispatching could easily bed done by redux with hooks. How to use hooks instead of connect
+
+.. useSelector : it is a hook that is close equivalent to the matchstatetoprops method that maintains the state that is present in a store return value
+.. useDispatch : it is a hook that is close equivalent to the matchDispatchtoprops method that maintains the state that is present in a store return func
+
+import {useSelector, useDispatch} from  'react-redux'
+import BuyCake from '../redux/cakes/CakeActions'
+function HooksCakeContainer(){
+    // this is a way we are connecting to a store of each one means instead matchStatetoprops 
+    const numOfCakes = useSelector(state => state.numOfCakes)
+    const dispatch = useDispatch()
+    return(
+        <>
+        <h1> Number of Cakes - {numOfCakes}</h1>
+        <button onClick={()=>dispatch(BuyCake())}>Button</button>
+        </>
+    )
+}
+export default HooksCakeContainer
+
+
+>> Logger Middleware in react : npm install redux-logger
+>> Redux devtool extension : it is an helpful tool for an react application redux.
+1. add extension to your browser
+2. redux-dev-tool to a react application using  npm install @redux-devtools/extension
+
+import { composeWithDevTools } from '@redux-devtools/extension'; and then do that const Store = createStore(reducer, composeWithDevTools(
+    applyMiddleware(logger)
+  ))
+
+
+>>Action Payload : it is basically used to send a data means from one to another and then required action... using function value 
+
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+
+>> mapStateToProps: it basically accepts two parameter one is its state and second one is ownprops that we pass and depending on our own props we can decide what to send what to do import {connect} from  'react-redux'
+
+function ItemContainer(props){
+    return(
+        <>
+        <h1> Items - {props.item}</h1>
+        </>
+    )
+}
+
+const mapStateToProps = (state,ownProps) =>{ 
+    const itemstate = ownProps.cake ? state.cake.numOfCakes : state.icecream.numOfIceCream
+    return {
+        item : itemstate
+    }
+}
+
+>> mapDispatchToProps : here also we can pass our own props and we can dispatch and do the same thing as needed by the function means smae thing
 
 
 
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
+............................................................................................................................................................
 
+
+>> Advance Topics :: Whenver rerender happens then new virtual dom created so basically react detect the changes from a previos virtual dom to current virtual dom and then that changes if there will be propogated to ReactDom and then Reactdom will propagate the changes to original dom and communication.
+If react directly changes real dom then upon every rerendering it will create a new dom element and changes and same and again it is same as normal js. 
+Only the function call rerender ionly component whose value changes or you can say that component and only ther child created not parent if not required.
+
+While comparing the primitive has been compared on the basis of values where as the non primitive like object,array has been compared on the basis of references. so whenever we like writing so while setting setState([...arr,5]) // so here it is creating new array and then pushing so different reference and we see in the re rendering..
+
+
+>> Diffing Algorithm : Comparison between the earlier dom tree and new dom tree and detecting changes is called diffing algorithm. In diffing algorithm there has been comparison on the basis of position. So basically what happens when there are two data like static and dynamic in any app so like
+<h1> Counter - {count}</h1> // so basically it create a test node one is static data like counter and 0ne is dynamic data like count so it will change only the dynamic data this is how precise the react works.
+
+
+Key : children(dyamic children we need to provide key that is unique and please do not give index number as key)
+comparison always happen on the basis of position if not key but if key there then it compare on the bais of key if key present
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+>> React Testing Library ::
+.. it is mainly used for checking weather everything working fine or not in a UI as this is a testing library works very well for the dom testing or you can testing the UI . it does not check for the internal working like this component has 5 state so check all the state it does not have anything to do with this. It only focuses on outside this means it has highly focus towards the UI (user interfaces).
+
+so basically react have so many functions like test,it => these are used to describe the function means test and it are used to test inside this whatever we write our library checks for that it to test.
+
+Now we have describe function that is used to basically bind so many test and it function that are actually testing in order to have a common name like we describe login test means login testing it is doing and inside that so many things are there.
+
+>> So there are three specification on the basis of that we need to test like :
+1. .test.js : like we have home.js then its testfile home.test.js and inside this write everything
+2. .spec.js : it is same home.spec.js
+3. __tests_ : here we have to make a folder __test__ and then inside this we have to do make a same name folder like we can have home.js inside this and then write inside the same code as above
+
+
+>> Query Methods : query,find and get and query returns a  null if not present where as get and find by returns an error if not present. FindBy method is async operations hence we need to use await when using findby{whatever required) and then usng async outside.
+
+queryByText(), queryByLabelText and so many things then we have to pass parameter and if we want that matching name present then we have to use second parameter {exact:false} and then if we want to test by the element tag then we have to use queryByRole("button",{name : "add"}) // like this we have to test.
+
+expect(linkelement).tobeInTheDocument or expect(linkelement).toBeNull // means document me hai ki nahi or null hai ki nahi or we ca use tobe(//means inside this what is there)	
+
+
+>>FireEvent : fireevent.click(btn) or it can be fireevent.change(inputvalue) // so basically we use the firevent to check weather this things happen or not so basically there are certain steps first get the element by screen.getelement and then fireevent and then get the message and then and then expect the content  // means there are steps you have to do and perform the steps . we need to include fireevent. 
+
+
+>> waitFor : we need to include waitFor and then do and inside async await and then pass the parameter that it is checking wait for that much time if we will not include waitFor it will give you a error means we are checking right now that element is there if it is taking time then it should wait for some time then check if timelimit so much then wait for specific timeout and then execute whatever needed.
+
+const btn = screen.getByRole('button')
+fireevent.click(btn)
+
+await waitfor(()=>screen.getTestById('li-1'),{timeout:100000}); // this is basically  we are doing that wait for this much time and it is using waitfor 
+expect(screen.getTestById('li-1')).toHaveTextContent('Test List')
+
+... jest.setTimeOut(timeoutvalue) // here means it should wait for this many seconds for the resonse of any 
+
+
+>>> if we will use findBy then we do not need to use waitFor and then code here if we will use findby then it gonna work for the fine means it will work without using waitfor this gonna work fine 
+
+
+>> Mock Service Worker : using the mock service worker it is basically since when we hit a api then it can have host also so basically to avoid this we can test the api as per need means in handlers we need to define post data we are expecting and then return ctx res req and then using that we can do and then we have to mocks inside that we have to use server handlers and then add in a setuptest and then does the thing you want to do by await method means it is same just check the content and mock service worker means we have to do as per our api then we have to use rest and rest.get rest.post 
+
+
+rest.get('api',(req,res,ctx)=>{
+return res(
+ctx.json({
+data : data we are giving 
+name : "Code demo" // means it can be anything inside this means we can specify anything any data kuch bhi
+}))
+
+
+>>beforeAll(),afterAll(),beforeEach(),afterEach() ::
+
+beforeAll(()=>{
+//write here whatver needed // here we can write any function 
+})
+
+// so beforeAll,afterAll,beforeEach,afterEach they are function that are used basically inorder to have all means eitherbefore or after all the function and then each means before and after the each function
 
 
 
