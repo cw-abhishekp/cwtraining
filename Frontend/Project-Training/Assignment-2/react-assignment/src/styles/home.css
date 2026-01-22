@@ -1,0 +1,144 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 24px;
+  padding: 0 260px;
+}
+
+/* Right side list */
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Card */
+.car-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image section */
+.image-carousel {
+  position: relative;
+  height: 180px;
+  background: #000;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff8c00;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* No image UI */
+.no-image {
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.request-photo {
+  margin-top: 6px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Body */
+.card-body {
+  padding: 12px 14px;
+}
+
+.car-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 4px 0 6px;
+}
+
+.car-meta {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.car-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.make-offer {
+  color: #1976d2;
+  font-size: 13px;
+  cursor: pointer;
+  justify-self: start;  
+}
+
+.emi {
+  font-size: 12px;
+  color: #777;
+  margin: 6px 0 10px;
+}
+
+.seller-btn {
+  width: 100%;
+  padding: 10px;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.seller-btn:hover {
+  background: #c62828;
+}
+
+/* Carousel nav */
+.image-carousel .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.image-carousel .left { left: 8px; }
+.image-carousel .right { right: 8px; }

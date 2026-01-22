@@ -1,33 +1,46 @@
-import { FETCH_USERS_FAILURE, FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS } from "./CarTypes"
+import {
+  FETCH_CARS_REQUEST,
+  FETCH_CARS_SUCCESS,
+  FETCH_CARS_FAILURE
+} from "./CarTypes";
 
 const initialState = {
-    loading : false,
-    data : [],
-    error : ''
-}
+  loading: false,
+  data: [],
+  error: ""
+};
 
-const CarReducer = (state = initialState,action) =>{
-    switch(action.type){
-        case FETCH_USERS_REQUEST: return{
-            ...state,
-            loading :true
+const CarReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_CARS_REQUEST:
+      return { ...state, loading: true };
+
+    case FETCH_CARS_SUCCESS:
+  return {
+    ...state,
+    loading: false,
+    data: action.append
+      ? {
+          ...action.payload,
+          stocks: [
+            ...(state.data.stocks || []),
+            ...(action.payload.stocks || [])
+          ]
         }
+      : action.payload
+  };
 
-        case FETCH_USERS_SUCCESS: return{
-            ...state,
-            loading :false,
-            error : '',
-            data : action.payload
-        }
 
-        case FETCH_USERS_FAILURE: return{
-            ...state,
-            loading :false,
-            error : action.payload,
-            data : []
-        }
-        default: return state
-    }
-}
+    case FETCH_CARS_FAILURE:
+      return { ...state, loading: false, error: action.payload };
 
-export default CarReducer
+    default:
+      return state;
+  }
+};
+
+export default CarReducer;
+
+
+
+
