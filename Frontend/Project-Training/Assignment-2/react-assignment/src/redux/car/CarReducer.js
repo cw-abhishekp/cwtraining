@@ -6,19 +6,25 @@ import {
 
 const initialState = {
   loading: false,
+  isFetchingNext: false,  
   data: [],
   error: ""
 };
 
 const CarReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_CARS_REQUEST:
-      return { ...state, loading: true };
+case FETCH_CARS_REQUEST:
+  return {
+    ...state,
+    loading: true,
+    isFetchingNext: action.append || false
+  };
 
-    case FETCH_CARS_SUCCESS:
+case FETCH_CARS_SUCCESS:
   return {
     ...state,
     loading: false,
+    isFetchingNext: false,  
     data: action.append
       ? {
           ...action.payload,
@@ -29,8 +35,6 @@ const CarReducer = (state = initialState, action) => {
         }
       : action.payload
   };
-
-
     case FETCH_CARS_FAILURE:
       return { ...state, loading: false, error: action.payload };
 

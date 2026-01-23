@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import fetchMake from "../redux/make/MakeActions";
 import fetchCity from "../redux/city/CityActions";
@@ -23,6 +23,38 @@ function Home() {
     dispatch(fetchCity());
   }, []);
 
+ const prevHeightRef = useRef(0);
+const listRef = useRef(null);
+
+useEffect(() => {
+  const handleScroll = () => {
+    const nearBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 300;
+
+    if (nearBottom && data?.nextPageUrl && !loading) {
+      prevHeightRef.current = document.documentElement.scrollHeight;
+      dispatch(fetchUsers(data.nextPageUrl));
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [data?.nextPageUrl, loading, dispatch]);
+
+useEffect(() => {
+  if (!loading && prevHeightRef.current) {
+    const newHeight = document.documentElement.scrollHeight;
+    const diff = newHeight - prevHeightRef.current;
+
+    window.scrollTo({
+      top: window.scrollY + diff,
+      behavior: "instant"
+    });
+  }
+}, [loading]);
+
+
   const sortedStocks = useMemo(() => {
     return sortData(data?.stocks || [], filters.sortBy);
   }, [data, filters.sortBy]);
@@ -34,12 +66,20 @@ function Home() {
   <Filter />
   <div>
     <SortBy />
-    <div className="car-list">
-      {sortedStocks.map(car => (
-        <Card key={car.profileId} data={car} />
-      ))}
+   <div className="car-list">
+  {sortedStocks.map(car => (
+    <Card key={car.profileId} data={car} />
+  ))}
+
+  {loading && (
+    <div className="scroll-loader">
+      <span className="spinner" /> Loading more cars...
     </div>
+  )}
+</div>
+
   </div>
+  <div className="scroll-loader">Loading more cars…</div>
 </div>
   );
 }

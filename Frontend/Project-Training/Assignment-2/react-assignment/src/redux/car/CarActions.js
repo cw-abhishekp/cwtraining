@@ -35,13 +35,22 @@ import axios from "axios";
 
 
 const fetchUsers = (nextPage = null) => async (dispatch, getState) => {
-  try {
-    dispatch({ type: "FETCH_CARS_REQUEST" });
+  const { carData } = getState();
 
-    const { filterData } = getState();
+  if (carData.isFetchingNext) return;
+
+  try {
+    dispatch({
+      type: "FETCH_CARS_REQUEST",
+      append: !!nextPage
+    });
+
     let url = "http://localhost:5000/api/stocks";
 
-    if (!nextPage) {
+    if (nextPage) {
+      url = "http://localhost:5000" + nextPage;
+    } else {
+      const { filterData } = getState();
       const params = [];
 
       if (filterData.fuel.length)
@@ -54,8 +63,6 @@ const fetchUsers = (nextPage = null) => async (dispatch, getState) => {
         params.push(`city=${filterData.cityIds.join("+")}`);
 
       if (params.length) url += "?" + params.join("&");
-    } else {
-      url = "http://localhost:5000" + nextPage;
     }
 
     const { data } = await axios.get(url);
@@ -69,6 +76,7 @@ const fetchUsers = (nextPage = null) => async (dispatch, getState) => {
     dispatch({ type: "FETCH_CARS_FAILURE", payload: err.message });
   }
 };
+
 
 
 // const fetchUsers = (nextPage = null) => async (dispatch, getState) => {
