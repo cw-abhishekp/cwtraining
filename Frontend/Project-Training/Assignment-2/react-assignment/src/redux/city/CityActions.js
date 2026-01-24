@@ -23,16 +23,22 @@ const fetchCity = () => {
     return async function (dispatch) {
         dispatch(fetchCityRequest());
 
-        await fetch("http://localhost:5000/api/cities")
-            .then((response) => response.json())
-            .then((data) => {
-                dispatch(fetchCitySuccess(data));
-            })
-            .catch((error) => {
-                dispatch(fetchCityFailure(error.message));
-            });
+        try {
+            const response = await fetch("http://localhost:5000/api/cities");
+
+            if (!response.ok) {
+                throw new Error("Server error while fetching cities");
+            }
+
+            const data = await response.json();
+            dispatch(fetchCitySuccess(data));
+
+        } catch (error) {
+            dispatch(fetchCityFailure(error.message));
+        }
     };
 };
+
 
 export default fetchCity
 

@@ -1,37 +1,36 @@
 import { FETCH_MAKE_ID_REQUEST, FETCH_MAKE_ID_FAILURE, FETCH_MAKE_ID_SUCCESS } from "./MakeTypes"
 
-function fetchMakeIdRequest() {
-    return {
-        type: FETCH_MAKE_ID_REQUEST
-    }
-}
+export const fetchMakeIdRequest = () => {
+  return { type: "FETCH_MAKE_ID_REQUEST" };
+};
 
-function fetchMakeIdSuccess(data) {
-    return {
-        type: FETCH_MAKE_ID_SUCCESS,
-        payload: data
-    }
-}
+export const fetchMakeIdSuccess = (data) => {
+  return { type: "FETCH_MAKE_ID_SUCCESS", payload: data };
+};
 
-function fetchMakeIdFailure(error) {
-    return {
-        type: FETCH_MAKE_ID_FAILURE,
-        payload: error
-    }
-}
+export const fetchMakeIdFailure = (error) => {
+  return { type: "FETCH_MAKE_ID_FAILURE", payload: error };
+};
+
 const fetchMake = () => {
     return async function (dispatch) {
         dispatch(fetchMakeIdRequest());
 
-        await fetch("http://localhost:5000/api/v2/makes/?type=new")
-            .then((response) => response.json())
-            .then((data) => {
-                dispatch(fetchMakeIdSuccess(data));
-            })
-            .catch((error) => {
-                dispatch(fetchMakeIdFailure(error.message));
-            });
+        try {
+            const response = await fetch("http://localhost:5000/api/v2/makes/?type=new");
+
+            if (!response.ok) {
+                throw new Error("Server error while fetching cars");
+            }
+
+            const data = await response.json();
+            dispatch(fetchMakeIdSuccess(data));
+
+        } catch (error) {
+            dispatch(fetchMakeIdFailure(error.message));
+        }
     };
 };
+
 
 export default fetchMake

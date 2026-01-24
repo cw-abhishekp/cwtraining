@@ -12,8 +12,6 @@ app.get('/api/stocks', async (req, res) => {
     const params = new URLSearchParams(req.query).toString();
     const url = `https://stg.carwale.com/api/stocks?${params}`;
 
-    console.log("Proxying to:", url);
-
     const response = await fetch(url);
     const data = await response.json();
     res.json(data);

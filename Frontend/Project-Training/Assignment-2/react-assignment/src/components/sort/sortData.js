@@ -1,21 +1,34 @@
 export default function sortData(data = [], sortBy) {
-  const list = [...data];
-  console.log(sortBy)
-  console.log(list)
+  // 1. Remove duplicates by profileId
+  const uniqueList = Array.from(
+    new Map(data.map(item => [item.profileId, item])).values()
+  );
+
+  // console.log(sortBy)
+  // console.log(data)
+  // 2. Sort the deduplicated list
   switch (sortBy) {
     case "Price - Low to High":
-      return list.sort((a, b) => +a.priceNumeric - +b.priceNumeric);
+      return uniqueList.sort(
+        (a, b) => +a.priceNumeric - +b.priceNumeric
+      );
 
     case "Price - High to Low":
-      return list.sort((a, b) => +b.priceNumeric - +a.priceNumeric);
+      return uniqueList.sort(
+        (a, b) => +b.priceNumeric - +a.priceNumeric
+      );
 
     case "Year - Old to New":
-      return list.sort((a, b) => a.makeYear - b.makeYear);
+      return uniqueList.sort(
+        (a, b) => a.makeYear - b.makeYear
+      );
 
     case "Year - New to Old":
-      return list.sort((a, b) => b.makeYear - a.makeYear);
+      return uniqueList.sort(
+        (a, b) => b.makeYear - a.makeYear
+      );
 
     default:
-      return list;
+      return uniqueList;
   }
 }
