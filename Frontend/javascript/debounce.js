@@ -10,7 +10,7 @@ const debounce = (fun,time)=>{
     return function(){
         clearTimeout(timer);
         timer = setTimeout(() => {
-            fun(this,args)
+            fun(this,args)  
         }, time);
     }
 }

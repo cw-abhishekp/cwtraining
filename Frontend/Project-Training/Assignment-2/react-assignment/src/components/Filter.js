@@ -48,6 +48,7 @@ function Filter() {
       [min, max] = [max, min]; // Swap values
     }
 
+
     setMinBudget(min);
     setMaxBudget(max);
     setMinInput(String(min));
@@ -74,6 +75,15 @@ function Filter() {
     [cityData, citySearch]
   );
 
+function clearAll(){
+    dispatch(clearFilter())
+    setMinBudget(0);
+    setMaxBudget(50);
+    setMinInput(String(0));
+    setMaxInput(String(50));
+
+  }
+  
   const toggleSection = (key) => setExpanded((p) => ({ ...p, [key]: !p[key] }));
 
   // Debounced budget change handler
@@ -181,7 +191,7 @@ function Filter() {
           />
           <h4>Filters</h4>
         </div>
-        <button className="clear-all-btn" onClick={() => dispatch(clearFilter())}>
+        <button className="clear-all-btn" onClick={() => clearAll()}>
           Clear All
         </button>
       </div>
