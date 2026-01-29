@@ -1,0 +1,369 @@
+/* Variables for Exact Colors */
+:root {
+  --primary-red: #d02d25;
+  --bg-gray: #f5f5f5;
+  --text-dark: #333;
+  --text-light: #666;
+  --border-color: #e8e8e8;
+  --hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* --- MAIN LAYOUT --- */
+.grid {
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 15px;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* --- SIDEBAR FILTER (Fixed but in flow) --- */
+.filter {
+  position: sticky;
+  top: 80px;
+  width: 280px;
+  max-height: calc(100vh - 100px);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+/* --- RIGHT SIDE CONTENT --- */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+/* .sort-container {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+
+
+.filters{
+  justify-self: left;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+} */
+
+.sort-select:hover,
+.sort-select:focus,
+.sort-select:active {
+  border-color: #00897b;
+}
+
+.sort-container {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  margin-bottom: 15px;
+}
+
+.sort-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;               
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;      
+  flex-shrink: 0;
+}
+
+.chip {
+  background: #eee;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  white-space: nowrap;
+}
+
+.chip button {
+  border: 1px solid #999;
+  background: white;
+  font-size: 11px;
+  padding: 0 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sort-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 28px;
+}
+
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Disabled state during loading */
+.car-list.loading {
+  pointer-events: none;
+  opacity: 0.5;
+  filter: blur(2px);
+  user-select: none;
+}
+
+/* --- LOADING OVERLAY --- */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+}
+
+.loading-content {
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary-red);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-content p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* --- SCROLL LOADER (Bottom) --- */
+.scroll-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--primary-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* --- EMPTY STATE --- */
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 40px 20px;
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.empty-state-content {
+  text-align: center;
+  max-width: 450px;
+}
+
+.empty-state-icon {
+  margin-bottom: 30px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.empty-state-icon svg {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+.empty-state-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.empty-state-description {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+.clear-filters-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(208, 45, 37, 0.2);
+}
+
+.clear-filters-btn:hover {
+  background-color: #b82620;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(208, 45, 37, 0.3);
+}
+
+.clear-filters-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(208, 45, 37, 0.2);
+}
+
+.clear-filters-btn svg {
+  flex-shrink: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .car-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .filter {
+    position: relative;
+    width: 100%;
+    max-height: none;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .car-list {
+    grid-template-columns: 1fr;
+  }
+
+  .empty-state {
+    min-height: 400px;
+    padding: 30px 15px;
+  }
+
+  .empty-state-icon svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .empty-state-title {
+    font-size: 24px;
+  }
+
+  .empty-state-description {
+    font-size: 14px;
+  }
+
+  .clear-filters-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
