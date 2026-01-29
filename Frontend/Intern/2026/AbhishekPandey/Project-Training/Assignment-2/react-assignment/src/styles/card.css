@@ -1,0 +1,190 @@
+.car-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.no-image {
+  position: relative;
+}
+
+.request-photo-btn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.car-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+}
+
+.no-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.car-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.car-card:hover {
+  box-shadow: var(--hover-shadow);
+}
+
+.image-carousel {
+  height: 210px;
+  position: relative;
+  background: #f0f0f0;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 2px;
+  color: #333;
+  background: #ffc107;
+  z-index: 2;
+}
+
+.tag-owner {
+  background: #00897b;
+  color: white;
+}
+
+.no-image {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+.request-photo-btn {
+  margin-top: 10px;
+  background: white;
+  border: 1px solid #888;
+  padding: 6px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.car-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.car-meta {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.car-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.75;
+  text-decoration: dashed underline;
+}
+
+.emi-text {
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+.card-actions {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.make-offer {
+  color: #00857a;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  opacity: 0.8;
+}
+
+.seller-btn {
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Navigation Arrows */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav.left {
+  left: 10px;
+}
+
+.nav.right {
+  right: 10px;
+}
