@@ -1,5 +1,5 @@
 import { FETCH_MAKE_ID_REQUEST, FETCH_MAKE_ID_FAILURE, FETCH_MAKE_ID_SUCCESS } from "./MakeTypes"
-
+import { MAKE_API } from "../../utils/api";
 export const fetchMakeIdRequest = () => {
   return { type: "FETCH_MAKE_ID_REQUEST" };
 };
@@ -17,7 +17,7 @@ const fetchMake = () => {
         dispatch(fetchMakeIdRequest());
 
         try {
-            const response = await fetch("http://localhost:5000/api/v2/makes/?type=new");
+            const response = await fetch(MAKE_API);
 
             if (!response.ok) {
                 throw new Error("Server error while fetching cars");

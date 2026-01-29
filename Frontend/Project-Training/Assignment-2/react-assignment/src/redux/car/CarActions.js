@@ -1,4 +1,5 @@
 import axios from "axios";
+import { CARS_API, HOST_API } from "../../utils/api";
 
 const fetchCars = (nextPage = null) => async (dispatch, getState) => {
   const { carData } = getState();
@@ -10,10 +11,10 @@ const fetchCars = (nextPage = null) => async (dispatch, getState) => {
       append: !!nextPage
     });
 
-    let url = "http://localhost:5000/api/stocks";
+    let url = CARS_API
 
     if (nextPage) {
-      url = "http://localhost:5000" + nextPage;
+      url = HOST_API + nextPage;
     } else {
       const { filterData } = getState();
       const params = [];

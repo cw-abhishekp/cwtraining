@@ -42,7 +42,7 @@ body {
   position: relative;
 }
 
-.sort-container {
+/* .sort-container {
   background-color: #f9f9f9;
   border: 1px solid var(--border-color);
   border-radius: 6px;
@@ -54,6 +54,11 @@ body {
   padding: 0 15px;
 }
 
+
+.filters{
+  justify-self: left;
+}
+
 .sort-select {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -61,7 +66,7 @@ body {
   font-size: 14px;
   background: white;
   cursor: pointer;
-}
+} */
 
 .sort-select:hover,
 .sort-select:focus,
@@ -69,6 +74,68 @@ body {
   border-color: #00897b;
 }
 
+.sort-container {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  margin-bottom: 15px;
+}
+
+.sort-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;               
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;      
+  flex-shrink: 0;
+}
+
+.chip {
+  background: #eee;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  white-space: nowrap;
+}
+
+.chip button {
+  border: 1px solid #999;
+  background: white;
+  font-size: 11px;
+  padding: 0 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sort-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 28px;
+}
 
 .car-list {
   display: grid;
@@ -155,7 +222,7 @@ body {
   animation: spin 0.8s linear infinite;
 }
 
-/* --- ✅ EMPTY STATE --- */
+/* --- EMPTY STATE --- */
 .empty-state {
   display: flex;
   align-items: center;

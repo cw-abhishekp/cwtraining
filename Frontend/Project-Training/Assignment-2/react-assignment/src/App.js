@@ -1,5 +1,5 @@
 import './App.css';
-import Card from './components/Card';
+import Card from './components/Card_Carousel';
 import { Provider } from 'react-redux';
 import Store from '../src/store/Store';
 import Home from './components/Home';

@@ -9,7 +9,7 @@
     max-height: 100%;
   }
 
-  /* Filter Header - Fixed at top */
+  /* Filter Header */
   .filter-main-header {
     display: flex;
     justify-content: space-between;

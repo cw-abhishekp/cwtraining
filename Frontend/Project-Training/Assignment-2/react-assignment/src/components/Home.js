@@ -4,30 +4,16 @@ import fetchMake from "../redux/make/MakeActions";
 import fetchCity from "../redux/city/CityActions";
 import fetchCars from "../redux/car/CarActions";
 import { changeFuelType, changeMakeId, changeCity, changeBudget } from "../redux/filter/FilterActions";
-import Card from "./Card";
+import Card from "./Card_Carousel";
 import Filter from "./Filter";
 import SortBy from "./Sort/SortBy";
 import sortData from "./Sort/SortData";
 import "../styles/home.css";
-
-// Helper function to sanitize budget
-const sanitizeBudget = (budgetString) => {
-  if (!budgetString) return "0-50";
-
-  let [min, max] = budgetString.split("-").map(Number);
-
-  min = isNaN(min) ? 0 : Math.max(0, Math.min(min, 100));
-  max = isNaN(max) ? 50 : Math.max(0, Math.min(max, 100));
-
-  if (min > max) {
-    [min, max] = [max, min];
-  }
-
-  return `${min}-${max}`;
-};
+import { sanitizeBudget } from "../utils/HomeUtils";
 
 function Home() {
   const dispatch = useDispatch();
+  const filt = useRef([])
   const { data, loading } = useSelector((state) => state.carData);
   const filters = useSelector((state) => state.filterData);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
@@ -41,13 +27,7 @@ function Home() {
     dataRef.current = data;
   }, [data]);
 
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-    if (currentPath !== '/') {
-      window.location.href = '/';
-    }
-  }, []);
-
+ 
 
   // Initialize filters from URL on mount
   useEffect(() => {
@@ -66,12 +46,12 @@ function Home() {
     hasInitializedFromURL.current = true;
     isInitialLoad.current = false;
 
-    const handlePopState = () => {
-      window.location.reload();
-    };
+    // const handlePopState = () => {
+    //   window.location.reload();
+    // };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    // window.addEventListener('popstate', handlePopState);
+    // return () => window.removeEventListener('popstate', handlePopState);
   }, [dispatch]);
 
   // Update URL when filters change
@@ -91,7 +71,7 @@ function Home() {
     if (window.location.search !== `?${newSearch}`) {
       window.history.replaceState({}, '', newUrl);
     }
-  }, [filters.fuel, filters.budget, filters.makeIds, filters.cityIds]);
+  }, [filters]);
 
   useEffect(() => {
     dispatch(fetchCars());
@@ -100,7 +80,7 @@ function Home() {
   useEffect(() => {
     dispatch(fetchMake());
     dispatch(fetchCity());
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -146,6 +126,14 @@ function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [loading, isLoadingMore, dispatch]);
 
+   useEffect(() => {
+    const currentPath = window.location.pathname;
+    if (currentPath !== '/') {
+      window.location.href = '/';
+    }
+  }, []);
+
+
   useEffect(() => {
     if (!loading && !data?.isFetchingNext && isLoadingMore) {
       setIsLoadingMore(false);
@@ -156,8 +144,16 @@ function Home() {
     return sortData(data?.stocks || [], filters.sortBy);
   }, [data?.stocks, filters.sortBy]);
 
-  // Check if any filters are active
+
   const hasActiveFilters = useMemo(() => {
+    let arr = [];
+    (filters.fuel?.length > 0) ? arr.push(true) : arr.push(false);
+    (filters.makeIds?.length > 0) ? arr.push(true) : arr.push(false);
+    (filters.cityIds?.length > 0) ? arr.push(true) : arr.push(false);
+    (filters.budget && filters.budget !== "0-50") ? arr.push(true) : arr.push(false);
+    console.log(filt);
+    filt.current =arr;
+    console.log(filt);
     return (
       filters.fuel?.length > 0 ||
       filters.makeIds?.length > 0 ||
@@ -165,6 +161,9 @@ function Home() {
       (filters.budget && filters.budget !== "0-50")
     );
   }, [filters]);
+
+
+
   //  Check if we should show empty state
   const showEmptyState = !loading && sortedStocks.length === 0;
 
@@ -180,7 +179,7 @@ function Home() {
         {/* Sort Container - Only show when there are results */}
         {sortedStocks.length > 0 && (
           <div className="sort-container">
-            <SortBy />
+            <SortBy array = {filt.current}/>
           </div>
         )}
 

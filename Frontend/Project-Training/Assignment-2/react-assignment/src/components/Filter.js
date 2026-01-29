@@ -3,7 +3,6 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { changeFuelType, changeMakeId, changeCity, clearFilter, changeBudget } from "../redux/filter/FilterActions";
 import { fuelMap } from "../constants/fuelMap";
 import '../styles/filter.css';
-
 const toggle = (arr = [], v) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
 
 function Filter() {
@@ -12,6 +11,7 @@ function Filter() {
   const cityData = useSelector((s) => s.cityData.data || []);
   const { fuel = [], budget = "0-50", makeIds = [], cityIds = [] } = useSelector((s) => s.filterData);
 
+  console.log(fuel,"fuel this is")
   const [expanded, setExpanded] = useState({
     budget: true,
     make: true,
@@ -26,26 +26,22 @@ function Filter() {
   const [minBudget, setMinBudget] = useState(0);
   const [maxBudget, setMaxBudget] = useState(50);
 
-  // Local state for input field values (allow partial typing)
   const [minInput, setMinInput] = useState("0");
   const [maxInput, setMaxInput] = useState("50");
 
   // Debounce timer ref
   const debounceTimer = useRef(null);
 
-  // Initialize local state from Redux
   useEffect(() => {
     if (!budget) return;
 
     let [min, max] = budget.split("-").map(Number);
 
-    // Sanitize: ensure min and max are valid numbers
     min = isNaN(min) ? 0 : Math.max(0, Math.min(min, 100));
     max = isNaN(max) ? 50 : Math.max(0, Math.min(max, 100));
 
-    // CRITICAL: Ensure min <= max, swap if needed
     if (min > max) {
-      [min, max] = [max, min]; // Swap values
+      [min, max] = [max, min]; 
     }
 
 
@@ -61,17 +57,17 @@ function Filter() {
     }
   }, [budget, dispatch]);
 
-  useEffect(() => {
-    // console.log("Filter component - Redux state:", { fuel, budget, makeIds, cityIds });
-  }, [fuel, budget, makeIds, cityIds]);
+  // useEffect(() => {
+  //   // console.log("Filter component - Redux state:", { fuel, budget, makeIds, cityIds });
+  // }, [fuel, budget, makeIds, cityIds]);
 
   const filteredMakes = useMemo(() =>
-    makeData.filter((m) => m.makeName.toLowerCase().includes(makeSearch.toLowerCase())),
+    makeData? makeData.filter((m) => m.makeName.toLowerCase().includes(makeSearch.toLowerCase())) : [],
     [makeData, makeSearch]
   );
-
+  
   const filteredCities = useMemo(() =>
-    cityData.filter((c) => c.CityName.toLowerCase().includes(citySearch.toLowerCase())),
+    cityData? cityData.filter((c) => c.CityName.toLowerCase().includes(citySearch.toLowerCase())) : [],
     [cityData, citySearch]
   );
 
@@ -100,7 +96,7 @@ function clearAll(){
     setMaxInput(String(newMax));
 
     // Dispatch after 1 second
-    debounceTimer.current = setTimeout(() => {
+    debounceTimer.current = setTimeout(() =>  {
       dispatch(changeBudget(`${newMin}-${newMax}`));
     }, 1000);
   };
