@@ -1,0 +1,3 @@
+obj\Debug\net8.0\Protos/Cities.cs \
+obj\Debug\net8.0\Protos/CitiesGrpc.cs: C:/Users/abhishek.p/.nuget/packages/grpc.tools/2.78.0/build/native/include/google/protobuf/empty.proto\
+ Protos/cities.proto

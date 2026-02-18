@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "StocksGrpcService.Protos";
+
+package make;
+
+// gRPC Service Definition
+service MakeService {
+  rpc GetMake (google.protobuf.Empty) returns (MakeListgrpcDTO);
+}
+
+message MakegrpcDTO{
+  int32 make_id=1;
+  string make_name = 2;
+}
+
+message MakeListgrpcDTO{
+  repeated  MakegrpcDTO make =1;
+}
+
