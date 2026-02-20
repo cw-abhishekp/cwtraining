@@ -3,6 +3,8 @@ using StocksService.Interfaces;
 
 namespace StocksController.Controllers;
 
+
+// controller for the make table,which will be used to retrieve all car makes from the database
 [ApiController]
 [Route("api/v1/[controller]")]
 public class MakeController : ControllerBase

@@ -12,11 +12,11 @@ using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+// 0. Configure the logging with Serilog
 builder.Host.UseSerilog((context, services, configuration) => configuration
     .ReadFrom.Configuration(context.Configuration));
 
-// Add services to the container.
+// 1.  Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -45,7 +45,7 @@ builder.Services.AddScoped<ICitiesService, CitiesService>();
 builder.Services.AddScoped<IResponseStocksLogic, ResponseStocksLogic>();
 builder.Services.AddScoped<IResponseNextPage, ResponseNextPage>();
 
-// Register the Grpc Clients
+// 2. Register the Grpc Clients
 var grpcUrl = builder.Configuration["GrpcSettings:ServerUrl"]
               ?? throw new InvalidOperationException("GrpcSettings:ServerUrl not configured");
 
@@ -59,7 +59,7 @@ builder.Services.AddSingleton<ICitiesGrpcClient>(sp =>
     new CitiesGrpcClient(grpcUrl, sp.GetRequiredService<ILogger<CitiesGrpcClient>>()));
 
 
-// Customizing the model validation error response using the modelsatet
+// 3. Customizing the model validation error response using the modelsate
 builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(options =>
     {
@@ -80,9 +80,12 @@ builder.Services.AddControllers()
 
 var app = builder.Build();
 
+
+// 4. Add global exception handling middleware
 app.UseMiddleware<GlobalExceptionMiddleware>();
 
-app.UseCors("MyPolicyName"); 
+// 5. Configure CORS to allow requests from the React frontend
+app.UseCors("MyPolicyName");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

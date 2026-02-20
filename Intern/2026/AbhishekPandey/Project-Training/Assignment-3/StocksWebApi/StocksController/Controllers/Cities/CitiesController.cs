@@ -3,6 +3,7 @@ using StocksService.Interfaces;
 
 namespace StocksController.Controllers;
 
+// controller for cities, which will be used to retrieve all cities from the database
 [ApiController]
 [Route("api/v1/[controller]")]
 public class CitiesController : ControllerBase

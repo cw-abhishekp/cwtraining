@@ -999,3 +999,20 @@
 2026-02-20 13:13:30.483 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
 2026-02-20 13:13:30.490 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 105.9417ms
 2026-02-20 13:13:54.324 +05:30 [INF] Application is shutting down...
+2026-02-20 13:25:28.499 +05:30 [INF] Now listening on: http://localhost:5133
+2026-02-20 13:25:28.535 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 13:25:28.536 +05:30 [INF] Hosting environment: Development
+2026-02-20 13:25:28.536 +05:30 [INF] Content root path: C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksGrpc\StocksGrpcService
+2026-02-20 13:25:35.405 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:25:35.511 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:25:35.705 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 13:25:35.721 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:25:37.609 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:25:37.790 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:25:37.794 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:25:37.905 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:25:37.947 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 2226ms
+2026-02-20 13:25:37.963 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:25:37.995 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:25:38.007 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 2604.6318ms
+2026-02-20 13:25:49.990 +05:30 [INF] Application is shutting down...

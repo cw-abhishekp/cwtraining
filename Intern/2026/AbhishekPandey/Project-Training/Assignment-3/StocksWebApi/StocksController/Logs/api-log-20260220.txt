@@ -719,3 +719,13 @@
 2026-02-20 13:13:30.491 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
 2026-02-20 13:13:30.491 +05:30 [INF] Stocks Service: Returning 30 stocks to client
 2026-02-20 13:13:30.491 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-20 13:24:52.249 +05:30 [INF] Starting Web API...
+2026-02-20 13:25:34.904 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-20 13:25:35.057 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-20 13:25:35.067 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-20 13:25:35.074 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-20 13:25:35.082 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-20 13:25:38.056 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 2973ms
+2026-02-20 13:25:38.062 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-20 13:25:38.101 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-20 13:25:38.105 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.

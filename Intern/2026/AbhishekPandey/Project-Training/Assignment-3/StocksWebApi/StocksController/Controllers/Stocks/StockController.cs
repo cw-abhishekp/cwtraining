@@ -6,6 +6,7 @@ using StocksController.Validation;
 
 namespace StocksController.Controllers
 {
+    // controller for the stocks endpoint, which will return a list of stocks based on the filters provided in the query parameters
     [ApiController]
     [Route("api/v1/stocks")]
     public class StockController : ControllerBase
