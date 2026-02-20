@@ -1,4 +1,4 @@
- using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging;
 using StocksCommon.DTOs;
 using StocksCommon.Mappers;
 using StocksRepository.Interfaces;
@@ -24,13 +24,13 @@ public class MakeService : IMakeService
         _logger.LogInformation("Make Service: Fetching all car makes from repository.");
 
         var makeEntities = await _makeRepository.GetAllMake();
-        
+
         _logger.LogDebug("Make Service: Retrieved {Count} make entities from repository.", makeEntities?.Count ?? 0);
 
         var responseDTO = _makeMapper.ToDTOList(makeEntities);
-        
+
         _logger.LogInformation("Make Service: Returning {Count} mapped Make DTOs.", responseDTO?.Count ?? 0);
-        
+
         return responseDTO;
     }
 }

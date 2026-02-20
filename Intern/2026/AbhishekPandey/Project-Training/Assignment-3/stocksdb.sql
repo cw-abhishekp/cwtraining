@@ -4,7 +4,6 @@ USE stocksdb;
 
 CREATE TABLE stock (
     profile_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    api_external_id VARCHAR(50) UNIQUE COMMENT 'Stores CarWale String ID',
     make_id SMALLINT UNSIGNED NOT NULL,
     city_id SMALLINT UNSIGNED NOT NULL,
 
@@ -22,6 +21,8 @@ CREATE TABLE stock (
     emi_price INT UNSIGNED DEFAULT NULL,
 
     is_active BOOLEAN DEFAULT TRUE,
+    
+	api_external_id VARCHAR(50) UNIQUE COMMENT 'Stores CarWale String ID',
 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 

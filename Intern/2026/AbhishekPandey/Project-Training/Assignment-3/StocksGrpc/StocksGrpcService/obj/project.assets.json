@@ -2167,11 +2167,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
+      "projectUniqueName": "c:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
       "projectName": "StocksGrpcService",
-      "projectPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
+      "projectPath": "c:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
       "packagesPath": "C:\\Users\\abhishek.p\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\obj\\",
+      "outputPath": "c:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abhishek.p\\AppData\\Roaming\\NuGet\\NuGet.Config"

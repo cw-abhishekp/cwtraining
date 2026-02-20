@@ -12,21 +12,11 @@ using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Host.UseSerilog((context, services, configuration) => configuration
     .ReadFrom.Configuration(context.Configuration));
 
-
-// Log.Logger = new LoggerConfiguration()
-//     .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-//     .Enrich.FromLogContext()
-//     .WriteTo.Console()
-//     .WriteTo.File("Logs/api-audit-.txt", 
-//         rollingInterval: RollingInterval.Day,
-//         outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
-//     .CreateLogger();
-
 // Add services to the container.
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -39,9 +29,9 @@ builder.Services.AddSingleton<GrpcResponseMapper>();
 builder.Services.AddSingleton<StocksResponseDTOMapper>();
 builder.Services.AddSingleton<GrpcMakeResponseMapper>();
 builder.Services.AddSingleton<GrpcCitiesResponseMapper>();
-
 builder.Services.AddSingleton<CitiesMapper>();
 builder.Services.AddSingleton<MakeMapper>();
+
 
 // for registering the stock service and repo
 builder.Services.AddScoped<IStockService, StockService>();
@@ -69,7 +59,7 @@ builder.Services.AddSingleton<ICitiesGrpcClient>(sp =>
     new CitiesGrpcClient(grpcUrl, sp.GetRequiredService<ILogger<CitiesGrpcClient>>()));
 
 
-
+// Customizing the model validation error response using the modelsatet
 builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(options =>
     {

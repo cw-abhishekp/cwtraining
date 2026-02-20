@@ -30,7 +30,8 @@ public class CitiesRepository : ICitiesRepository
         try
         {
             await connection.OpenAsync();
-            
+            _logger.LogInformation("Database: Starting Cities query execution.");
+
             var result = await connection.QueryAsync<CitiesEntity>(SqlQueries.SelectAllCities);
             
             var cityList =  result.ToList();

@@ -22,3 +22,16 @@ c:\Users\abhishek.p\Documents\Backend\Assignment-3\StocksWebApi\StocksCommon\obj
 c:\Users\abhishek.p\Documents\Backend\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\refint\StocksCommon.dll
 c:\Users\abhishek.p\Documents\Backend\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.pdb
 c:\Users\abhishek.p\Documents\Backend\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\ref\StocksCommon.dll
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\bin\Debug\net8.0\StocksCommon.deps.json
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\bin\Debug\net8.0\StocksCommon.dll
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\bin\Debug\net8.0\StocksCommon.pdb
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.csproj.AssemblyReference.cache
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.AssemblyInfoInputs.cache
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.AssemblyInfo.cs
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.csproj.CoreCompileInputs.cache
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.sourcelink.json
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.dll
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\refint\StocksCommon.dll
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\StocksCommon.pdb
+C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksWebApi\StocksCommon\obj\Debug\net8.0\ref\StocksCommon.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Akq6SBkLl0k=",
+  "dgSpecHash": "iMetlsag7pI=",
   "success": true,
-  "projectFilePath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
+  "projectFilePath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abhishek.p\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\abhishek.p\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",

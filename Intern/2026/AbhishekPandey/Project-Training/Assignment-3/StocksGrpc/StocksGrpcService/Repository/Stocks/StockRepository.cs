@@ -1,15 +1,11 @@
 using System.Data;
+using System.Diagnostics;
 using StocksGrpcService.Entity;
-using Microsoft.Extensions.Logging;
 using MySqlConnector;
 using Dapper;
-using StocksGrpcService.Common.Queries;
-using StocksGrpcService.Mappers;
-using StocksGrpcService.Common.ConstantVal;
 using StocksGrpcService.Common.Enums;
-using System.Reflection.Metadata;
-using Microsoft.VisualBasic;
-using System.Diagnostics;
+using StocksGrpcService.Common.ConstantVal;
+using StocksGrpcService.Common.Queries;
 
 namespace StocksGrpcService.Repository;
 
@@ -31,7 +27,7 @@ public class StockRepository : IStockRepository
         var sw = Stopwatch.StartNew();
         _logger.LogInformation("Database: Starting fetch for all stocks.");
         using var _mySqlConnection = new MySqlConnection(_connectionString);
-        var stocks = new List<StockEntity>();
+        // var stocks = new List<StockEntity>();
         int totalCount = 0;
         try
         {
@@ -100,46 +96,26 @@ public class StockRepository : IStockRepository
             parameters.Add("Limit", ConstantVal.PageSize);
             parameters.Add("Offset", (filter.Page - 1) * ConstantVal.PageSize);
 
-            _logger.LogInformation("Database: Starting Stock Fetch query. filter: {filter}", filter);
-            var result = await _mySqlConnection.QueryAsync<dynamic>(sql, parameters);
-            foreach (var row in result)
-            {
-                stocks.Add(new StockEntity
-                {
-                    ProfileId = row.ProfileId?.ToString() ?? "",
-                    MakeId = row.MakeId != null ? (int)row.MakeId : 0,
-                    MakeName = row.MakeName ?? "",
-                    CityId = row.CityId != null ? (int)row.CityId : 0,
-                    CityName = row.CityName ?? "",
-                    VersionName = row.VersionName ?? "",
-                    KmNumeric = row.KmNumeric != null ? (int)row.KmNumeric : 0,
-                    Fuel = Enum.GetName(typeof(FuelType), (int)row.FuelInt) ?? "Petrol",
-                    MakeYear = row.MakeYear != null ? (int)row.MakeYear : 0,
-                    ModelName = row.ModelName ?? "",
-                    PriceNumeric = row.PriceNumeric != null ? (int)row.PriceNumeric : 0,
-                    EmiPrice = row.EmiPrice != null ? (int)row.EmiPrice : 0,
-                    StockImages = new List<string>()
-                });
-            }
+            _logger.LogInformation("Database: Starting Stock Fetch query.");
+            var stocks = (await _mySqlConnection.QueryAsync<StockEntity>(sql, parameters)).ToList();
 
-            // Populate Images
             if (stocks.Any())
             {
                 var profileIds = stocks.Select(s => s.ProfileId).ToList();
-                var images = await _mySqlConnection.QueryAsync<dynamic>(SqlQueries.imageSql, new { Ids = profileIds });
-                var stockLookup = stocks.ToDictionary(s => s.ProfileId!);
-
+                _logger.LogInformation("Database: Starting Stock Images Fetch query .");
+                var images = (await _mySqlConnection.QueryAsync<ImageMappingDto>(SqlQueries.imageSql, new { Ids = profileIds })).ToList();
+                var stockLookup = stocks.ToDictionary(s => s.ProfileId);
                 foreach (var img in images)
                 {
-                    string dbId = img.profile_id.ToString();
-                    if (stockLookup.TryGetValue(dbId, out var stock))
+                    if (stockLookup.TryGetValue(img.ProfileId, out var stock))
                     {
-                        stock.StockImages.Add(img.image_url ?? "");
+                        stock.StockImages.Add(img.ImageUrl);
                     }
                 }
             }
             sw.Stop();
             _logger.LogInformation("Database: Fetch completed. Total Count: {Count}, Time: {ElapsedMs}ms", totalCount, sw.ElapsedMilliseconds);
+            return (stocks, totalCount);
         }
         catch (Exception ex)
         {
@@ -147,144 +123,11 @@ public class StockRepository : IStockRepository
             _logger.LogError(ex, "Database Error: GetFilteredStocks failed after {ElapsedMs}ms", sw.ElapsedMilliseconds);
             throw;
         }
+    }
 
-        return (stocks, totalCount);
+    private class ImageMappingDto
+    {
+        public long ProfileId { get; set; } = 0;
+        public string ImageUrl { get; set; } = "";
     }
 }
-
-
-
-
-
-
-// public async Task<List<StockEntity>> GetFilteredStocks(FilterEntity filter)
-// {
-//     using var _mySqlConnection = new MySqlConnection(_connectionString);
-//     List<StockEntity> stocks = new List<StockEntity>();
-
-//     try
-//     {
-// if (_mySqlConnection.State != ConnectionState.Open)
-// {
-//     await _mySqlConnection.OpenAsync();
-//     _logger.LogInformation("Database connection opened successfully.");
-// }
-
-//         //      var parameters = new
-//         //     {
-//         //         FuelTypeIds = filter.FuelTypeIds,
-//         //         MinBudget = filter.MinBudget,
-//         //         MaxBudget = filter.MaxBudget,
-//         //         MakeIds = filter.MakeIds,
-//         //         CityIds = filter.CityIds,
-//         //         SortByType = (int)filter.SortByType,
-//         //         PageSize = filter.PageSize,
-//         //         Offset = (filter.Page - 1) * filter.PageSize
-//         //     };
-
-
-//         //     stocks = (await _mySqlConnection.QueryAsync<StockEntity>(
-//         //         SqlQueries.SelectFilteredStocks,
-//         //         parameters
-//         //     )).ToList();
-
-
-//         //    _logger.LogInformation($"Retrieved {stocks.Count} stocks from database.");
-
-
-//         stocks = new List<StockEntity>
-//     {
-//         new StockEntity
-//         {
-//             ProfileId = "101",
-//             MakeId = 1,
-//             MakeName = "Maruti Suzuki",
-//             CityId = 6,
-//             CityName = "Mumbai",
-//             VersionName = "VXI",
-//             KmNumeric = 25000,
-//             Fuel = "Petrol",
-//             MakeYear = 2020,
-//             ModelName = "Swift",
-//             PriceNumeric = 550000,
-//             EmiPrice = 12000,
-//             StockImages = new List<string>
-//             {
-//                 "https://imgd.aeplcdn.com/400x300/blur/image/ln8s84e6x9cq.jpg",
-//                 "https://imgd.aeplcdn.com/400x300/blur/image/5noai4dy729c.jpg"
-//             }
-//         },
-//         new StockEntity
-//         {
-//             ProfileId = "102",
-//             MakeId = 2,
-//             MakeName = "Hyundai",
-//             CityId = 2,
-//             CityName = "Delhi",
-//             VersionName = "Sportz",
-//             KmNumeric = 18000,
-//             Fuel = "Diesel",
-//             MakeYear = 2021,
-//             ModelName = "i20",
-//             PriceNumeric = 920000,
-//             EmiPrice = 15890,
-//             StockImages = new List<string>
-//             {
-//                 "https://imgd.aeplcdn.com/400x300/blur/image/abc123.jpg"
-//             }
-//         },
-//         new StockEntity
-//         {
-//             ProfileId = "103",
-//             MakeId = 5,
-//             MakeName = "Honda",
-//             CityId = 3,
-//             CityName = "Bangalore",
-//             VersionName = "VX",
-//             KmNumeric = 42000,
-//             Fuel = "Petrol",
-//             MakeYear = 2019,
-//             ModelName = "City",
-//             PriceNumeric = 1080000,
-//             EmiPrice = 18650,
-//             StockImages = new List<string>
-//             {
-//                 "https://imgd.aeplcdn.com/400x300/blur/image/xyz789.jpg",
-//                 "https://imgd.aeplcdn.com/400x300/blur/image/pqr456.jpg",
-//                 "https://imgd.aeplcdn.com/400x300/blur/image/lmn012.jpg"
-//             }
-//         },
-//         new StockEntity
-//         {
-//             ProfileId = "104",
-//             MakeId = 2,
-//             MakeName = "Hyundai",
-//             CityId = 2,
-//             CityName = "Delhi",
-//             VersionName = "Sportz Elite",
-//             KmNumeric = 18000,
-//             Fuel = "Diesel",
-//             MakeYear = 2021,
-//             ModelName = "i20",
-//             PriceNumeric = 923000,
-//             EmiPrice = 15890,
-//             StockImages = new List<string>()
-//         }
-//     };
-//     }
-//     catch (Exception ex)
-//     {
-//         _logger.LogError(ex, "Error opening database connection");
-//         throw;
-//     }
-//     finally
-//     {
-//         if (_mySqlConnection.State == ConnectionState.Open)
-//         {
-//             _mySqlConnection.Close();
-//             _mySqlConnection.Dispose();
-//             _logger.LogInformation("Database connection closed.");
-//         }
-//     }
-//     return stocks;
-// }

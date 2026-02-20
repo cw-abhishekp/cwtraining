@@ -1,5 +1,5 @@
-using StocksGrpcService.Common.Enums;
 using System.ComponentModel.DataAnnotations;
+using StocksGrpcService.Common.Enums;
 
 namespace StocksGrpcService.Entity
 {

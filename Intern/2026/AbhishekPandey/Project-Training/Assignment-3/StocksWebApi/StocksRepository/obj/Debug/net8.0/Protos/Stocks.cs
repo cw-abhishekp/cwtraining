@@ -30,7 +30,7 @@ namespace StocksGrpcService.Protos {
             "Z2V0GAMgASgBSAGIAQESEAoIbWFrZV9pZHMYBCADKAUSEAoIY2l0eV9pZHMY",
             "BSADKAUSFAoMc29ydF9ieV90eXBlGAYgASgFEgwKBHBhZ2UYByABKAVCDQoL",
             "X21pbl9idWRnZXRCDQoLX21heF9idWRnZXQi9wMKFVN0b2Nrc1Jlc3BvbnNl",
-            "Z3JwY0RUTxIXCgpwcm9maWxlX2lkGAEgASgJSACIAQESFAoHbWFrZV9pZBgC",
+            "Z3JwY0RUTxIXCgpwcm9maWxlX2lkGAEgASgDSACIAQESFAoHbWFrZV9pZBgC",
             "IAEoBUgBiAEBEhYKCW1ha2VfbmFtZRgDIAEoCUgCiAEBEhQKB2NpdHlfaWQY",
             "BCABKAVIA4gBARIWCgljaXR5X25hbWUYBSABKAlIBIgBARIZCgx2ZXJzaW9u",
             "X25hbWUYBiABKAlIBYgBARIXCgprbV9udW1lcmljGAcgASgFSAaIAQESEQoE",
@@ -571,31 +571,32 @@ namespace StocksGrpcService.Protos {
 
     /// <summary>Field number for the "profile_id" field.</summary>
     public const int ProfileIdFieldNumber = 1;
-    private readonly static string ProfileIdDefaultValue = "";
+    private readonly static long ProfileIdDefaultValue = 0L;
 
-    private string profileId_;
+    private long profileId_;
     /// <summary>
     /// "1"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ProfileId {
-      get { return profileId_ ?? ProfileIdDefaultValue; }
+    public long ProfileId {
+      get { if ((_hasBits0 & 1) != 0) { return profileId_; } else { return ProfileIdDefaultValue; } }
       set {
-        profileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        _hasBits0 |= 1;
+        profileId_ = value;
       }
     }
     /// <summary>Gets whether the "profile_id" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasProfileId {
-      get { return profileId_ != null; }
+      get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "profile_id" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearProfileId() {
-      profileId_ = null;
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "make_id" field.</summary>
@@ -609,9 +610,9 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MakeId {
-      get { if ((_hasBits0 & 1) != 0) { return makeId_; } else { return MakeIdDefaultValue; } }
+      get { if ((_hasBits0 & 2) != 0) { return makeId_; } else { return MakeIdDefaultValue; } }
       set {
-        _hasBits0 |= 1;
+        _hasBits0 |= 2;
         makeId_ = value;
       }
     }
@@ -619,13 +620,13 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasMakeId {
-      get { return (_hasBits0 & 1) != 0; }
+      get { return (_hasBits0 & 2) != 0; }
     }
     /// <summary>Clears the value of the "make_id" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMakeId() {
-      _hasBits0 &= ~1;
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "make_name" field.</summary>
@@ -668,9 +669,9 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CityId {
-      get { if ((_hasBits0 & 2) != 0) { return cityId_; } else { return CityIdDefaultValue; } }
+      get { if ((_hasBits0 & 4) != 0) { return cityId_; } else { return CityIdDefaultValue; } }
       set {
-        _hasBits0 |= 2;
+        _hasBits0 |= 4;
         cityId_ = value;
       }
     }
@@ -678,13 +679,13 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasCityId {
-      get { return (_hasBits0 & 2) != 0; }
+      get { return (_hasBits0 & 4) != 0; }
     }
     /// <summary>Clears the value of the "city_id" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCityId() {
-      _hasBits0 &= ~2;
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "city_name" field.</summary>
@@ -756,9 +757,9 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int KmNumeric {
-      get { if ((_hasBits0 & 4) != 0) { return kmNumeric_; } else { return KmNumericDefaultValue; } }
+      get { if ((_hasBits0 & 8) != 0) { return kmNumeric_; } else { return KmNumericDefaultValue; } }
       set {
-        _hasBits0 |= 4;
+        _hasBits0 |= 8;
         kmNumeric_ = value;
       }
     }
@@ -766,13 +767,13 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasKmNumeric {
-      get { return (_hasBits0 & 4) != 0; }
+      get { return (_hasBits0 & 8) != 0; }
     }
     /// <summary>Clears the value of the "km_numeric" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearKmNumeric() {
-      _hasBits0 &= ~4;
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "fuel" field.</summary>
@@ -815,9 +816,9 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MakeYear {
-      get { if ((_hasBits0 & 8) != 0) { return makeYear_; } else { return MakeYearDefaultValue; } }
+      get { if ((_hasBits0 & 16) != 0) { return makeYear_; } else { return MakeYearDefaultValue; } }
       set {
-        _hasBits0 |= 8;
+        _hasBits0 |= 16;
         makeYear_ = value;
       }
     }
@@ -825,13 +826,13 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasMakeYear {
-      get { return (_hasBits0 & 8) != 0; }
+      get { return (_hasBits0 & 16) != 0; }
     }
     /// <summary>Clears the value of the "make_year" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMakeYear() {
-      _hasBits0 &= ~8;
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "price_numeric" field.</summary>
@@ -845,9 +846,9 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PriceNumeric {
-      get { if ((_hasBits0 & 16) != 0) { return priceNumeric_; } else { return PriceNumericDefaultValue; } }
+      get { if ((_hasBits0 & 32) != 0) { return priceNumeric_; } else { return PriceNumericDefaultValue; } }
       set {
-        _hasBits0 |= 16;
+        _hasBits0 |= 32;
         priceNumeric_ = value;
       }
     }
@@ -855,13 +856,13 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasPriceNumeric {
-      get { return (_hasBits0 & 16) != 0; }
+      get { return (_hasBits0 & 32) != 0; }
     }
     /// <summary>Clears the value of the "price_numeric" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPriceNumeric() {
-      _hasBits0 &= ~16;
+      _hasBits0 &= ~32;
     }
 
     /// <summary>Field number for the "emi_price" field.</summary>
@@ -875,9 +876,9 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int EmiPrice {
-      get { if ((_hasBits0 & 32) != 0) { return emiPrice_; } else { return EmiPriceDefaultValue; } }
+      get { if ((_hasBits0 & 64) != 0) { return emiPrice_; } else { return EmiPriceDefaultValue; } }
       set {
-        _hasBits0 |= 32;
+        _hasBits0 |= 64;
         emiPrice_ = value;
       }
     }
@@ -885,13 +886,13 @@ namespace StocksGrpcService.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasEmiPrice {
-      get { return (_hasBits0 & 32) != 0; }
+      get { return (_hasBits0 & 64) != 0; }
     }
     /// <summary>Clears the value of the "emi_price" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEmiPrice() {
-      _hasBits0 &= ~32;
+      _hasBits0 &= ~64;
     }
 
     /// <summary>Field number for the "stock_images" field.</summary>
@@ -1004,8 +1005,8 @@ namespace StocksGrpcService.Protos {
       output.WriteRawMessage(this);
     #else
       if (HasProfileId) {
-        output.WriteRawTag(10);
-        output.WriteString(ProfileId);
+        output.WriteRawTag(8);
+        output.WriteInt64(ProfileId);
       }
       if (HasMakeId) {
         output.WriteRawTag(16);
@@ -1063,8 +1064,8 @@ namespace StocksGrpcService.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HasProfileId) {
-        output.WriteRawTag(10);
-        output.WriteString(ProfileId);
+        output.WriteRawTag(8);
+        output.WriteInt64(ProfileId);
       }
       if (HasMakeId) {
         output.WriteRawTag(16);
@@ -1122,7 +1123,7 @@ namespace StocksGrpcService.Protos {
     public int CalculateSize() {
       int size = 0;
       if (HasProfileId) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProfileId);
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ProfileId);
       }
       if (HasMakeId) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MakeId);
@@ -1226,8 +1227,8 @@ namespace StocksGrpcService.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            ProfileId = input.ReadString();
+          case 8: {
+            ProfileId = input.ReadInt64();
             break;
           }
           case 16: {
@@ -1297,8 +1298,8 @@ namespace StocksGrpcService.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            ProfileId = input.ReadString();
+          case 8: {
+            ProfileId = input.ReadInt64();
             break;
           }
           case 16: {

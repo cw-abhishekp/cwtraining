@@ -21,10 +21,7 @@ namespace StocksGrpcService.Common.Queries
             JOIN city c ON s.city_id = c.city_id
             WHERE s.is_active = 1";
 
-        public const string imageSql = @"
-            SELECT profile_id, image_url 
-            FROM stock_images 
-            WHERE profile_id IN @Ids AND is_active = 1";
+        public const string imageSql = @"SELECT profile_id AS ProfileId, image_url AS ImageUrl FROM stock_images WHERE profile_id IN @Ids AND is_active = 1";
 
         public const string BaseStockCountQuery = @"
     SELECT COUNT(*) 
@@ -37,7 +34,7 @@ namespace StocksGrpcService.Common.Queries
             FROM city ";
 
 
-            public const string SelectAllMakes = @"
+        public const string SelectAllMakes = @"
             SELECT 
                 make_id AS MakeId, 
                 make_name AS MakeName 

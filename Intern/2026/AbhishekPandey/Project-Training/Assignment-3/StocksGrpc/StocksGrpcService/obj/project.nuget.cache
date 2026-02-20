@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3YDyioavCto=",
+  "dgSpecHash": "xMuK8zqCWPM=",
   "success": true,
-  "projectFilePath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
+  "projectFilePath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abhishek.p\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\abhishek.p\\.nuget\\packages\\google.protobuf\\3.23.1\\google.protobuf.3.23.1.nupkg.sha512",

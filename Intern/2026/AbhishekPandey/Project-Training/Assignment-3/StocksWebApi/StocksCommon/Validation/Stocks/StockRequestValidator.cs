@@ -59,6 +59,22 @@ namespace StocksCommon.Validation
             }
         }
 
+
+         public static IEnumerable<ValidationResult> ValidateNumericIds(string? input, string fieldName)
+        {
+            if (string.IsNullOrWhiteSpace(input)) yield break;
+
+            var ids = input.Split(new[] { ',', '+', '-', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var id in ids)
+            {
+                if (!int.TryParse(id, NumberStyles.Integer, null, out int val) || val <= 0)
+                {
+                    yield return new ValidationResult($"Invalid {fieldName} ID: '{id}'. Only positive integers are allowed.", new[] { fieldName });
+                    continue;
+                }
+            }
+        }
+
         public static IEnumerable<ValidationResult> ValidateSortBy(string? sortBy, string fieldName)
         {
             if (string.IsNullOrWhiteSpace(sortBy)) yield break;

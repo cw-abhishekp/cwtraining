@@ -182,7 +182,8 @@
       "Grpc.Tools/2.57.0": {
         "type": "package",
         "build": {
-          "build/_._": {}
+          "build/Grpc.Tools.props": {},
+          "build/Grpc.Tools.targets": {}
         }
       },
       "Microsoft.AspNetCore.OpenApi/10.0.3": {
@@ -3337,6 +3338,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "FluentAssertions >= 8.8.0",
+      "Grpc.AspNetCore >= 2.57.0",
       "Microsoft.NET.Test.Sdk >= 18.0.1",
       "Moq >= 4.20.72",
       "StocksGrpcService >= 1.0.0",
@@ -3351,11 +3353,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
       "projectName": "StocksGrpc.Tests",
-      "projectPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
+      "projectPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
       "packagesPath": "C:\\Users\\abhishek.p\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\obj\\",
+      "outputPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abhishek.p\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3370,8 +3372,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj": {
-              "projectPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj"
+            "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj": {
+              "projectPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj"
             }
           }
         }
@@ -3394,6 +3396,10 @@
           "FluentAssertions": {
             "target": "Package",
             "version": "[8.8.0, )"
+          },
+          "Grpc.AspNetCore": {
+            "target": "Package",
+            "version": "[2.57.0, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

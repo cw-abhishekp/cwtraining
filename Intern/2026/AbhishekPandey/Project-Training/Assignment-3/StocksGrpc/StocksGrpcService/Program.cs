@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration()
    .MinimumLevel.Information()
    .WriteTo.Console()
-   .WriteTo.File("Logs/grpc-service-.txt", rollingInterval: RollingInterval.Day)
+   .WriteTo.File("Logs/grpc-service-log-.txt", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7)
    .CreateLogger();
 
 builder.Host.UseSerilog();

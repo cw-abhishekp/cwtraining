@@ -31,6 +31,7 @@ public class MakeRepository : IMakeRepository
         try
         {
             await connection.OpenAsync();
+            _logger.LogInformation("Database: Starting Makes query execution.");
             var result = await connection.QueryAsync<MakeEntity>(SqlQueries.SelectAllMakes);
             var makeList = result.ToList();
             sw.Stop();

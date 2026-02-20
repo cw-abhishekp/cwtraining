@@ -4,11 +4,8 @@ using StocksService.Interfaces;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Http;
 using Moq;
-using Xunit;
 
-namespace StocksWebApi.Tests.Controllers;
 
 public class StockControllerTests
 {
@@ -99,7 +96,7 @@ public class StockControllerTests
                 new StocksResponseDTO
                 {
                     // Core Data
-                    ProfileId = "1",
+                    ProfileId = 1,
                     MakeId = 5,
                     MakeName = "Maruti Suzuki",
                     CityId = 101,

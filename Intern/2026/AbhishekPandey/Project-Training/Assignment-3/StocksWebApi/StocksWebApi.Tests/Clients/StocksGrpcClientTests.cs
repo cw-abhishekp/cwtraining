@@ -4,8 +4,6 @@ using Moq;
 using StocksGrpcService.Protos;
 using StocksRepository.Clients;
 using Grpc.Core;
-using Xunit;
-
 namespace StocksWebApi.Tests.Clients;
 
 public class StocksGrpcClientTests
@@ -90,7 +88,7 @@ public class StocksGrpcClientTests
 
         var stockItem = new StocksResponsegrpcDTO
         {
-            ProfileId = "1",
+            ProfileId = 1,
             MakeId = 10,
             MakeName = "Maruti Suzuki",
             CityId = 176,

@@ -21,8 +21,8 @@ namespace StocksCommon.DTOs
         foreach (var error in StockRequestValidator.ValidateBudget(Budget, nameof(Budget))) yield return error;
         foreach (var error in StockRequestValidator.ValidateSortBy(SortBy, nameof(SortBy))) yield return error;
         foreach (var error in StockRequestValidator.ValidateIds<FuelType>(Fuel, nameof(Fuel), isEnum: true)) yield return error;
-        foreach (var error in StockRequestValidator.ValidateIds<FuelType>(Car, nameof(Car))) yield return error;
-        foreach (var error in StockRequestValidator.ValidateIds<FuelType>(City, nameof(City))) yield return error;
+        foreach (var error in StockRequestValidator.ValidateNumericIds(Car, nameof(Car))) yield return error;
+        foreach (var error in StockRequestValidator.ValidateNumericIds(City, nameof(City))) yield return error;
     }
     }
 }

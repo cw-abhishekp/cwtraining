@@ -3,7 +3,7 @@ namespace StocksCommon.Entity;
 public class StocksResponseEntity
 {
 
-    public string? ProfileId { get; set; }
+    public long ProfileId { get; set; }
     public int MakeId { get; set; }
     public string MakeName { get; set; } = string.Empty;
     public int CityId { get; set; }

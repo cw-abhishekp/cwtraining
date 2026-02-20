@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj": {}
+    "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj": {
+    "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
         "projectName": "StocksGrpc.Tests",
-        "projectPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
+        "projectPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\StocksGrpc.Tests.csproj",
         "packagesPath": "C:\\Users\\abhishek.p\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\obj\\",
+        "outputPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpc.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abhishek.p\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj": {
-                "projectPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj"
+              "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj": {
+                "projectPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj"
               }
             }
           }
@@ -50,6 +50,10 @@
             "FluentAssertions": {
               "target": "Package",
               "version": "[8.8.0, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.57.0, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -94,14 +98,14 @@
         }
       }
     },
-    "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj": {
+    "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
+        "projectUniqueName": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
         "projectName": "StocksGrpcService",
-        "projectPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
+        "projectPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\StocksGrpcService.csproj",
         "packagesPath": "C:\\Users\\abhishek.p\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\abhishek.p\\Documents\\Backend\\Assignment-3\\StocksGrpc\\StocksGrpcService\\obj\\",
+        "outputPath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksGrpc\\StocksGrpcService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abhishek.p\\AppData\\Roaming\\NuGet\\NuGet.Config"

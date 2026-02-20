@@ -24,7 +24,7 @@ message FiltergrpcDTO {
 
 // Single Stock Message
 message StocksResponsegrpcDTO {
-  optional string profile_id = 1;        // "1"
+  optional int64 profile_id = 1;        // "1"
   optional int32 make_id = 2;            // 10
   optional string make_name = 3;         // "Maruti Suzuki"
   optional int32 city_id = 4;            // 176

@@ -1,13 +1,14 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using FluentAssertions;
 using Grpc.Core;
-using Microsoft.Extensions.Logging;
 using Moq;
+using StocksGrpcService.Entity;
+using StocksGrpcService.Repository;
+using Microsoft.Extensions.Logging;
+using StocksGrpcService.Services;
 using StocksGrpcService.Mappers;
 using StocksGrpcService.Protos;
-using StocksGrpcService.Repository;
-using StocksGrpcService.Services;
-using StocksGrpcService.Entity; 
-using Xunit;
 
 namespace StocksGrpc.Tests.Services;
 
@@ -15,7 +16,7 @@ public class StocksServiceImplTests
 {
     private readonly Mock<IStockRepository> _mockRepo = new();
     private readonly Mock<ILogger<StocksServiceImpl>> _mockLogger = new();
-    private readonly ProtoMapper _protoMapper = new(); 
+    private readonly ProtoMapper _protoMapper = new();
     private readonly StocksServiceImpl _service;
 
     public StocksServiceImplTests()
@@ -27,12 +28,12 @@ public class StocksServiceImplTests
     public async Task GetFilteredStocks_WithAllFields_ReturnsFullProtoResponse()
     {
         // 1. Arrange: Setup request with all filter fields
-        var request = new FiltergrpcDTO 
-        { 
-            MinBudget = 100000, 
-            MaxBudget = 800000, 
-            Page = 1, 
-            SortByType = 1 
+        var request = new FiltergrpcDTO
+        {
+            MinBudget = 1,
+            MaxBudget = 8,
+            Page = 1,
+            SortByType = 1
         };
         request.FuelTypeIds.Add(1);
         request.MakeIds.Add(10);
@@ -42,7 +43,7 @@ public class StocksServiceImplTests
         var mockEntities = new List<StockEntity>
         {
             new StockEntity {
-                ProfileId = "1",
+                ProfileId = 1,
                 MakeId = 10,
                 MakeName = "Maruti Suzuki",
                 CityId = 176,
@@ -73,7 +74,7 @@ public class StocksServiceImplTests
         response.Stocks.Should().HaveCount(1);
 
         var actual = response.Stocks[0];
-        actual.ProfileId.Should().Be("1");
+        actual.ProfileId.Should().Be(1);
         actual.MakeId.Should().Be(10);
         actual.MakeName.Should().Be("Maruti Suzuki");
         actual.CityId.Should().Be(176);
