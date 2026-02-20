@@ -1,0 +1,6 @@
+@StocksGrpcService_HostAddress = http://localhost:5133
+
+GET {{StocksGrpcService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5zWJhMOGmy+v56EGzvR33hW5qt6nQfbeo2m5PAY3M1E=",
+  "Source": "databasepopulate",
+  "BasePath": "_content/databasepopulate",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

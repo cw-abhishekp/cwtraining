@@ -1,0 +1,1164 @@
+2026-02-19 17:32:35.791 +05:30 [INF] Starting Web API...
+2026-02-19 17:32:50.979 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-19 17:32:51.065 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:32:51.065 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:32:51.067 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:32:51.067 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:32:51.069 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:32:51.069 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:32:51.071 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:32:51.071 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:32:51.105 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"PriceDesc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:32:51.121 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:32:51.122 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:32:51.123 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:32:51.787 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 716ms
+2026-02-19 17:32:51.787 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 716ms
+2026-02-19 17:32:51.788 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:32:51.788 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:32:51.789 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:32:51.789 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:32:51.789 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:32:51.789 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:32:51.804 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 681ms
+2026-02-19 17:32:51.812 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:32:51.823 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:32:51.832 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:33:48.769 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:33:48.770 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:33:48.770 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:33:48.770 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:33:48.772 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:33:48.772 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:33:48.772 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:33:48.772 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:33:48.774 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:33:48.774 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:33:48.774 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:33:48.774 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:33:48.881 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 108ms
+2026-02-19 17:33:48.881 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:33:48.881 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:33:48.881 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:33:48.898 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 128ms
+2026-02-19 17:33:48.898 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:33:48.898 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:33:48.898 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:33:48.930 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 155ms
+2026-02-19 17:33:48.930 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:33:48.930 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:33:48.930 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:34:01.419 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:34:01.420 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:34:01.420 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:34:01.420 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:34:01.424 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:34:01.424 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:34:01.424 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:34:01.424 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:34:01.434 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":"1","Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:34:01.441 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:34:01.441 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:34:01.448 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:34:01.476 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 52ms
+2026-02-19 17:34:01.476 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:34:01.476 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:34:01.476 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:34:01.491 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 71ms
+2026-02-19 17:34:01.491 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:34:01.491 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:34:01.491 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:34:01.596 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 147ms
+2026-02-19 17:34:01.596 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:34:01.602 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:34:01.602 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:34:14.522 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:34:14.522 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:34:14.522 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:34:14.522 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:34:14.524 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:34:14.524 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:34:14.524 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:34:14.524 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:34:14.526 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:34:14.526 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:34:14.526 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:34:14.526 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:34:14.582 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 59ms
+2026-02-19 17:34:14.582 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:34:14.582 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:34:14.582 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:34:14.593 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 69ms
+2026-02-19 17:34:14.593 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:34:14.593 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:34:14.593 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:34:14.629 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 103ms
+2026-02-19 17:34:14.629 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:34:14.629 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:34:14.629 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:34:57.213 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:34:57.213 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:34:57.213 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:34:57.213 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:34:57.213 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:34:57.213 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:34:57.213 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:34:57.213 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:34:57.218 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:34:57.218 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:34:57.218 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:34:57.218 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:34:57.246 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 32ms
+2026-02-19 17:34:57.246 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:34:57.246 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:34:57.246 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:34:57.266 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 52ms
+2026-02-19 17:34:57.266 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:34:57.266 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:34:57.266 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:34:57.297 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 78ms
+2026-02-19 17:34:57.297 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:34:57.297 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:34:57.297 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:35:35.376 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:35:35.376 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:35:35.376 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:35:35.376 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:35:35.379 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:35:35.379 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:35:35.379 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:35:35.379 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:35:35.392 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":"1","Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:35:35.392 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:35:35.392 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:35:35.392 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:35:35.461 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 84ms
+2026-02-19 17:35:35.485 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:35:35.485 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:35:35.485 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:35:35.491 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 112ms
+2026-02-19 17:35:35.492 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:35:35.492 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:35:35.492 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:35:35.546 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 153ms
+2026-02-19 17:35:35.546 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:35:35.546 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:35:35.546 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:35:39.036 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:35:39.036 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:35:39.036 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:35:39.036 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:35:39.036 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:35:39.036 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:35:39.036 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:35:39.036 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:35:39.093 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 56ms
+2026-02-19 17:35:39.093 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:35:39.093 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:35:39.093 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:35:39.098 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 61ms
+2026-02-19 17:35:39.098 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:35:39.098 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:35:39.098 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:35:42.242 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:35:42.242 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:35:42.242 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:35:42.242 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:35:42.243 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:35:42.243 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:35:42.243 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:35:42.243 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:35:42.259 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":"1","Budget":null,"Car":"49","City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:35:42.259 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:35:42.259 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:35:42.259 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:35:42.295 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 53ms
+2026-02-19 17:35:42.295 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:35:42.295 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:35:42.295 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:35:42.296 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 52ms
+2026-02-19 17:35:42.296 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:35:42.296 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:35:42.296 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:35:42.323 +05:30 [INF] Stocks gRPC Client: Received 2 stocks in 63ms
+2026-02-19 17:35:42.323 +05:30 [INF] Stocks Repository: gRPC call successful. Received 2 entities.
+2026-02-19 17:35:42.323 +05:30 [INF] Stocks Service: Returning 2 stocks to client
+2026-02-19 17:35:42.323 +05:30 [INF] Stocks Controller: Successfully retrieved 2 stocks.
+2026-02-19 17:35:50.433 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:35:50.433 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:35:50.433 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:35:50.433 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:35:50.450 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:35:50.450 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:35:50.450 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:35:50.450 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:35:50.537 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 86ms
+2026-02-19 17:35:50.537 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:35:50.537 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:35:50.537 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:35:50.542 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 109ms
+2026-02-19 17:35:50.543 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:35:50.543 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:35:50.543 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:35:54.589 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:35:54.589 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:35:54.589 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:35:54.589 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:35:54.589 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:35:54.590 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:35:54.590 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:35:54.590 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:35:54.602 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:35:54.602 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:35:54.602 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:35:54.602 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:35:54.658 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 68ms
+2026-02-19 17:35:54.658 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:35:54.659 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:35:54.659 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:35:54.672 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 82ms
+2026-02-19 17:35:54.672 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:35:54.672 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:35:54.672 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:35:54.708 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 105ms
+2026-02-19 17:35:54.708 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:35:54.708 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:35:54.708 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:36:01.767 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:36:01.767 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:36:01.767 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:36:01.767 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:36:01.768 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:36:01.768 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:36:01.769 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:36:01.769 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:36:01.770 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:36:01.770 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:36:01.770 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:36:01.771 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:36:01.844 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 76ms
+2026-02-19 17:36:01.844 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:36:01.844 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:36:01.844 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:36:01.875 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 106ms
+2026-02-19 17:36:01.875 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:36:01.875 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:36:01.875 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:36:01.895 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 124ms
+2026-02-19 17:36:01.895 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:36:01.895 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:36:01.895 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:36:10.243 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:36:10.243 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:36:10.243 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:36:10.243 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:36:10.244 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:36:10.244 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:36:10.244 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:36:10.244 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:36:10.293 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 48ms
+2026-02-19 17:36:10.293 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:36:10.293 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:36:10.293 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:36:10.294 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 50ms
+2026-02-19 17:36:10.294 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:36:10.294 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:36:10.294 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:36:33.371 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:36:33.371 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:36:33.371 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:36:33.371 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:36:33.371 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:36:33.371 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:36:33.371 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:36:33.371 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:36:33.385 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 13ms
+2026-02-19 17:36:33.385 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:36:33.385 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:36:33.385 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:36:33.391 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 19ms
+2026-02-19 17:36:33.391 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:36:33.391 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:36:33.391 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:36:37.362 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:36:37.362 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:36:37.362 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:36:37.362 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:36:37.363 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:36:37.363 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:36:37.363 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:36:37.363 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:36:37.376 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 13ms
+2026-02-19 17:36:37.376 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:36:37.376 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:36:37.376 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:36:37.384 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 21ms
+2026-02-19 17:36:37.384 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:36:37.384 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:36:37.384 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:36:40.155 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:36:40.155 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:36:40.155 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:36:40.155 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:36:40.162 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:36:40.162 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:36:40.162 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:36:40.162 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:36:40.206 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 50ms
+2026-02-19 17:36:40.206 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:36:40.206 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:36:40.206 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:36:40.216 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 54ms
+2026-02-19 17:36:40.216 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:36:40.216 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:36:40.216 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:36:45.940 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:36:45.940 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:36:45.940 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:36:45.940 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:36:45.941 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:36:45.941 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:36:45.941 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:36:45.941 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:36:45.987 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 46ms
+2026-02-19 17:36:45.987 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:36:45.987 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:36:45.987 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:36:45.989 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 48ms
+2026-02-19 17:36:45.989 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:36:45.989 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:36:45.989 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:37:13.273 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:37:13.273 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:37:13.273 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:37:13.273 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:37:13.273 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:37:13.273 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:37:13.273 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:37:13.273 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:37:13.300 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 26ms
+2026-02-19 17:37:13.300 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:37:13.300 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:37:13.300 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:37:13.305 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 32ms
+2026-02-19 17:37:13.305 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:37:13.305 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:37:13.305 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:37:20.383 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:37:20.383 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:37:20.383 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:37:20.383 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:37:20.384 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:37:20.384 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:37:20.384 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:37:20.384 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:37:20.422 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 38ms
+2026-02-19 17:37:20.422 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:37:20.422 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:37:20.422 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:37:20.424 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 39ms
+2026-02-19 17:37:20.424 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:37:20.424 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:37:20.424 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:37:50.376 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:37:50.376 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:37:50.376 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:37:50.376 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:37:50.381 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:37:50.381 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:37:50.381 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:37:50.381 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:37:50.397 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":"0-100","Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:37:50.397 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=0, MaxBudget=100, Page=1
+2026-02-19 17:37:50.397 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: 0-100
+2026-02-19 17:37:50.397 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:37:50.473 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 96ms
+2026-02-19 17:37:50.473 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:37:50.473 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:37:50.473 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:37:50.483 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 101ms
+2026-02-19 17:37:50.483 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:37:50.483 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:37:50.483 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:37:50.532 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 134ms
+2026-02-19 17:37:50.532 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:37:50.533 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:37:50.533 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:37:57.920 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:37:57.920 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:37:57.920 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:37:57.920 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:37:57.941 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:37:57.941 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:37:57.941 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:37:57.942 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:37:57.943 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:37:57.943 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:37:57.943 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:37:57.943 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:37:57.989 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 68ms
+2026-02-19 17:37:57.989 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:37:57.989 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:37:57.989 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:37:58.000 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 56ms
+2026-02-19 17:37:58.000 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:37:58.000 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:37:58.000 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:37:58.078 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 136ms
+2026-02-19 17:37:58.078 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:37:58.079 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:37:58.079 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:21.397 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:38:21.397 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:38:21.397 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:38:21.397 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:38:21.397 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:38:21.397 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:38:21.397 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:38:21.397 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:38:21.404 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:38:21.404 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:38:21.404 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:38:21.404 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:38:21.424 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 27ms
+2026-02-19 17:38:21.424 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:38:21.424 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:38:21.424 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:38:21.432 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 35ms
+2026-02-19 17:38:21.433 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:38:21.433 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:38:21.433 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:38:21.459 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 55ms
+2026-02-19 17:38:21.459 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:38:21.459 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:38:21.459 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:21.512 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:38:21.512 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:38:21.512 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:38:21.512 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:38:21.549 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 36ms
+2026-02-19 17:38:21.549 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:38:21.549 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:38:21.549 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:32.427 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:38:32.427 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:38:32.427 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:38:32.427 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:38:32.427 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:38:32.427 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:38:32.427 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:38:32.427 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:38:32.453 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 26ms
+2026-02-19 17:38:32.453 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:38:32.453 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:38:32.453 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:38:32.455 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 28ms
+2026-02-19 17:38:32.455 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:38:32.455 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:38:32.455 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:38:32.465 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:38:32.465 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:38:32.465 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:38:32.465 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:38:32.586 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 120ms
+2026-02-19 17:38:32.586 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:38:32.586 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:38:32.586 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:32.644 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:38:32.644 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:38:32.644 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:38:32.644 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:38:32.678 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 33ms
+2026-02-19 17:38:32.678 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:38:32.678 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:38:32.678 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:38.069 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:38:38.069 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:38:38.069 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:38:38.069 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:38:38.069 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:38:38.069 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:38:38.069 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:38:38.069 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:38:38.073 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:38:38.073 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:38:38.073 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:38:38.073 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:38:38.116 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 46ms
+2026-02-19 17:38:38.116 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:38:38.116 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:38:38.116 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:38:38.126 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 56ms
+2026-02-19 17:38:38.127 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:38:38.127 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:38:38.127 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:38:38.172 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 99ms
+2026-02-19 17:38:38.172 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:38:38.172 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:38:38.172 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:43.189 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:38:43.190 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:38:43.190 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:38:43.191 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:38:43.191 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:38:43.191 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:38:43.191 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:38:43.191 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:38:43.193 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:38:43.193 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:38:43.193 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:38:43.193 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:38:43.235 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 43ms
+2026-02-19 17:38:43.235 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:38:43.235 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:38:43.235 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:38:43.309 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 117ms
+2026-02-19 17:38:43.309 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:38:43.309 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:38:43.309 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:38:43.324 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 131ms
+2026-02-19 17:38:43.324 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:38:43.324 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:38:43.324 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:46.684 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:38:46.684 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:38:46.684 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:38:46.684 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:38:46.684 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:38:46.684 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:38:46.684 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:38:46.684 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:38:46.704 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"1","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:38:46.704 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:38:46.704 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:38:46.704 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:38:46.790 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 106ms
+2026-02-19 17:38:46.790 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:38:46.790 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:38:46.790 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:38:46.816 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 131ms
+2026-02-19 17:38:46.816 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:38:46.816 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:38:46.816 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:38:46.861 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 156ms
+2026-02-19 17:38:46.861 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:38:46.861 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:38:46.861 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:38:58.006 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:38:58.006 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:38:58.006 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:38:58.006 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:38:58.012 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:38:58.013 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:38:58.013 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:38:58.013 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:38:58.051 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 38ms
+2026-02-19 17:38:58.051 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:38:58.051 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:38:58.051 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:38:58.056 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 50ms
+2026-02-19 17:38:58.056 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:38:58.056 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:38:58.056 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:39:03.528 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:39:03.528 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:39:03.528 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:39:03.528 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:39:03.570 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 42ms
+2026-02-19 17:39:03.570 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:39:03.571 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:39:03.571 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:39:05.573 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"YearAsc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:39:05.573 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:39:05.573 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:39:05.573 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:39:05.612 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 39ms
+2026-02-19 17:39:05.616 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:39:05.616 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:39:05.616 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:39:06.705 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"YearDesc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:39:06.705 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:39:06.705 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:39:06.705 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:39:06.729 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 23ms
+2026-02-19 17:39:06.729 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:39:06.729 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:39:06.729 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:39:07.896 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"PriceDesc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:39:07.896 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:39:07.896 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:39:07.896 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:39:07.925 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 29ms
+2026-02-19 17:39:07.925 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:39:07.925 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:39:07.925 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:39:08.715 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"PriceAsc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:39:08.715 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:39:08.715 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:39:08.715 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:39:08.737 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 21ms
+2026-02-19 17:39:08.737 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:39:08.738 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:39:08.738 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:39:09.459 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"BestMatch","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:39:09.459 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:39:09.459 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:39:09.459 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:39:09.510 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 50ms
+2026-02-19 17:39:09.510 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:39:09.510 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:39:09.510 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:40:03.359 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:40:03.359 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:40:03.359 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:40:03.359 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:40:03.359 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:40:03.359 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:40:03.359 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:40:03.359 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:40:03.360 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"BestMatch","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:40:03.360 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:40:03.360 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:40:03.360 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:40:03.374 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 14ms
+2026-02-19 17:40:03.374 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:40:03.374 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:40:03.374 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:40:03.378 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 19ms
+2026-02-19 17:40:03.378 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:40:03.378 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:40:03.378 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:40:03.408 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 48ms
+2026-02-19 17:40:03.408 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:40:03.409 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:40:03.409 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:40:03.420 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"BestMatch","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:40:03.420 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:40:03.420 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:40:03.420 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:40:03.459 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 38ms
+2026-02-19 17:40:03.459 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:40:03.459 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:40:03.459 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:40:14.933 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:40:14.933 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:40:14.933 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:40:14.933 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:40:14.933 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:40:14.933 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:40:14.933 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:40:14.933 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:40:14.944 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"BestMatch","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:40:14.944 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:40:14.944 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:40:14.944 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:40:14.950 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 17ms
+2026-02-19 17:40:14.950 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:40:14.950 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:40:14.950 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:40:14.953 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 20ms
+2026-02-19 17:40:14.953 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:40:14.954 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:40:14.954 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:40:15.013 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 69ms
+2026-02-19 17:40:15.013 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:40:15.014 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:40:15.014 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:41:20.703 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:41:20.703 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:41:20.703 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:41:20.703 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:41:20.703 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:41:20.703 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:41:20.703 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:41:20.704 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:41:20.704 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:41:20.704 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:41:20.704 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:41:20.704 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:41:20.717 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 13ms
+2026-02-19 17:41:20.717 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:41:20.718 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:41:20.718 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:41:20.725 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 21ms
+2026-02-19 17:41:20.725 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:41:20.725 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:41:20.725 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:41:20.764 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 60ms
+2026-02-19 17:41:20.764 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:41:20.765 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:41:20.765 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:41:29.201 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:41:29.201 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:41:29.201 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:41:29.201 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:41:29.201 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:41:29.201 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:41:29.201 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:41:29.201 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:41:29.223 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 21ms
+2026-02-19 17:41:29.223 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:41:29.223 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:41:29.223 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:41:29.235 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 33ms
+2026-02-19 17:41:29.235 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:41:29.235 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:41:29.235 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:41:32.775 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:41:32.775 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:41:32.775 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:41:32.775 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:41:32.775 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:41:32.775 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:41:32.775 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:41:32.775 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:41:32.803 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 27ms
+2026-02-19 17:41:32.803 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:41:32.803 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:41:32.803 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:41:32.803 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 28ms
+2026-02-19 17:41:32.804 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:41:32.804 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:41:32.804 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:41:35.287 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:41:35.287 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:41:35.287 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:41:35.287 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:41:35.288 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:41:35.288 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:41:35.288 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:41:35.288 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:41:35.289 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:41:35.289 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:41:35.289 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:41:35.289 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:41:35.337 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 49ms
+2026-02-19 17:41:35.337 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:41:35.337 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:41:35.337 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:41:35.338 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 49ms
+2026-02-19 17:41:35.338 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:41:35.338 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:41:35.338 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:41:35.380 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 91ms
+2026-02-19 17:41:35.380 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:41:35.381 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:41:35.381 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:41:37.177 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"YearAsc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:41:37.177 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:41:37.177 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:41:37.177 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:41:37.205 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 27ms
+2026-02-19 17:41:37.205 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:41:37.205 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:41:37.205 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:42:04.359 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:42:04.359 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:42:04.359 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:42:04.359 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:42:04.361 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"YearAsc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:42:04.361 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:42:04.361 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:42:04.361 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:42:04.361 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:42:04.361 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:42:04.361 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:42:04.361 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:42:04.377 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 17ms
+2026-02-19 17:42:04.377 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:42:04.377 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:42:04.377 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:42:04.381 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 20ms
+2026-02-19 17:42:04.382 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:42:04.382 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:42:04.382 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:42:04.387 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 26ms
+2026-02-19 17:42:04.387 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:42:04.388 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:42:04.388 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:42:04.413 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"YearAsc","Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:42:04.413 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:42:04.413 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:42:04.413 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:42:04.429 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 15ms
+2026-02-19 17:42:04.429 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:42:04.429 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:42:04.429 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:42:38.244 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:42:38.244 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:42:38.244 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:42:38.244 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:42:38.245 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:42:38.245 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:42:38.245 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:42:38.245 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:42:38.246 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:42:38.246 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:42:38.246 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:42:38.246 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:42:38.259 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 14ms
+2026-02-19 17:42:38.259 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:42:38.259 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:42:38.259 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:42:38.260 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 15ms
+2026-02-19 17:42:38.260 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:42:38.260 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:42:38.260 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:42:38.293 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 46ms
+2026-02-19 17:42:38.293 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:42:38.293 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:42:38.293 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:42:40.497 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:42:40.497 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:42:40.497 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:42:40.497 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:42:40.497 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:42:40.497 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:42:40.497 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:42:40.497 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:42:40.498 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:42:40.498 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:42:40.498 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:42:40.498 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:42:40.510 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 12ms
+2026-02-19 17:42:40.510 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:42:40.510 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:42:40.510 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:42:40.511 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 14ms
+2026-02-19 17:42:40.511 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:42:40.511 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:42:40.511 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:42:40.543 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 45ms
+2026-02-19 17:42:40.543 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:42:40.544 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:42:40.544 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 17:42:44.569 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:42:44.569 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:42:44.569 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:42:44.569 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:42:44.570 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:42:44.570 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:42:44.570 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:42:44.570 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:42:44.610 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 41ms
+2026-02-19 17:42:44.610 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:42:44.610 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:42:44.611 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:42:44.612 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 41ms
+2026-02-19 17:42:44.612 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:42:44.612 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:42:44.612 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:42:48.507 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 17:42:48.507 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 17:42:48.507 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 17:42:48.507 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 17:42:48.507 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 17:42:48.507 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 17:42:48.507 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 17:42:48.507 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 17:42:48.511 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 17:42:48.511 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 17:42:48.511 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 17:42:48.511 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 17:42:48.524 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 16ms
+2026-02-19 17:42:48.524 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 17:42:48.524 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 17:42:48.524 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 17:42:48.525 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 17ms
+2026-02-19 17:42:48.525 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 17:42:48.525 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 17:42:48.525 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 17:42:48.559 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 47ms
+2026-02-19 17:42:48.559 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 17:42:48.559 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 17:42:48.559 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:28:06.852 +05:30 [INF] Starting Web API...
+2026-02-19 18:29:29.121 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-19 18:29:29.188 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 18:29:29.188 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 18:29:29.189 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 18:29:29.189 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 18:29:29.202 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 18:29:29.202 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 18:29:29.203 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 18:29:29.204 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 18:29:29.222 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:29:29.225 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:29:29.232 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:29:29.235 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:29:29.791 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 587ms
+2026-02-19 18:29:29.791 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 587ms
+2026-02-19 18:29:29.796 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 18:29:29.799 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 18:29:29.800 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 18:29:29.800 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 18:29:29.800 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 18:29:29.800 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 18:29:29.845 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 609ms
+2026-02-19 18:29:29.850 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:29:29.868 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:29:29.869 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:30:27.629 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:30:27.629 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:30:27.629 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:30:27.629 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:30:27.688 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 59ms
+2026-02-19 18:30:27.688 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:30:27.689 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:30:27.689 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:31:07.505 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:31:07.505 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:31:07.505 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:31:07.505 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:31:07.552 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 46ms
+2026-02-19 18:31:07.552 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:31:07.553 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:31:07.553 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:31:15.189 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:31:15.189 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:31:15.189 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:31:15.189 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:31:15.280 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 90ms
+2026-02-19 18:31:15.280 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:31:15.280 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:31:15.280 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:31:19.472 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:31:19.472 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:31:19.472 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:31:19.472 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:31:19.509 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 37ms
+2026-02-19 18:31:19.509 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:31:19.509 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:31:19.509 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:31:36.480 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:31:36.480 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:31:36.480 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:31:36.480 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:31:36.534 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 53ms
+2026-02-19 18:31:36.534 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:31:36.534 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:31:36.534 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:31:54.431 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:31:54.431 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:31:54.431 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:31:54.431 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:31:54.497 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 65ms
+2026-02-19 18:31:54.497 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:31:54.497 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:31:54.497 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:31:58.491 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:31:58.491 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:31:58.491 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:31:58.491 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:31:58.538 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 46ms
+2026-02-19 18:31:58.538 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:31:58.538 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:31:58.538 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:33:16.940 +05:30 [INF] Cities Controller: Processing GET request to retrieve all cities.
+2026-02-19 18:33:16.940 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 18:33:16.940 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 18:33:16.940 +05:30 [INF] Cities Service: Fetching all cities from repository.
+2026-02-19 18:33:16.940 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 18:33:16.940 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 18:33:16.940 +05:30 [INF] Cities Repository: Requesting all cities from gRPC client.
+2026-02-19 18:33:16.940 +05:30 [INF] Cities gRPC Client: Starting GetCities call.
+2026-02-19 18:33:16.944 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:33:16.944 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:33:16.944 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:33:16.944 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:33:16.967 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 26ms
+2026-02-19 18:33:16.967 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 18:33:16.967 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 18:33:16.967 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 18:33:16.973 +05:30 [INF] Cities gRPC Client: Fetched 1420 cities in 32ms
+2026-02-19 18:33:16.973 +05:30 [INF] Cities Repository: Successfully mapped 1420 cities. 
+2026-02-19 18:33:16.973 +05:30 [INF] Cities Service: Returning 1420 mapped City DTOs.
+2026-02-19 18:33:16.973 +05:30 [INF] Cities Controller: Successfully retrieved 1420 cities.
+2026-02-19 18:33:17.001 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 57ms
+2026-02-19 18:33:17.001 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:33:17.001 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:33:17.001 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:33:28.812 +05:30 [INF] Make Controller: Processing GET request to retrieve all car makes.
+2026-02-19 18:33:28.812 +05:30 [INF] Make Service: Fetching all car makes from repository.
+2026-02-19 18:33:28.812 +05:30 [INF] Make Repository: Requesting all makes from gRPC client.
+2026-02-19 18:33:28.812 +05:30 [INF] Make gRPC Client: Starting GetMake call.
+2026-02-19 18:33:28.830 +05:30 [INF] Make gRPC Client: Fetched 41 makes in 17ms
+2026-02-19 18:33:28.830 +05:30 [INF] Make Repository: Successfully mapped 41. 
+2026-02-19 18:33:28.830 +05:30 [INF] Make Service: Returning 41 mapped Make DTOs.
+2026-02-19 18:33:28.830 +05:30 [INF] Make Controller: Successfully retrieved 41 car makes.
+2026-02-19 18:36:38.997 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":2,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:38.997 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=2
+2026-02-19 18:36:38.997 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:38.997 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:39.076 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 79ms
+2026-02-19 18:36:39.076 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:39.076 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:39.076 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:42.645 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":3,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:42.645 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=3
+2026-02-19 18:36:42.645 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:42.645 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:42.696 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 50ms
+2026-02-19 18:36:42.696 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:42.696 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:42.697 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:48.197 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":4,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:48.197 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=4
+2026-02-19 18:36:48.197 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:48.197 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:48.249 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 52ms
+2026-02-19 18:36:48.249 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:48.249 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:48.250 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:50.058 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":5,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:50.058 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=5
+2026-02-19 18:36:50.058 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:50.058 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:50.113 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 55ms
+2026-02-19 18:36:50.114 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:50.114 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:50.114 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:51.376 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":6,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:51.376 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=6
+2026-02-19 18:36:51.376 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:51.376 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:51.422 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 45ms
+2026-02-19 18:36:51.422 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:51.422 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:51.422 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:53.732 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":"625","SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:53.736 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:36:53.736 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:53.737 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:53.771 +05:30 [INF] Stocks gRPC Client: Received 0 stocks in 34ms
+2026-02-19 18:36:53.771 +05:30 [INF] Stocks Repository: gRPC call successful. Received 0 entities.
+2026-02-19 18:36:53.771 +05:30 [INF] Stocks Service: Returning 0 stocks to client
+2026-02-19 18:36:53.771 +05:30 [WRN] Stocks Controller: No vehicle stocks found matching the criteria: {"Fuel":null,"Budget":null,"Car":null,"City":"625","SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:56.580 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:56.580 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:36:56.580 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:56.580 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:56.635 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 55ms
+2026-02-19 18:36:56.635 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:56.636 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:56.636 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:56.691 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":2,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:56.692 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=2
+2026-02-19 18:36:56.692 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:56.692 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:56.748 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 55ms
+2026-02-19 18:36:56.748 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:56.748 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:56.748 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:56.805 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":3,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:56.805 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=3
+2026-02-19 18:36:56.805 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:56.805 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:56.851 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 45ms
+2026-02-19 18:36:56.851 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:56.852 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:56.852 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:56.923 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":4,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:56.923 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=4
+2026-02-19 18:36:56.923 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:56.923 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:56.982 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 59ms
+2026-02-19 18:36:56.982 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:56.983 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:56.983 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:57.073 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":5,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:57.073 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=5
+2026-02-19 18:36:57.073 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:57.073 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:57.141 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 68ms
+2026-02-19 18:36:57.141 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:57.141 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:57.141 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:57.196 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":6,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:57.196 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=6
+2026-02-19 18:36:57.196 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:57.196 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:57.267 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 70ms
+2026-02-19 18:36:57.267 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:57.268 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:57.268 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:36:58.494 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":7,"$type":"StocksRequestDTO"}
+2026-02-19 18:36:58.494 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=7
+2026-02-19 18:36:58.494 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:36:58.494 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:36:58.552 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 57ms
+2026-02-19 18:36:58.552 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:36:58.552 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:36:58.552 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:01.421 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":"1","Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:01.422 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:37:01.422 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:01.422 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:01.481 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 59ms
+2026-02-19 18:37:01.481 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:01.483 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:01.483 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:03.934 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:03.934 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:37:03.934 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:03.934 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:03.991 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 56ms
+2026-02-19 18:37:03.991 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:03.992 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:03.992 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:05.409 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":2,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:05.409 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=2
+2026-02-19 18:37:05.409 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:05.409 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:05.481 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 71ms
+2026-02-19 18:37:05.481 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:05.481 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:05.481 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:06.991 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":3,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:06.991 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=3
+2026-02-19 18:37:06.991 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:06.991 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:07.056 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 64ms
+2026-02-19 18:37:07.056 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:07.057 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:07.057 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:08.374 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":4,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:08.374 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=4
+2026-02-19 18:37:08.374 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:08.374 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:08.422 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 47ms
+2026-02-19 18:37:08.422 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:08.423 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:08.423 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:09.960 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":5,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:09.960 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=5
+2026-02-19 18:37:09.960 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:09.960 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:10.013 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 53ms
+2026-02-19 18:37:10.013 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:10.014 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:10.014 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:11.293 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":6,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:11.293 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=6
+2026-02-19 18:37:11.293 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:11.293 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:11.344 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 51ms
+2026-02-19 18:37:11.344 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:11.344 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:11.344 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:12.641 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":null,"Budget":null,"Car":null,"City":null,"SortBy":"bestmatch","Page":7,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:12.641 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=7
+2026-02-19 18:37:12.641 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:12.641 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:12.687 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 46ms
+2026-02-19 18:37:12.687 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:12.688 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:12.688 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.
+2026-02-19 18:37:15.237 +05:30 [INF] Stocks Controller: Processing GetStocks request. Filters applied: {"Fuel":"1","Budget":null,"Car":null,"City":null,"SortBy":null,"Page":1,"$type":"StocksRequestDTO"}
+2026-02-19 18:37:15.237 +05:30 [INF] Stocks Service: Fetch Stocks Request: MinBudget=null, MaxBudget=null, Page=1
+2026-02-19 18:37:15.237 +05:30 [INF] Stocks Repository: Initiating gRPC call for filtered stocks. Budget: null-null
+2026-02-19 18:37:15.237 +05:30 [INF] Stocks gRPC Client:  Starting GetFilteredStocks call.
+2026-02-19 18:37:15.298 +05:30 [INF] Stocks gRPC Client: Received 30 stocks in 59ms
+2026-02-19 18:37:15.298 +05:30 [INF] Stocks Repository: gRPC call successful. Received 30 entities.
+2026-02-19 18:37:15.298 +05:30 [INF] Stocks Service: Returning 30 stocks to client
+2026-02-19 18:37:15.298 +05:30 [INF] Stocks Controller: Successfully retrieved 30 stocks.

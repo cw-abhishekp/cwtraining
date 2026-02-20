@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4bD6IWoOvP5pxaMdRNmkHIKBLqm//BHYqNObhnHyIu0=",
+  "Source": "StocksGrpcService",
+  "BasePath": "_content/StocksGrpcService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

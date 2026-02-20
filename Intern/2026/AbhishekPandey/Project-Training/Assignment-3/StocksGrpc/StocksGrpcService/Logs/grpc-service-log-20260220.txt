@@ -1,0 +1,1018 @@
+2026-02-20 09:50:03.578 +05:30 [INF] Now listening on: http://localhost:5133
+2026-02-20 09:50:03.618 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 09:50:03.621 +05:30 [INF] Hosting environment: Development
+2026-02-20 09:50:03.622 +05:30 [INF] Content root path: C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksGrpc\StocksGrpcService
+2026-02-20 09:50:42.849 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:50:42.849 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 09:50:42.848 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 09:50:42.963 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:50:42.963 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:50:42.963 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:50:43.111 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 09:50:43.111 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 09:50:43.142 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 09:50:43.142 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 09:50:43.212 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:50:43.225 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:50:46.741 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 09:50:46.741 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 09:50:46.744 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 09:50:46.911 +05:30 [INF] Database: Successfully fetched 1420 cities in 3767ms
+2026-02-20 09:50:46.911 +05:30 [INF] Database: Successfully fetched 41 makes in 3766ms
+2026-02-20 09:50:46.923 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 09:50:46.924 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 09:50:46.946 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:50:46.946 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:50:46.955 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 4105.1718ms
+2026-02-20 09:50:46.955 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 4105.1717ms
+2026-02-20 09:50:47.018 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 09:50:47.022 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:50:47.146 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:50:47.231 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 4007ms
+2026-02-20 09:50:47.245 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 09:50:47.257 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:50:47.258 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 4411.5586ms
+2026-02-20 09:53:03.319 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 09:53:03.324 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:53:03.325 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 09:53:03.325 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 09:53:03.331 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 09:53:03.334 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 09:53:03.335 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:53:03.337 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 09:53:03.337 +05:30 [INF] Database: Successfully fetched 1420 cities in 11ms
+2026-02-20 09:53:03.337 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 09:53:03.338 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 09:53:03.339 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 09:53:03.340 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:53:03.340 +05:30 [INF] Database: Successfully fetched 41 makes in 1ms
+2026-02-20 09:53:03.341 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 21.4655ms
+2026-02-20 09:53:03.341 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 09:53:03.342 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:03.344 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:53:03.345 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:03.346 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 12.3501ms
+2026-02-20 09:53:03.349 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:03.350 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:03.351 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 09:53:03.381 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 09:53:03.383 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:03.413 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:03.417 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 66ms
+2026-02-20 09:53:03.419 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 09:53:03.419 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:03.420 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 77.9133ms
+2026-02-20 09:53:03.585 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:03.588 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:03.590 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:03.590 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:03.591 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 09:53:03.603 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 09:53:03.604 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:03.622 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:03.624 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 33ms
+2026-02-20 09:53:03.625 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 09:53:03.625 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:03.626 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 40.4431ms
+2026-02-20 09:53:03.940 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:03.943 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:03.944 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:03.945 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:03.946 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 09:53:03.964 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 09:53:03.965 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:03.986 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:03.988 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 43ms
+2026-02-20 09:53:03.988 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 09:53:03.989 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:03.990 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 49.4828ms
+2026-02-20 09:53:04.255 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 09:53:04.255 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:04.256 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 09:53:04.257 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:53:04.261 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.263 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:53:04.264 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:04.265 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 09:53:04.266 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:04.268 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 09:53:04.269 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.269 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 09:53:04.271 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:04.271 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 09:53:04.273 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 09:53:04.273 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 09:53:04.272 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:04.273 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 09:53:04.275 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:04.275 +05:30 [INF] Database: Successfully fetched 41 makes in 2ms
+2026-02-20 09:53:04.278 +05:30 [INF] Database: Successfully fetched 1420 cities in 4ms
+2026-02-20 09:53:04.279 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 09:53:04.279 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 09:53:04.280 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:53:04.281 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:53:04.281 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 09:53:04.282 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 26.6646ms
+2026-02-20 09:53:04.283 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 27.1147ms
+2026-02-20 09:53:04.289 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 09:53:04.290 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:04.291 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 09:53:04.292 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:04.298 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 09:53:04.301 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:53:04.302 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 09:53:04.303 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 09:53:04.304 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 09:53:04.305 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 09:53:04.306 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:53:04.308 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 09:53:04.308 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 09:53:04.308 +05:30 [INF] Database: Successfully fetched 41 makes in 3ms
+2026-02-20 09:53:04.310 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 09:53:04.309 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 09:53:04.310 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 09:53:04.313 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 15.6481ms
+2026-02-20 09:53:04.317 +05:30 [INF] Database: Successfully fetched 1420 cities in 8ms
+2026-02-20 09:53:04.319 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 09:53:04.320 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 09:53:04.322 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 17.5868ms
+2026-02-20 09:53:04.322 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:04.323 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:04.327 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 52ms
+2026-02-20 09:53:04.328 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 56ms
+2026-02-20 09:53:04.329 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 09:53:04.330 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 09:53:04.331 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.332 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.333 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 69.0796ms
+2026-02-20 09:53:04.334 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 78.7279ms
+2026-02-20 09:53:04.355 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:04.357 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:04.357 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.358 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.359 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:04.360 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:04.360 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:04.361 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:04.361 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 09:53:04.362 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 09:53:04.366 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 09:53:04.367 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:04.381 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 09:53:04.382 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:04.393 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:04.395 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 35ms
+2026-02-20 09:53:04.396 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 09:53:04.397 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.398 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 42.9276ms
+2026-02-20 09:53:04.409 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:04.411 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 50ms
+2026-02-20 09:53:04.412 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 09:53:04.412 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.413 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 56.3155ms
+2026-02-20 09:53:04.431 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:53:04.433 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.434 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:53:04.434 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:53:04.435 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 09:53:04.446 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 09:53:04.446 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:53:04.475 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:53:04.477 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 42ms
+2026-02-20 09:53:04.478 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 09:53:04.478 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:53:04.479 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 47.9575ms
+2026-02-20 09:54:13.245 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 09:54:13.247 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:54:13.248 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 09:54:13.250 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 09:54:13.252 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 09:54:13.259 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 09:54:13.261 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 09:54:13.293 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 09:54:13.295 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 45ms
+2026-02-20 09:54:13.296 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 09:54:13.296 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 09:54:13.297 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 52.0775ms
+2026-02-20 10:03:20.385 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:03:20.386 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:03:20.392 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:20.394 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:20.394 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:03:20.395 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:03:20.395 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:03:20.399 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:20.405 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.400 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:03:20.406 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:20.408 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:20.412 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:03:20.413 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:03:20.421 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:20.421 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 10:03:20.425 +05:30 [INF] Database: Successfully fetched 41 makes in 18ms
+2026-02-20 10:03:20.426 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.427 +05:30 [INF] Database: Successfully fetched 1420 cities in 26ms
+2026-02-20 10:03:20.428 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:03:20.429 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:20.430 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:03:20.430 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:20.431 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:20.434 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:20.451 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 65.9899ms
+2026-02-20 10:03:20.445 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 10:03:20.458 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:20.434 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 48.169ms
+2026-02-20 10:03:20.451 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:03:20.468 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:20.446 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:03:20.469 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:03:20.478 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:20.482 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:03:20.486 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:03:20.475 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:03:20.490 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:20.487 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:20.490 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:03:20.470 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:03:20.498 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 90ms
+2026-02-20 10:03:20.501 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:03:20.502 +05:30 [INF] Database: Successfully fetched 1420 cities in 13ms
+2026-02-20 10:03:20.504 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 10:03:20.530 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.528 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:03:20.530 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:03:20.524 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:20.550 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:20.547 +05:30 [INF] Database: Successfully fetched 41 makes in 19ms
+2026-02-20 10:03:20.557 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:03:20.552 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 120ms
+2026-02-20 10:03:20.562 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:03:20.555 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.548 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:20.558 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:20.531 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 131.54ms
+2026-02-20 10:03:20.562 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.564 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:20.565 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 96.0107ms
+2026-02-20 10:03:20.566 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 114.5805ms
+2026-02-20 10:03:20.573 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 152.7091ms
+2026-02-20 10:03:20.580 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:20.594 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 10:03:20.612 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 10:03:20.612 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:20.641 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:20.648 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:20.650 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 70ms
+2026-02-20 10:03:20.651 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.654 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 10:03:20.655 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:20.655 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.656 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:20.656 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 106.4161ms
+2026-02-20 10:03:20.657 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:03:20.668 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:03:20.671 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:20.677 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:20.699 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:20.706 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.727 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 71ms
+2026-02-20 10:03:20.727 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:20.747 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:03:20.748 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:20.749 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.771 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 10:03:20.772 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 123.7266ms
+2026-02-20 10:03:20.846 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 10:03:20.877 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:20.907 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:20.911 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 162ms
+2026-02-20 10:03:20.912 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 10:03:20.933 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:20.934 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 256.749ms
+2026-02-20 10:03:24.301 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:03:24.311 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:03:24.342 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:24.361 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:24.344 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:24.359 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:24.343 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:24.374 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:24.366 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:03:24.367 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:03:24.362 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:24.376 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:24.376 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:03:24.377 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:03:24.381 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:24.383 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:24.387 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:03:24.394 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:03:24.400 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 10:03:24.407 +05:30 [INF] Database: Successfully fetched 1420 cities in 20ms
+2026-02-20 10:03:24.408 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:03:24.408 +05:30 [INF] Database: Successfully fetched 41 makes in 14ms
+2026-02-20 10:03:24.479 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:03:24.429 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:03:24.462 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:03:24.481 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:24.480 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:24.481 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:24.427 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 10:03:24.507 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:24.506 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 205.6369ms
+2026-02-20 10:03:24.506 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 195.0096ms
+2026-02-20 10:03:24.537 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:24.537 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:24.538 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:03:24.589 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:24.561 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 178ms
+2026-02-20 10:03:24.603 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:03:24.544 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:03:24.602 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:03:24.566 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 184ms
+2026-02-20 10:03:24.604 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:24.634 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:24.635 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:03:24.636 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 10:03:24.653 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:24.637 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:03:24.647 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:03:24.636 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 293.5418ms
+2026-02-20 10:03:24.672 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 329.6418ms
+2026-02-20 10:03:24.674 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:24.741 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:24.789 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:03:24.832 +05:30 [INF] Database: Successfully fetched 41 makes in 185ms
+2026-02-20 10:03:25.088 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:25.106 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:25.124 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:25.113 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:03:25.119 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:25.138 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:25.126 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:25.127 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:03:25.141 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 603.3561ms
+2026-02-20 10:03:25.140 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:03:25.140 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 10:03:25.113 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:03:25.199 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:03:25.228 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:25.211 +05:30 [INF] Database: Successfully fetched 1420 cities in 99ms
+2026-02-20 10:03:25.211 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 10:03:25.229 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:03:25.231 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:25.244 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:03:25.258 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:25.277 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 733.7424ms
+2026-02-20 10:03:25.280 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:25.301 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 163ms
+2026-02-20 10:03:25.306 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 179ms
+2026-02-20 10:03:25.307 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:03:25.307 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 10:03:25.308 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:25.309 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:25.311 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 569.6945ms
+2026-02-20 10:03:25.310 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 635.4664ms
+2026-02-20 10:03:25.559 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:03:25.564 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:25.566 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:03:25.574 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:03:25.575 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min
+2026-02-20 10:03:25.594 +05:30 [INF] Database: Count query completed. Total records found: 6995
+2026-02-20 10:03:25.596 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:03:25.625 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:03:25.631 +05:30 [INF] Database: Fetch completed. Total Count: 6995, Time: 56ms
+2026-02-20 10:03:25.634 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 6995.
+2026-02-20 10:03:25.636 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:03:25.637 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 77.9727ms
+2026-02-20 10:03:36.202 +05:30 [INF] Application is shutting down...
+2026-02-20 10:13:19.691 +05:30 [INF] Now listening on: http://localhost:5133
+2026-02-20 10:13:19.724 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 10:13:19.726 +05:30 [INF] Hosting environment: Development
+2026-02-20 10:13:19.727 +05:30 [INF] Content root path: C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksGrpc\StocksGrpcService
+2026-02-20 10:13:32.850 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:13:32.903 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:13:32.998 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:13:33.009 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:13:33.108 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:13:33.221 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:13:33.224 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:13:33.290 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:13:33.319 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 309ms
+2026-02-20 10:13:33.327 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:13:33.347 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:13:33.351 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 502.4682ms
+2026-02-20 10:15:51.800 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:15:51.804 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:15:51.810 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:15:51.810 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:15:51.812 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:15:51.813 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:15:51.813 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:15:51.816 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:15:51.817 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:15:51.819 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:15:51.821 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:15:51.822 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:15:51.826 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:15:51.826 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:15:51.833 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:15:51.833 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:15:51.834 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:15:51.837 +05:30 [INF] Database: Successfully fetched 1420 cities in 17ms
+2026-02-20 10:15:51.837 +05:30 [INF] Database: Successfully fetched 41 makes in 7ms
+2026-02-20 10:15:51.840 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:15:51.849 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:15:51.851 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:15:51.851 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:15:51.852 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 38.959ms
+2026-02-20 10:15:51.852 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 42.4974ms
+2026-02-20 10:15:51.882 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:15:51.885 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 72ms
+2026-02-20 10:15:51.886 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:15:51.887 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:15:51.888 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 88.0361ms
+2026-02-20 10:16:08.330 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:16:08.332 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:08.334 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 2 }
+2026-02-20 10:16:08.335 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:16:08.336 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:16:08.340 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:16:08.342 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:16:08.381 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:16:08.385 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 50ms
+2026-02-20 10:16:08.386 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:16:08.386 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:08.387 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 57.1273ms
+2026-02-20 10:16:20.489 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:16:20.491 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:20.492 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "makeIds": [ 49 ], "page": 1 }
+2026-02-20 10:16:20.494 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:16:20.496 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.make_id IN @Makes
+2026-02-20 10:16:20.499 +05:30 [INF] Database: Count query completed. Total records found: 2
+2026-02-20 10:16:20.499 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:16:20.502 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:16:20.507 +05:30 [INF] Database: Fetch completed. Total Count: 2, Time: 13ms
+2026-02-20 10:16:20.509 +05:30 [INF] Stocks gRPC Service: Returning 2 stocks out of 2.
+2026-02-20 10:16:20.511 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:20.513 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 23.1203ms
+2026-02-20 10:16:24.351 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:16:24.354 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:24.356 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "makeIds": [ 49 ], "sortByType": 2, "page": 1 }
+2026-02-20 10:16:24.359 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:16:24.361 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.make_id IN @Makes
+2026-02-20 10:16:24.363 +05:30 [INF] Database: Count query completed. Total records found: 2
+2026-02-20 10:16:24.364 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:16:24.367 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:16:24.376 +05:30 [INF] Database: Fetch completed. Total Count: 2, Time: 17ms
+2026-02-20 10:16:24.378 +05:30 [INF] Stocks gRPC Service: Returning 2 stocks out of 2.
+2026-02-20 10:16:24.379 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:24.380 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 28.2534ms
+2026-02-20 10:16:26.420 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:16:26.422 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:26.423 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 2, "page": 1 }
+2026-02-20 10:16:26.424 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:16:26.426 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:16:26.433 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:16:26.435 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:16:26.441 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:16:26.450 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 26ms
+2026-02-20 10:16:26.451 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:16:26.458 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:26.461 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 39.8107ms
+2026-02-20 10:16:28.745 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:16:28.747 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:28.749 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:16:28.750 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:16:28.751 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:16:28.756 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:16:28.757 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:16:28.783 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:16:28.791 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 41ms
+2026-02-20 10:16:28.794 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:16:28.796 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:16:28.796 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 51.1175ms
+2026-02-20 10:17:06.580 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:17:06.580 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:17:06.583 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:06.583 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:17:06.584 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:06.586 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:17:06.587 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:06.588 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:17:06.588 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:17:06.589 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:17:06.591 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:17:06.591 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:17:06.589 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:17:06.593 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:17:06.595 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:17:06.596 +05:30 [INF] Database: Successfully fetched 1420 cities in 5ms
+2026-02-20 10:17:06.599 +05:30 [INF] Database: Successfully fetched 41 makes in 4ms
+2026-02-20 10:17:06.599 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:17:06.600 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:17:06.600 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:17:06.601 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:06.601 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:17:06.602 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:06.603 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 23.1948ms
+2026-02-20 10:17:06.608 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 27.924ms
+2026-02-20 10:17:06.676 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:17:06.678 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 87ms
+2026-02-20 10:17:06.681 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:17:06.684 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:06.688 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 104.1884ms
+2026-02-20 10:17:06.712 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:17:06.725 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:06.726 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:17:06.727 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:17:06.728 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:17:06.737 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:17:06.740 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:17:06.774 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:17:06.776 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 48ms
+2026-02-20 10:17:06.776 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:17:06.777 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:06.778 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 65.7094ms
+2026-02-20 10:17:15.463 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:17:15.465 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:17:15.466 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:17:15.469 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:15.470 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:15.472 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:15.473 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:17:15.473 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:17:15.475 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:17:15.476 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:17:15.476 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:17:15.477 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:17:15.478 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:17:15.482 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:17:15.482 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:17:15.484 +05:30 [INF] Database: Successfully fetched 41 makes in 2ms
+2026-02-20 10:17:15.486 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:17:15.486 +05:30 [INF] Database: Successfully fetched 1420 cities in 8ms
+2026-02-20 10:17:15.486 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:15.488 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:17:15.489 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 22.511ms
+2026-02-20 10:17:15.489 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:17:15.490 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:15.492 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:17:15.492 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 28.8849ms
+2026-02-20 10:17:15.541 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:17:15.543 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 66ms
+2026-02-20 10:17:15.543 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:17:15.544 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:15.547 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 79.1433ms
+2026-02-20 10:17:25.051 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:17:25.051 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:17:25.052 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:17:25.053 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:25.054 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:25.056 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:25.058 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:17:25.059 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:17:25.061 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:17:25.063 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:17:25.064 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:17:25.065 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:17:25.064 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:17:25.066 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:17:25.073 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:17:25.074 +05:30 [INF] Database: Successfully fetched 41 makes in 8ms
+2026-02-20 10:17:25.074 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:17:25.074 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:17:25.075 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:17:25.075 +05:30 [INF] Database: Successfully fetched 1420 cities in 3ms
+2026-02-20 10:17:25.086 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:17:25.076 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:25.088 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:25.089 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 37.8834ms
+2026-02-20 10:17:25.089 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 36.5354ms
+2026-02-20 10:17:25.119 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:17:25.122 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 59ms
+2026-02-20 10:17:25.123 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:17:25.125 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:25.126 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 75.4215ms
+2026-02-20 10:17:27.671 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 10:17:27.672 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 10:17:27.673 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:17:27.675 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:27.677 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:27.679 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:27.681 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 10:17:27.682 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 10:17:27.683 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 10:17:27.683 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 10:17:27.684 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 10:17:27.684 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:17:27.686 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 10:17:27.687 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 10:17:27.687 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:17:27.691 +05:30 [INF] Database: Successfully fetched 41 makes in 4ms
+2026-02-20 10:17:27.692 +05:30 [INF] Database: Successfully fetched 1420 cities in 6ms
+2026-02-20 10:17:27.694 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 10:17:27.697 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 10:17:27.697 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:17:27.700 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 10:17:27.701 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 10:17:27.702 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:17:27.703 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 30.7657ms
+2026-02-20 10:17:27.704 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 32.1767ms
+2026-02-20 10:17:27.741 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:17:27.742 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 57ms
+2026-02-20 10:17:27.744 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:17:27.747 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:17:27.753 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 80.255ms
+2026-02-20 10:18:05.311 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:18:05.313 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:05.313 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 1, "page": 1 }
+2026-02-20 10:18:05.314 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:18:05.316 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:18:05.321 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:18:05.324 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:18:05.330 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:18:05.348 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 33ms
+2026-02-20 10:18:05.349 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:18:05.350 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:05.351 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 40.4609ms
+2026-02-20 10:18:06.428 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:18:06.431 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:06.435 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 2, "page": 1 }
+2026-02-20 10:18:06.436 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:18:06.437 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:18:06.442 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:18:06.443 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:18:06.456 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:18:06.467 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 31ms
+2026-02-20 10:18:06.468 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:18:06.469 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:06.470 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 41.9046ms
+2026-02-20 10:18:07.728 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:18:07.730 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:07.731 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 4, "page": 1 }
+2026-02-20 10:18:07.732 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:18:07.733 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:18:07.737 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:18:07.737 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:18:07.742 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:18:07.751 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 19ms
+2026-02-20 10:18:07.753 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:18:07.754 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:07.754 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 26.2224ms
+2026-02-20 10:18:08.759 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:18:08.761 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:08.762 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 3, "page": 1 }
+2026-02-20 10:18:08.762 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:18:08.764 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:18:08.767 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:18:08.768 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:18:08.772 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:18:08.791 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 29ms
+2026-02-20 10:18:08.792 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:18:08.794 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:08.794 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 35.4259ms
+2026-02-20 10:18:15.682 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 10:18:15.684 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:15.685 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 4, "page": 1 }
+2026-02-20 10:18:15.686 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 10:18:15.688 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 10:18:15.694 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 10:18:15.694 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 10:18:15.697 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 10:18:15.701 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 14ms
+2026-02-20 10:18:15.703 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 10:18:15.708 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 10:18:15.709 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 27.3786ms
+2026-02-20 10:19:27.854 +05:30 [INF] Application is shutting down...
+2026-02-20 12:38:50.430 +05:30 [INF] Now listening on: http://localhost:5133
+2026-02-20 12:38:50.470 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 12:38:50.472 +05:30 [INF] Hosting environment: Development
+2026-02-20 12:38:50.473 +05:30 [INF] Content root path: C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksGrpc\StocksGrpcService
+2026-02-20 12:38:58.403 +05:30 [INF] Application is shutting down...
+2026-02-20 12:45:25.069 +05:30 [INF] Now listening on: http://localhost:5133
+2026-02-20 12:45:25.136 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 12:45:25.144 +05:30 [INF] Hosting environment: Development
+2026-02-20 12:45:25.145 +05:30 [INF] Content root path: C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksGrpc\StocksGrpcService
+2026-02-20 12:47:14.352 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 12:47:14.353 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 12:47:14.353 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 12:47:14.513 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 12:47:14.513 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 12:47:14.513 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 12:47:14.652 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 12:47:14.652 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 12:47:14.684 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 12:47:14.684 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 12:47:14.857 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 12:47:14.876 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 12:47:15.047 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 12:47:15.047 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 12:47:15.050 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 12:47:15.292 +05:30 [INF] Database: Successfully fetched 1420 cities in 602ms
+2026-02-20 12:47:15.292 +05:30 [INF] Database: Successfully fetched 41 makes in 600ms
+2026-02-20 12:47:15.306 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 12:47:15.310 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 12:47:15.311 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 12:47:15.311 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 12:47:15.357 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 12:47:15.357 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 12:47:15.375 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 1027.4532ms
+2026-02-20 12:47:15.375 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 1019.8253ms
+2026-02-20 12:47:15.460 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 12:47:15.545 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 669ms
+2026-02-20 12:47:15.558 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 12:47:15.575 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 12:47:15.578 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 1232.4921ms
+2026-02-20 12:47:27.329 +05:30 [INF] Application is shutting down...
+2026-02-20 13:11:33.520 +05:30 [INF] Now listening on: http://localhost:5133
+2026-02-20 13:11:33.564 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 13:11:33.566 +05:30 [INF] Hosting environment: Development
+2026-02-20 13:11:33.568 +05:30 [INF] Content root path: C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksGrpc\StocksGrpcService
+2026-02-20 13:12:42.156 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:12:42.153 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - application/grpc null
+2026-02-20 13:12:42.156 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - application/grpc null
+2026-02-20 13:12:42.317 +05:30 [INF] Executing endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 13:12:42.317 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:12:42.317 +05:30 [INF] Executing endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 13:12:42.442 +05:30 [INF] Cities gRPC Service: Fetching all cities.
+2026-02-20 13:12:42.442 +05:30 [INF] Make gRPC Service: Fetching all car makes.
+2026-02-20 13:12:42.455 +05:30 [INF] Database: Starting fetch for all cities.
+2026-02-20 13:12:42.455 +05:30 [INF] Database: Starting fetch for all car makes.
+2026-02-20 13:12:42.624 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 13:12:42.647 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:12:42.793 +05:30 [INF] Database: Starting Cities query execution.
+2026-02-20 13:12:42.793 +05:30 [INF] Database: Starting Makes query execution.
+2026-02-20 13:12:42.796 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:12:43.009 +05:30 [INF] Database: Successfully fetched 1420 cities in 549ms
+2026-02-20 13:12:43.009 +05:30 [INF] Database: Successfully fetched 41 makes in 547ms
+2026-02-20 13:12:43.029 +05:30 [INF] Make gRPC Service: Returning 41 makes.
+2026-02-20 13:12:43.030 +05:30 [INF] Cities gRPC Service: Returning 1420 cities.
+2026-02-20 13:12:43.047 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:12:43.049 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:12:43.072 +05:30 [INF] Executed endpoint 'gRPC - /make.MakeService/GetMake'
+2026-02-20 13:12:43.072 +05:30 [INF] Executed endpoint 'gRPC - /cities.CitiesService/GetCities'
+2026-02-20 13:12:43.085 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/cities.CitiesService/GetCities - 200 null application/grpc 934.4976ms
+2026-02-20 13:12:43.085 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/make.MakeService/GetMake - 200 null application/grpc 934.509ms
+2026-02-20 13:12:43.166 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:12:43.268 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 621ms
+2026-02-20 13:12:43.282 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:12:43.297 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:12:43.299 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 1150.4801ms
+2026-02-20 13:12:52.889 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:12:52.893 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:12:52.900 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 2 }
+2026-02-20 13:12:52.902 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:12:52.912 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:12:52.920 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:12:52.921 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:12:52.991 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:12:53.001 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 99ms
+2026-02-20 13:12:53.006 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:12:53.012 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:12:53.019 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 130.0301ms
+2026-02-20 13:12:59.610 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:12:59.614 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:12:59.619 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 2, "page": 1 }
+2026-02-20 13:12:59.623 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:12:59.625 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:12:59.635 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:12:59.638 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:12:59.659 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:12:59.670 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 46ms
+2026-02-20 13:12:59.675 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:12:59.680 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:12:59.684 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 73.8176ms
+2026-02-20 13:13:01.039 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:01.044 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:01.045 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 3, "page": 1 }
+2026-02-20 13:13:01.047 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:01.048 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:01.060 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:01.062 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:01.066 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:01.095 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 48ms
+2026-02-20 13:13:01.099 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:01.107 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:01.113 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 73.1082ms
+2026-02-20 13:13:02.325 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:02.329 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:02.332 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 4, "page": 1 }
+2026-02-20 13:13:02.337 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:02.340 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:02.346 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:02.347 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:02.355 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:02.363 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 25ms
+2026-02-20 13:13:02.367 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:02.374 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:02.377 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 51.9501ms
+2026-02-20 13:13:03.283 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:03.287 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:03.289 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 1, "page": 1 }
+2026-02-20 13:13:03.291 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:03.293 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:03.303 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:03.308 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:03.312 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:03.322 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 31ms
+2026-02-20 13:13:03.327 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:03.330 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:03.341 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 57.8343ms
+2026-02-20 13:13:05.141 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:05.152 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:05.156 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 12, "maxBudget": 20, "sortByType": 1, "page": 1 }
+2026-02-20 13:13:05.158 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:05.165 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.price_numeric <= @Max
+2026-02-20 13:13:05.175 +05:30 [INF] Database: Count query completed. Total records found: 766
+2026-02-20 13:13:05.180 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:05.189 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:05.223 +05:30 [INF] Database: Fetch completed. Total Count: 766, Time: 65ms
+2026-02-20 13:13:05.228 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 766.
+2026-02-20 13:13:05.231 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:05.233 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 91.3186ms
+2026-02-20 13:13:06.036 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:06.040 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:06.048 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 12, "maxBudget": 20, "makeIds": [ 49 ], "sortByType": 1, "page": 1 }
+2026-02-20 13:13:06.053 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:06.057 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.price_numeric <= @Max AND s.make_id IN @Makes
+2026-02-20 13:13:06.061 +05:30 [INF] Database: Count query completed. Total records found: 0
+2026-02-20 13:13:06.063 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:06.069 +05:30 [INF] Database: Fetch completed. Total Count: 0, Time: 15ms
+2026-02-20 13:13:06.076 +05:30 [INF] Stocks gRPC Service: Returning 0 stocks out of 0.
+2026-02-20 13:13:06.079 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:06.081 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 44.8738ms
+2026-02-20 13:13:07.828 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:07.834 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:07.843 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 12, "maxBudget": 20, "sortByType": 1, "page": 1 }
+2026-02-20 13:13:07.846 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:07.848 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.price_numeric <= @Max
+2026-02-20 13:13:07.856 +05:30 [INF] Database: Count query completed. Total records found: 766
+2026-02-20 13:13:07.859 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:07.864 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:07.877 +05:30 [INF] Database: Fetch completed. Total Count: 766, Time: 31ms
+2026-02-20 13:13:07.882 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 766.
+2026-02-20 13:13:07.888 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:07.893 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 65.572ms
+2026-02-20 13:13:09.122 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:09.125 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:09.126 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 1, "page": 1 }
+2026-02-20 13:13:09.128 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:09.130 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:09.136 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:09.137 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:09.141 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:09.148 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 19ms
+2026-02-20 13:13:09.152 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:09.160 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:09.162 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 38.9706ms
+2026-02-20 13:13:10.122 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:10.125 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:10.126 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "makeIds": [ 49 ], "sortByType": 1, "page": 1 }
+2026-02-20 13:13:10.129 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:10.131 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.make_id IN @Makes
+2026-02-20 13:13:10.135 +05:30 [INF] Database: Count query completed. Total records found: 2
+2026-02-20 13:13:10.136 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:10.141 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:10.144 +05:30 [INF] Database: Fetch completed. Total Count: 2, Time: 15ms
+2026-02-20 13:13:10.146 +05:30 [INF] Stocks gRPC Service: Returning 2 stocks out of 2.
+2026-02-20 13:13:10.151 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:10.159 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 36.4678ms
+2026-02-20 13:13:12.572 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:12.575 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:12.581 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "fuelTypeIds": [ 1 ], "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "makeIds": [ 49 ], "sortByType": 1, "page": 1 }
+2026-02-20 13:13:12.585 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:12.592 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.fuel IN @Fuels AND s.price_numeric >= @Min AND s.make_id IN @Makes
+2026-02-20 13:13:12.598 +05:30 [INF] Database: Count query completed. Total records found: 2
+2026-02-20 13:13:12.601 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:12.610 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:12.613 +05:30 [INF] Database: Fetch completed. Total Count: 2, Time: 28ms
+2026-02-20 13:13:12.618 +05:30 [INF] Stocks gRPC Service: Returning 2 stocks out of 2.
+2026-02-20 13:13:12.624 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:12.628 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 55.8647ms
+2026-02-20 13:13:13.091 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:13.094 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:13.095 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "makeIds": [ 49 ], "sortByType": 1, "page": 1 }
+2026-02-20 13:13:13.106 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:13.110 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.make_id IN @Makes
+2026-02-20 13:13:13.114 +05:30 [INF] Database: Count query completed. Total records found: 2
+2026-02-20 13:13:13.122 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:13.127 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:13.130 +05:30 [INF] Database: Fetch completed. Total Count: 2, Time: 23ms
+2026-02-20 13:13:13.132 +05:30 [INF] Stocks gRPC Service: Returning 2 stocks out of 2.
+2026-02-20 13:13:13.139 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:13.143 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 52.8907ms
+2026-02-20 13:13:14.485 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:14.490 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:14.494 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "makeIds": [ 49 ], "cityIds": [ 333 ], "sortByType": 1, "page": 1 }
+2026-02-20 13:13:14.503 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:14.506 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.make_id IN @Makes AND s.city_id IN @Cities
+2026-02-20 13:13:14.513 +05:30 [INF] Database: Count query completed. Total records found: 0
+2026-02-20 13:13:14.515 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:14.526 +05:30 [INF] Database: Fetch completed. Total Count: 0, Time: 22ms
+2026-02-20 13:13:14.529 +05:30 [INF] Stocks gRPC Service: Returning 0 stocks out of 0.
+2026-02-20 13:13:14.532 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:14.535 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 49.6062ms
+2026-02-20 13:13:15.010 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:15.013 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:15.016 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "makeIds": [ 49 ], "sortByType": 1, "page": 1 }
+2026-02-20 13:13:15.022 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:15.027 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.make_id IN @Makes
+2026-02-20 13:13:15.031 +05:30 [INF] Database: Count query completed. Total records found: 2
+2026-02-20 13:13:15.033 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:15.040 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:15.044 +05:30 [INF] Database: Fetch completed. Total Count: 2, Time: 21ms
+2026-02-20 13:13:15.046 +05:30 [INF] Stocks gRPC Service: Returning 2 stocks out of 2.
+2026-02-20 13:13:15.049 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:15.054 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 43.5925ms
+2026-02-20 13:13:17.094 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:17.097 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:17.099 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 1, "page": 1 }
+2026-02-20 13:13:17.104 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:17.106 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:17.117 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:17.118 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:17.122 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:17.129 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 25ms
+2026-02-20 13:13:17.133 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:17.140 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:17.143 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 49.0942ms
+2026-02-20 13:13:20.266 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:20.270 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:20.275 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 3, "maxBudget": 5, "sortByType": 1, "page": 1 }
+2026-02-20 13:13:20.277 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:20.279 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.price_numeric <= @Max
+2026-02-20 13:13:20.329 +05:30 [INF] Database: Count query completed. Total records found: 4195
+2026-02-20 13:13:20.332 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:20.342 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:20.346 +05:30 [INF] Database: Fetch completed. Total Count: 4195, Time: 69ms
+2026-02-20 13:13:20.349 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 4195.
+2026-02-20 13:13:20.358 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:20.362 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 95.8307ms
+2026-02-20 13:13:22.427 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:22.431 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:22.433 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "sortByType": 1, "page": 1 }
+2026-02-20 13:13:22.436 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:22.438 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:22.445 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:22.446 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:22.449 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:22.455 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 19ms
+2026-02-20 13:13:22.457 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:22.463 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:22.466 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 39.0055ms
+2026-02-20 13:13:23.077 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:23.081 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:23.085 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 13:13:23.087 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:23.090 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:23.104 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:23.107 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:23.178 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:23.185 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 97ms
+2026-02-20 13:13:23.189 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:23.192 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:23.194 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 116.7317ms
+2026-02-20 13:13:28.674 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:28.679 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:28.682 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 8, "maxBudget": 12, "page": 1 }
+2026-02-20 13:13:28.684 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:28.686 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min AND s.price_numeric <= @Max
+2026-02-20 13:13:28.689 +05:30 [INF] Database: Count query completed. Total records found: 680
+2026-02-20 13:13:28.689 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:28.701 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:28.721 +05:30 [INF] Database: Fetch completed. Total Count: 680, Time: 37ms
+2026-02-20 13:13:28.725 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 680.
+2026-02-20 13:13:28.728 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:28.731 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 56.1544ms
+2026-02-20 13:13:30.384 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:13:30.387 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:30.388 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 13:13:30.390 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:13:30.391 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:13:30.398 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:13:30.399 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:13:30.472 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:13:30.477 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 87ms
+2026-02-20 13:13:30.479 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:13:30.483 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:13:30.490 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 105.9417ms
+2026-02-20 13:13:54.324 +05:30 [INF] Application is shutting down...
+2026-02-20 13:25:28.499 +05:30 [INF] Now listening on: http://localhost:5133
+2026-02-20 13:25:28.535 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 13:25:28.536 +05:30 [INF] Hosting environment: Development
+2026-02-20 13:25:28.536 +05:30 [INF] Content root path: C:\Users\abhishek.p\Downloads\cwtraining\Intern\2026\AbhishekPandey\Project-Training\Assignment-3\StocksGrpc\StocksGrpcService
+2026-02-20 13:25:35.405 +05:30 [INF] Request starting HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - application/grpc null
+2026-02-20 13:25:35.511 +05:30 [INF] Executing endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:25:35.705 +05:30 [INF] Stocks gRPC Service: Processing GetFilteredStocks. Request: { "minBudget": 0, "maxBudget": 1.7976931348623157e+308, "page": 1 }
+2026-02-20 13:25:35.721 +05:30 [INF] Database: Starting fetch for all stocks.
+2026-02-20 13:25:37.609 +05:30 [INF] Database: Starting Count query execution. Filters:  AND s.price_numeric >= @Min
+2026-02-20 13:25:37.790 +05:30 [INF] Database: Count query completed. Total records found: 9969
+2026-02-20 13:25:37.794 +05:30 [INF] Database: Starting Stock Fetch query.
+2026-02-20 13:25:37.905 +05:30 [INF] Database: Starting Stock Images Fetch query .
+2026-02-20 13:25:37.947 +05:30 [INF] Database: Fetch completed. Total Count: 9969, Time: 2226ms
+2026-02-20 13:25:37.963 +05:30 [INF] Stocks gRPC Service: Returning 30 stocks out of 9969.
+2026-02-20 13:25:37.995 +05:30 [INF] Executed endpoint 'gRPC - /stocks.StockService/GetFilteredStocks'
+2026-02-20 13:25:38.007 +05:30 [INF] Request finished HTTP/2 POST http://localhost:5133/stocks.StockService/GetFilteredStocks - 200 null application/grpc 2604.6318ms
+2026-02-20 13:25:49.990 +05:30 [INF] Application is shutting down...

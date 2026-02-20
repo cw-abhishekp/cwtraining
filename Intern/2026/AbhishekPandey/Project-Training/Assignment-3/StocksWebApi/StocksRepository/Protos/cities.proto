@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "StocksGrpcService.Protos";
+
+package cities;
+
+// gRPC Service Definition
+service CitiesService {
+  rpc GetCities (google.protobuf.Empty) returns (CitiesListgrpcDTO);
+}
+
+message CitiesgrpcDTO{
+  int32 city_id =1;
+  string city_name = 2;
+  bool is_popular =3;
+}
+
+message CitiesListgrpcDTO{
+  repeated  CitiesgrpcDTO cities =1;
+}

@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "AAtTzTvu4Hg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\abhishek.p\\Downloads\\cwtraining\\Intern\\2026\\AbhishekPandey\\Project-Training\\Assignment-3\\StocksWebApi\\StocksRepository\\StocksRepository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\google.protobuf\\3.33.5\\google.protobuf.3.33.5.nupkg.sha512",
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\grpc.core.api\\2.76.0\\grpc.core.api.2.76.0.nupkg.sha512",
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\grpc.net.client\\2.76.0\\grpc.net.client.2.76.0.nupkg.sha512",
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\grpc.net.common\\2.76.0\\grpc.net.common.2.76.0.nupkg.sha512",
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\grpc.tools\\2.78.0\\grpc.tools.2.78.0.nupkg.sha512",
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\abhishek.p\\.nuget\\packages\\riok.mapperly\\4.0.0\\riok.mapperly.4.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
