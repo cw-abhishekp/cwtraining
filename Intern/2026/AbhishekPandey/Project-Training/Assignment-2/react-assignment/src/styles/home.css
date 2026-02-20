@@ -367,3 +367,142 @@ body {
     font-size: 14px;
   }
 }
+
+.sort-container {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  min-height: 25px;  /* ← Minimum height, but will grow */
+  height: auto;  /* ← Add this - allow automatic height */
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+}
+
+.sort-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* ← Space between filters and sort */
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;  /* Sort By won't shrink */
+  white-space: nowrap;
+  margin-left: auto;  /* Push to right */
+}
+
+.chip {
+  background: #eee;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  white-space: nowrap;
+}
+
+.chip button {
+  border: 1px solid #999;
+  background: white;
+  font-size: 11px;
+  padding: 0 4px;
+  border-radius: 3px; 
+  cursor: pointer;
+}
+
+.sort-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 28px;
+}
+
+
+.sort-container {
+  background-color: #f9f9f9;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  min-height: 29px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;  
+  padding: 8px 12px;
+  margin-bottom: 15px;
+}
+
+.sort-row {
+  display: flex;
+  align-items: flex-start; 
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-left: auto;
+  position: sticky; 
+  top: 0; 
+}
+
+.chip {
+  background: #eee;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  white-space: nowrap;
+}
+
+.chip button {
+  border: 1px solid #999;
+  background: white;
+  font-size: 11px;
+  padding: 0 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sort-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  height: 28px;
+}

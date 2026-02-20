@@ -12,7 +12,7 @@ const initialState = {
     budget: "",
     makeIds: [],
     cityIds: [],
-    sortBy: "Best Match"
+    sortBy: ""
 };
 
 const FilterReducer = (state = initialState, action) => {

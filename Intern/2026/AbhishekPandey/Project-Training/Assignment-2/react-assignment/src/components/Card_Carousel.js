@@ -1,6 +1,5 @@
 import { useState } from "react";
-import '../styles/card.css'
-
+import "../styles/card.css";
 
 function Card({ data = {} }) {
   //const { stockImages = , km =  } = data || {};
@@ -25,21 +24,36 @@ function Card({ data = {} }) {
             <img className="car-image" src={images[index]} alt={data.carName} />
             {images.length > 1 && (
               <>
-                <button className="nav left" onClick={prev}>‹</button>
-                <button className="nav right" onClick={next}>›</button>
+                <button className="nav left" onClick={prev}>
+                  ‹
+                </button>
+                <button className="nav right" onClick={next}>
+                  ›
+                </button>
               </>
             )}
           </>
         ) : (
           <div className="no-image">
             <img src="https://imgd.aeplcdn.com/0x0/cw/static/icons/svg/no-image.svg" />
-            <button className="request-photo-btn">Request Photo</button>
+            <button
+              className="request-photo-btn"
+              onClick={() =>
+                alert(
+                  "The photo has been requested from the owner and will be delivered shortly.",
+                )
+              }
+            >
+              Request Photo
+            </button>
           </div>
         )}
       </div>
 
       <div className="card-body">
-        <div className="car-name" title={`${data.makeYear} ${data.carName}`}>{data.makeYear} {data.carName}</div>
+        <div className="car-name" title={`${data.carName}`}>
+          {data.carName}
+        </div>
 
         <div className="car-meta">
           {/* {data.km} km | {data.fuel} | {data.cityName} */}

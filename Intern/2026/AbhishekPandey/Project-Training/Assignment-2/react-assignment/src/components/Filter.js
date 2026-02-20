@@ -1,17 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState, useMemo, useEffect, useRef } from "react";
-import { changeFuelType, changeMakeId, changeCity, clearFilter, changeBudget } from "../redux/filter/FilterActions";
+import { useState, useMemo, useEffect, useRef, useEffectEvent } from "react";
+import { changeFuelType, changeMakeId, changeCity, clearFilter, changeBudget } from "../redux/Filter/FilterActions";
 import { fuelMap } from "../constants/fuelMap";
 import '../styles/filter.css';
+import { BUDGET_PRESETS } from "../constants/budgets";
+
 const toggle = (arr = [], v) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
 
 function Filter() {
   const dispatch = useDispatch();
   const makeData = useSelector((s) => s.makeData.data || []);
   const cityData = useSelector((s) => s.cityData.data || []);
-  const { fuel = [], budget = "0-50", makeIds = [], cityIds = [] } = useSelector((s) => s.filterData);
-
-  console.log(fuel,"fuel this is")
+  const { fuel = [], budget = "0-100", makeIds = [], cityIds = [] } = useSelector((s) => s.filterData);
   const [expanded, setExpanded] = useState({
     budget: true,
     make: true,
@@ -24,62 +24,58 @@ function Filter() {
 
   // Local state for budget (for immediate UI updates)
   const [minBudget, setMinBudget] = useState(0);
-  const [maxBudget, setMaxBudget] = useState(50);
+  const [maxBudget, setMaxBudget] = useState(100);
 
   const [minInput, setMinInput] = useState("0");
-  const [maxInput, setMaxInput] = useState("50");
+  const [maxInput, setMaxInput] = useState("100");
 
   // Debounce timer ref
   const debounceTimer = useRef(null);
-
   useEffect(() => {
-    if (!budget) return;
+    if (!budget) {
+      setMinBudget(0);
+      setMaxBudget(100);
+      setMinInput("0");
+      setMaxInput("100");
+      return
+    };
 
     let [min, max] = budget.split("-").map(Number);
-
     min = isNaN(min) ? 0 : Math.max(0, Math.min(min, 100));
-    max = isNaN(max) ? 50 : Math.max(0, Math.min(max, 100));
+    max = isNaN(max) ? 100 : Math.max(0, Math.min(max, 100));
 
     if (min > max) {
-      [min, max] = [max, min]; 
+      [min, max] = [max, min];
     }
-
-
     setMinBudget(min);
     setMaxBudget(max);
     setMinInput(String(min));
     setMaxInput(String(max));
 
-    // If we had to fix the values, update Redux with corrected budget
     const correctedBudget = `${min}-${max}`;
     if (correctedBudget !== budget) {
       dispatch(changeBudget(correctedBudget));
     }
   }, [budget, dispatch]);
 
-  // useEffect(() => {
-  //   // console.log("Filter component - Redux state:", { fuel, budget, makeIds, cityIds });
-  // }, [fuel, budget, makeIds, cityIds]);
-
   const filteredMakes = useMemo(() =>
-    makeData? makeData.filter((m) => m.makeName.toLowerCase().includes(makeSearch.toLowerCase())) : [],
+    makeData ? makeData.filter((m) => m.makeName.toLowerCase().includes(makeSearch.toLowerCase())) : [],
     [makeData, makeSearch]
   );
-  
+
   const filteredCities = useMemo(() =>
-    cityData? cityData.filter((c) => c.CityName.toLowerCase().includes(citySearch.toLowerCase())) : [],
+    cityData ? cityData.filter((c) => c.cityName.toLowerCase().includes(citySearch.toLowerCase())) : [],
     [cityData, citySearch]
   );
 
-function clearAll(){
+  function clearAll() {
     dispatch(clearFilter())
     setMinBudget(0);
-    setMaxBudget(50);
+    setMaxBudget(100);
     setMinInput(String(0));
-    setMaxInput(String(50));
-
+    setMaxInput(String(100));
   }
-  
+
   const toggleSection = (key) => setExpanded((p) => ({ ...p, [key]: !p[key] }));
 
   // Debounced budget change handler
@@ -96,75 +92,64 @@ function clearAll(){
     setMaxInput(String(newMax));
 
     // Dispatch after 1 second
-    debounceTimer.current = setTimeout(() =>  {
+    debounceTimer.current = setTimeout(() => {
       dispatch(changeBudget(`${newMin}-${newMax}`));
     }, 1000);
   };
 
-  // Handle min input change
   const handleMinInputChange = (e) => {
     const value = e.target.value;
-
-    // Allow empty string or numbers only
     if (value === "" || /^\d+$/.test(value)) {
       setMinInput(value);
-
-      // Only update budget if it's a valid number
-      if (value !== "") {
-        const num = Math.min(Number(value), 100);
-        // Min cannot be greater than max
-        const validMin = Math.min(num, maxBudget);
-        handleBudgetChange(validMin, maxBudget);
+      if (value === "") {
+        if (debounceTimer.current) {
+          clearTimeout(debounceTimer.current);
+        }
+        return;
       }
+      if (debounceTimer.current) {
+        clearTimeout(debounceTimer.current);
+      }
+      const num = Number(value);
+      const cappedNum = Math.min(num, 100);
+      // setMinBudget(cappedNum);
+      debounceTimer.current = setTimeout(() => {
+        const validMin = Math.min(cappedNum, maxBudget);
+        setMinBudget(validMin);
+        setMinInput(String(validMin));
+        dispatch(changeBudget(`${validMin}-${maxBudget}`));
+      }, 1000);
     }
   };
 
-  // Handle max input change
   const handleMaxInputChange = (e) => {
     const value = e.target.value;
-
-    // Allow empty string or numbers only
     if (value === "" || /^\d+$/.test(value)) {
       setMaxInput(value);
 
-      // Only update budget if it's a valid number
-      if (value !== "") {
-        const num = Math.min(Number(value), 100);
-        // Max cannot be less than min
-        const validMax = Math.max(num, minBudget);
-        handleBudgetChange(minBudget, validMax);
+      if (value === "") {
+        if (debounceTimer.current) {
+          clearTimeout(debounceTimer.current);
+        }
+        return;
       }
+      if (debounceTimer.current) {
+        clearTimeout(debounceTimer.current);
+      }
+
+      const num = Number(value);
+      const cappedNum = Math.min(num, 100);
+
+      // setMaxBudget(cappedNum);
+      debounceTimer.current = setTimeout(() => {
+        const validMax = Math.max(cappedNum, minBudget);
+        setMaxBudget(validMax);
+        setMaxInput(String(validMax));
+        dispatch(changeBudget(`${minBudget}-${validMax}`));
+      }, 1000);
     }
   };
 
-  // Handle blur - validate and set proper value when user leaves input
-  const handleMinBlur = () => {
-    if (minInput === "") {
-      setMinInput("0");
-      handleBudgetChange(0, maxBudget);
-    } else {
-      const num = Math.min(Number(minInput), 100);
-      const validMin = Math.min(num, maxBudget);
-      setMinInput(String(validMin));
-      if (validMin !== minBudget) {
-        handleBudgetChange(validMin, maxBudget);
-      }
-    }
-  };
-
-  const handleMaxBlur = () => {
-    if (maxInput === "") {
-      setMaxInput("50");
-      handleBudgetChange(minBudget, 50);
-    } else {
-      const num = Math.min(Number(maxInput), 100);
-      const validMax = Math.max(num, minBudget);
-      setMaxInput(String(validMax));
-      if (validMax !== maxBudget) {
-        handleBudgetChange(minBudget, validMax);
-      }
-    }
-  };
 
   // Cleanup timer on unmount
   useEffect(() => {
@@ -174,6 +159,39 @@ function clearAll(){
       }
     };
   }, []);
+
+  // Handle budget pill click
+  const handleBudgetPresetClick = (min, max) => {
+    handleBudgetChange(min, max);
+  };
+
+  // Check if a preset is active
+  const isPresetActive = (min, max) => {
+    return minBudget === min && maxBudget === max;
+  };
+
+  // Increment/Decrement handlers for Min
+  const handleMinIncrement = () => {
+    const newMin = Math.min(minBudget + 1, maxBudget);
+    handleBudgetChange(newMin, maxBudget);
+  };
+
+  const handleMinDecrement = () => {
+    const newMin = Math.max(minBudget - 1, 0);
+    handleBudgetChange(newMin, maxBudget);
+  };
+
+  // Increment/Decrement handlers for Max
+  const handleMaxIncrement = () => {
+    const newMax = Math.min(maxBudget + 1, 100);
+    handleBudgetChange(minBudget, newMax);
+  };
+
+  const handleMaxDecrement = () => {
+    const newMax = Math.max(maxBudget - 1, minBudget);
+    handleBudgetChange(minBudget, newMax);
+  };
+
 
   return (
     <div className="filter-panel">
@@ -196,13 +214,27 @@ function clearAll(){
       <div className="filter-sections-wrapper">
         {/* Budget */}
         <div className="filter-section">
+
           <div className="section-header" onClick={() => toggleSection("budget")}>
             <h4>Budget (Lakh)</h4>
             <span className={`arrow-icon ${expanded.budget ? 'open' : ''}`}>▼</span>
           </div>
           <div className={`section-content ${expanded.budget ? 'open' : ''}`}>
+
+            <div className="budget-pills">
+              {BUDGET_PRESETS.map((preset, index) => (
+                <button
+                  key={index}
+                  className={`budget-pill ${isPresetActive(preset.min, preset.max) ? 'active' : ''}`}
+                  onClick={() => handleBudgetPresetClick(preset.min, preset.max)}
+                >
+                  {preset.label}
+                </button>
+              ))}
+            </div>
+
             <div className="budget-styling">
-              Rs. {minBudget === 0 ? '0' : `${minBudget} Lakh`} – {maxBudget === 100 ? '100+ Lakh' : `${maxBudget} Lakh`}
+              ₹ {minBudget === 0 ? '0' : `${minBudget} Lakh`} – {maxBudget === 100 ? '100+ Lakh' : `${maxBudget} Lakh`}
             </div>
 
             {/* Dual Range Slider */}
@@ -254,24 +286,39 @@ function clearAll(){
             </div>
 
             {/* Input Fields */}
+            {/* Input Fields with Arrows INSIDE */}
             <div className="budget-inputs">
-              <input
-                type="text"
-                className="budget-input-field"
-                value={minInput}
-                onChange={handleMinInputChange}
-                onBlur={handleMinBlur}
-                placeholder="0"
-              />
+              {/* Min Input with Arrows INSIDE */}
+              <div className="budget-input-wrapper">
+                <input
+                  type="text"
+                  className="budget-input-field"
+                  value={minInput}
+                  onChange={handleMinInputChange}
+                // onBlur={handleMinBlur}
+                />
+                <div className="input-arrows">
+                  <button className="arrow-btn arrow-up" onClick={handleMinIncrement}>▲</button>
+                  <button className="arrow-btn arrow-down" onClick={handleMinDecrement}>▼</button>
+                </div>
+              </div>
+
               <span className="budget-separator">–</span>
-              <input
-                type="text"
-                className="budget-input-field"
-                value={maxInput}
-                onChange={handleMaxInputChange}
-                onBlur={handleMaxBlur}
-                placeholder="50"
-              />
+
+              {/* Max Input with Arrows INSIDE */}
+              <div className="budget-input-wrapper">
+                <input
+                  type="text"
+                  className="budget-input-field"
+                  value={maxInput}
+                  onChange={handleMaxInputChange}
+                // onBlur={handleMaxBlur}
+                />
+                <div className="input-arrows">
+                  <button className="arrow-btn arrow-up" onClick={handleMaxIncrement}>▲</button>
+                  <button className="arrow-btn arrow-down" onClick={handleMaxDecrement}>▼</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -319,13 +366,13 @@ function clearAll(){
             />
             <div className="scrollable-list">
               {filteredCities.slice(0, 50).map((c) => (
-                <label className="checkbox-container" key={c.CityId}>
+                <label className="checkbox-container" key={c.cityId}>
                   <input
                     type="checkbox"
-                    checked={cityIds.includes(c.CityId)}
-                    onChange={() => dispatch(changeCity(toggle(cityIds, c.CityId)))}
+                    checked={cityIds.includes(c.cityId)}
+                    onChange={() => dispatch(changeCity(toggle(cityIds, c.cityId)))}
                   />
-                  {c.CityName}
+                  {c.cityName}
                 </label>
               ))}
             </div>

@@ -3,67 +3,91 @@ import { useSelector, useDispatch } from "react-redux";
 import fetchMake from "../redux/make/MakeActions";
 import fetchCity from "../redux/city/CityActions";
 import fetchCars from "../redux/car/CarActions";
-import { changeFuelType, changeMakeId, changeCity, changeBudget } from "../redux/filter/FilterActions";
+import { changeFuelType, changeMakeId, changeCity, changeBudget, changeSortBy } from "../redux/Filter/FilterActions";
 import Card from "./Card_Carousel";
 import Filter from "./Filter";
-import SortBy from "./Sort/SortBy";
-import sortData from "./Sort/SortData";
+import SortBy from "./sort/sortBy";
+import sortData from "./sort/sortData";
 import "../styles/home.css";
 import { sanitizeBudget } from "../utils/HomeUtils";
 
 function Home() {
   const dispatch = useDispatch();
-  const filt = useRef([])
   const { data, loading } = useSelector((state) => state.carData);
   const filters = useSelector((state) => state.filterData);
-  const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [isScrollingUp, setIsScrollingUp] = useState(false);
-  const isInitialLoad = useRef(true);
   const dataRef = useRef(data);
-  const hasInitializedFromURL = useRef(false);
+  const [isSorting, setIsSorting] = useState(false);
   const lastScrollY = useRef(0);
 
+  // for the initial mount tracking 
+  const isInitialMount = useRef(true);
+
   useEffect(() => {
-    dataRef.current = data;
-  }, [data]);
+    dispatch(fetchCity());
+    dispatch(fetchMake());
+  }, [dispatch]);
 
- 
-
-  // Initialize filters from URL on mount
+  // filters when url change initial mount
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
 
-    const fuel = params.get("fuel")?.split("+").filter(Boolean) || [];
-    const budget = sanitizeBudget(params.get("budget"));
-    const makeIds = params.get("car")?.split("+").map(Number).filter(Boolean) || [];
-    const cityIds = params.get("city")?.split("+").map(Number).filter(Boolean) || [];
 
+    const rawSearch = window.location.search.toLowerCase();
+    if (rawSearch.includes("=null") || rawSearch.includes("=undefined")) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    const fuel = params.get("fuel")?.split(" ").filter(Boolean) || [];
+    const budget = sanitizeBudget(params.get("budget"));
+    const makeIds = params.get("car")?.split(" ").filter(Boolean) || [];
+    const cityIds = params.get("city")?.split(" ").filter(Boolean) || [];
+    const sortBy = params.get("sortBy"); 
+
+    // Update known parameters set
+    const knownParams = new Set(["fuel", "budget", "car", "city", "sortBy"]);
+    const hasUnknownParams = Array.from(params.keys()).some(
+      key => !knownParams.has(key)
+    );
+
+    // Dispatch to Redux
     if (fuel.length) dispatch(changeFuelType(fuel));
-    if (budget && budget !== "0-50") dispatch(changeBudget(budget));
+    if (budget && budget !== "") dispatch(changeBudget(budget));
     if (makeIds.length) dispatch(changeMakeId(makeIds));
     if (cityIds.length) dispatch(changeCity(cityIds));
+    if (sortBy) dispatch(changeSortBy(sortBy)); 
 
-    hasInitializedFromURL.current = true;
-    isInitialLoad.current = false;
+    if (hasUnknownParams) {
+      const cleanParams = new URLSearchParams();
+      if (fuel.length) cleanParams.set("fuel", fuel.join(" "));
+      if (budget && budget !== "") cleanParams.set("budget", budget);
+      if (makeIds.length) cleanParams.set("car", makeIds.join(" "));
+      if (cityIds.length) cleanParams.set("city", cityIds.join(" "));
+      if (sortBy) cleanParams.set("sortBy", sortBy); // Keep sort in clean URL
 
-    // const handlePopState = () => {
-    //   window.location.reload();
-    // };
+      const newSearch = cleanParams.toString();
+      const newUrl = newSearch ? `?${newSearch}` : window.location.pathname;
+      window.history.replaceState({}, '', newUrl);
+    }
 
-    // window.addEventListener('popstate', handlePopState);
-    // return () => window.removeEventListener('popstate', handlePopState);
+    setTimeout(() => {
+      isInitialMount.current = false;
+      dispatch(fetchCars());
+    }, 0);
   }, [dispatch]);
 
-  // Update URL when filters change
+  // Updating the url when params change
   useEffect(() => {
-    if (isInitialLoad.current) return;
+    if (isInitialMount.current) return;
 
     const params = new URLSearchParams();
 
-    if (filters.fuel?.length) params.set("fuel", filters.fuel.join("+"));
-    if (filters.budget && filters.budget !== "0-50") params.set("budget", filters.budget);
-    if (filters.makeIds?.length) params.set("car", filters.makeIds.join("+"));
-    if (filters.cityIds?.length) params.set("city", filters.cityIds.join("+"));
+    if (filters.fuel?.length) params.set("fuel", filters.fuel.join(" "));
+    if (filters.budget && filters.budget !== "") params.set("budget", filters.budget);
+    if (filters.makeIds?.length) params.set("car", filters.makeIds.join(" "));
+    if (filters.cityIds?.length) params.set("city", filters.cityIds.join(" "));
+    if (filters.sortBy && filters.sortBy !== "") params.set("sortBy", filters.sortBy); // Sync sort to URL
 
     const newSearch = params.toString();
     const newUrl = newSearch ? `?${newSearch}` : window.location.pathname;
@@ -73,31 +97,34 @@ function Home() {
     }
   }, [filters]);
 
-  useEffect(() => {
-    dispatch(fetchCars());
-  }, [dispatch, filters]);
+  // useEffect(() => {
+  //   if (isInitialMount.current) return;
+  //   setIsSorting(true);
+  //   const timer = setTimeout(() => {
+  //     setIsSorting(false);
+  //   }, 300); 
+  //   return () => clearTimeout(timer);
+  // }, [filters.sortBy]);
 
+
+  // Fetch cars when filters change (but not during URL initialization)
   useEffect(() => {
-    dispatch(fetchMake());
-    dispatch(fetchCity());
-  }, []);
+    if (isInitialMount.current) return;
+    dispatch(fetchCars());
+  }, [dispatch, filters?.fuel, filters?.budget, filters?.makeIds, filters?.cityIds, filters?.sortBy]);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentData = dataRef.current;
       const currentScrollY = window.scrollY;
-
       const isScrollingDown = currentScrollY > lastScrollY.current;
       lastScrollY.current = currentScrollY;
-
       if (!isScrollingDown) {
         return;
       }
-
       const nearBottom =
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 250;
-
       if (
         nearBottom &&
         currentData?.nextPageUrl &&
@@ -105,85 +132,60 @@ function Home() {
         currentData?.stocks?.length < currentData?.totalCount &&
         !loading &&
         !currentData.isFetchingNext &&
-        !isLoadingMore
+        !isScrollingUp
       ) {
-        setIsLoadingMore(true);
         setIsScrollingUp(true);
 
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-
+        // window.scrollTo({
+        //   top: 0,
+        //   behavior: "smooth"
+        // });
+        dispatch(fetchCars(currentData.nextPageUrl));
         setTimeout(() => {
-          dispatch(fetchCars(currentData.nextPageUrl));
           setIsScrollingUp(false);
-        }, 1000);
+        }, 500);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [loading, isLoadingMore, dispatch]);
-
-   useEffect(() => {
-    const currentPath = window.location.pathname;
-    if (currentPath !== '/') {
-      window.location.href = '/';
-    }
-  }, []);
-
+  }, [dispatch]);
 
   useEffect(() => {
-    if (!loading && !data?.isFetchingNext && isLoadingMore) {
-      setIsLoadingMore(false);
-    }
-  }, [loading, data?.isFetchingNext, isLoadingMore]);
+    dataRef.current = data;
+  }, [data]);
 
-  const sortedStocks = useMemo(() => {
-    return sortData(data?.stocks || [], filters.sortBy);
-  }, [data?.stocks, filters.sortBy]);
+  // const sortedStocks = useMemo(() => {
+  //   return sortData(data?.stocks || [], filters.sortBy);
+  // }, [data?.stocks, filters.sortBy]);
 
+  const dataStocks = useMemo(() => {
+    return data?.stocks || [];
+  }, [data?.stocks]);
 
   const hasActiveFilters = useMemo(() => {
-    let arr = [];
-    (filters.fuel?.length > 0) ? arr.push(true) : arr.push(false);
-    (filters.makeIds?.length > 0) ? arr.push(true) : arr.push(false);
-    (filters.cityIds?.length > 0) ? arr.push(true) : arr.push(false);
-    (filters.budget && filters.budget !== "0-50") ? arr.push(true) : arr.push(false);
-    console.log(filt);
-    filt.current =arr;
-    console.log(filt);
     return (
       filters.fuel?.length > 0 ||
       filters.makeIds?.length > 0 ||
       filters.cityIds?.length > 0 ||
-      (filters.budget && filters.budget !== "0-50")
+      (filters.budget && filters.budget !== "")
     );
   }, [filters]);
 
-
-
-  //  Check if we should show empty state
-  const showEmptyState = !loading && sortedStocks.length === 0;
+  const showEmptyState = !loading && dataStocks.length === 0;
 
   return (
     <div className="grid">
-      {/* Left Sidebar - Sticky Filter */}
       <div className="filter">
         <Filter />
       </div>
 
-      {/* Right Content */}
       <div className="main-content">
-        {/* Sort Container - Only show when there are results */}
-        {sortedStocks.length > 0 && (
-          <div className="sort-container">
-            <SortBy array = {filt.current}/>
-          </div>
-        )}
+        {/* {sortedStocks.length > 0 && ( */}
+        <div className="sort-container">
+          <SortBy />
+        </div>
+        {/* )} */}
 
-        {/* Loading Overlay for Scroll Up */}
         {isScrollingUp && (
           <div className="loading-overlay">
             <div className="loading-content">
@@ -193,8 +195,7 @@ function Home() {
           </div>
         )}
 
-        {/* Initial Loading Overlay */}
-        {loading && !data?.stocks?.length && (
+        {(loading) && (
           <div className="loading-overlay">
             <div className="loading-content">
               <div className="loader-spinner"></div>
@@ -228,19 +229,11 @@ function Home() {
           </div>
         )}
 
-        {/* Car List */}
-        {sortedStocks.length > 0 && (
-          <div className={`car-list ${isLoadingMore || isScrollingUp ? 'loading' : ''}`}>
-            {sortedStocks.map((car) => (
-              <Card key={car.profileId} data={car} />
+        {dataStocks.length > 0 && (
+          <div className={`car-list ${isScrollingUp ? 'loading' : ''}`}>
+            {dataStocks.map((car) => (
+              <Card key={car.profileId} data={car} emptystate={showEmptyState} />
             ))}
-          </div>
-        )}
-
-        {/* Bottom Loading Indicator */}
-        {data?.isFetchingNext && !isLoadingMore && !isScrollingUp && (
-          <div className="scroll-loader">
-            <span className="spinner" /> Loading more cars...
           </div>
         )}
       </div>

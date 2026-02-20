@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import CarReducer from '../redux/car/CarReducer'
-import FilterReducer from '../redux/filter/FilterReducer';
+import FilterReducer from '../redux/Filter/FilterReducer';
 import { thunk } from 'redux-thunk';
 import MakeReducer from '../redux/make/MakeReducer';
 import CityReducer from '../redux/city/CityReducer';
